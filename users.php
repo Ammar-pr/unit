@@ -68,7 +68,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
     public function login($email,$password) {
 
         $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
-        $userdata=R::getAll( "SELECT * FROM users where email='$email' & pssword='$hashed_password' " );
+        $userdata=R::getAll( "SELECT * FROM users where email='$email' and  pssword='$hashed_password' " );
       if(count($userdata)>0){
         return true ;
       }else{
