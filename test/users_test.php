@@ -113,5 +113,5 @@ class users_test extends \PHPUnit_Framework_TestCase
 
 }
 
-$u=new  users_test();
-$u->test_update();
+//$u=new  users_test();
+//$u->test_update();

@@ -76,7 +76,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
       }
     }
 
-    public function check_user_input($email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name){
+    public function check_user_input($email,$user_job_number,$department_name,$name,$password,$phonenumber_number,$college_name){
         $name=htmlspecialchars($name);
         $name=trim($name);
         $department_name=htmlspecialchars($department_name);
@@ -98,20 +98,20 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         }
 
 
-        if(!is_string($college_name)  & strlen($college_name)>3 ) {
+        if(!is_string($college_name)  & strlen($college_name)<3 ) {
 
-            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم "."\n";
-        }else if(strlen($college_name)>3){
+            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ,طول الكلمة أكبر من 3 "."\n";
+        }else if(strlen($college_name)<3){
             $error_massage.="اسم المستخدم اسم الكلية يجب ان يكون اكبر من ثلاثة وأصفر من 12  "."\n";
         }else if(strlen($college_name)<12){
             $error_massage.="اسم الكلية  يجب ان يكون  أصفر من 12  "."\n";
         }
 
 
-        if(!is_string($department_name)  & strlen($department_name)>3 ) {
+        if(!is_string($department_name)  & strlen($department_name)<3 ) {
 
-            $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم  "."\n";
-        }else if(strlen($department_name)>3){
+            $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
+        }else if(strlen($department_name)<3){
             $error_massage.="اسم المستخدم اسم القسم يجب ان يكون اكبر من ثلاثة وأصفر من 12  "."\n";
         }else if(strlen($department_name)<12){
             $error_massage.="اسم القسم  يجب ان يكون  أصفر من 12  "."\n";
@@ -126,7 +126,11 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.= "البريد الالكتروني غير صحيح"."\n";
         }
 
-
+        if(strlen(htmlspecialchars($_POST['password']))<4){
+         echo "كلمة المرور يجب ان تكون اكبر من 4 خانات";
+        }else if(strlen(htmlspecialchars($_POST['password']))<12) {
+            echo "كلمة المرور يجب أن تكون أقل من 12 خانة ";
+        }
         return $error_massage;
 
 
