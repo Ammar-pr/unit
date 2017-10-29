@@ -108,7 +108,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         }
 
 
-        if(!is_string($department_name)  & strlen($department_name)>3 ) {
+        if(!is_string($department_name)  & strlen($department_name)>3  || strlen($department_name)>12) {
 
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
         }else if(strlen($department_name)>12){
@@ -126,12 +126,12 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
         if(strlen(htmlspecialchars(""))>4){
          echo "كلمة المرور يجب ان تكون اكبر من 4 خانات";
-        }else if(strlen(htmlspecialchars($_POST['password']))>12) {
-            $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ";
+        }else if(strlen($password)<12 || strlen($password)<3) {
+            $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ,لاتكون أصغر من 3  ";
         }
-         if(!preg_match("/^\d{3}\d{3}\d{4}$/",$phonenumber_number)){
+         if(strlen($phonenumber_number)==13){
 
-             $error_massage.="يجب ان يكون رقم الهاتف 9 أرقام ويبداً من 5";
+             $error_massage.="يجب ان يكون رقم الهاتف 10 أرقام";
          }
 
         return $error_massage;
