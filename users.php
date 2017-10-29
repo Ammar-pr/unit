@@ -17,7 +17,7 @@ class users
     }
 
 
-    public function Save($id,$email,$user_job_number,$role_id,$department_id,$name,$password,$phonenumber_number)
+    public function Save($id,$email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name)
     {
 
 
@@ -25,7 +25,7 @@ class users
         if ($id > 0) {
             $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
 
-return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_id` =$department_id, `name` = '$name', `password` = '$password', `phonenumber_number` = $phonenumber_number, `email` = '$email' WHERE `users`.`id` =" .$id);
+return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_name` ='$department_name', `name` = '$name', `password` = '$password', `phonenumber_number` = $phonenumber_number,   `college_name` = '$college_name' , `email` = '$email' WHERE `users`.`id` =" .$id);
 
         } else {
 
@@ -35,7 +35,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             else {
 
                 $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
-            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_id`, `name`, `password`, `phonenumber_number`, `email`) VALUES ( $user_job_number, $role_id, $department_id, '$name', '$hashed_password', $phonenumber_number, '$email')");
+            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_name`, `name`, `password`, `phonenumber_number`, `email`, `college_name`) VALUES ( $user_job_number, $role_id, '$department_name', '$name', '$hashed_password', $phonenumber_number, '$email','$college_name')");
         }}
     }
     public function fetchWithPK($id)
@@ -76,9 +76,16 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
       }
     }
 
-    public function check_user_input($email,$user_job_number,$role_id,$department_id,$name,$password,$phonenumber_number){
+    public function check_user_input($email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name){
         $name=htmlspecialchars($name);
         $name=trim($name);
+        $department_name=htmlspecialchars($department_name);
+        $department_name=trim($department_name);
+        $college_name=htmlspecialchars($college_name);
+        $college_name=trim($college_name);
+
+
+
 
         $error_massage ="";
         if(!is_string($name)  & strlen($name)>3 ) {
@@ -88,6 +95,30 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
         }else if(strlen($name)<12){
             $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون  أصفر من 12  ";
+        }
+
+
+        if(!is_string($college_name)  & strlen($college_name)>3 ) {
+
+            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ";
+        }else if(strlen($college_name)>3){
+            $error_massage.="اسم المستخدم اسم الكلية يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
+        }else if(strlen($college_name)<12){
+            $error_massage.="اسم الكلية  يجب ان يكون  أصفر من 12  ";
+        }
+
+
+        if(!is_string($department_name)  & strlen($department_name)>3 ) {
+
+            $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ";
+        }else if(strlen($department_name)>3){
+            $error_massage.="اسم المستخدم اسم القسم يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
+        }else if(strlen($department_name)<12){
+            $error_massage.="اسم القسم  يجب ان يكون  أصفر من 12  ";
+        }
+
+        if(!is_numeric($user_job_number)){
+            $error_massage.="ادخل رقمك الوظيفي   ";
         }
 
 

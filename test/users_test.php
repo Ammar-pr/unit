@@ -11,7 +11,7 @@ class users_test extends \PHPUnit_Framework_TestCase
 
         $tested= new users();
 
-        $tested->Save(0,'gfhgsdf@hotmail.com',134,2,27,'amdf',503448871,'drdfevd');
+        $tested->Save(0,'gfhgsdf@hotmail.com',134,2,27,'amdf',503448871,'drdfevd','colloge test');
         $list = R::find( 'users', ' email LIKE ? ', [ 'xxf@hotmail.com%' ] );
         //echo $authors->status_name;
         foreach($list as $test_record){
