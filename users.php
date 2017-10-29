@@ -100,25 +100,30 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
         if(!is_string($college_name)  & strlen($college_name)>3 ) {
 
-            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ";
+            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم "."\n";
         }else if(strlen($college_name)>3){
-            $error_massage.="اسم المستخدم اسم الكلية يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
+            $error_massage.="اسم المستخدم اسم الكلية يجب ان يكون اكبر من ثلاثة وأصفر من 12  "."\n";
         }else if(strlen($college_name)<12){
-            $error_massage.="اسم الكلية  يجب ان يكون  أصفر من 12  ";
+            $error_massage.="اسم الكلية  يجب ان يكون  أصفر من 12  "."\n";
         }
 
 
         if(!is_string($department_name)  & strlen($department_name)>3 ) {
 
-            $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ";
+            $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم  "."\n";
         }else if(strlen($department_name)>3){
-            $error_massage.="اسم المستخدم اسم القسم يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
+            $error_massage.="اسم المستخدم اسم القسم يجب ان يكون اكبر من ثلاثة وأصفر من 12  "."\n";
         }else if(strlen($department_name)<12){
-            $error_massage.="اسم القسم  يجب ان يكون  أصفر من 12  ";
+            $error_massage.="اسم القسم  يجب ان يكون  أصفر من 12  "."\n";
         }
 
         if(!is_numeric($user_job_number)){
-            $error_massage.="ادخل رقمك الوظيفي   ";
+            $error_massage.="ادخل رقمك الوظيفي   "."\n";
+        }
+
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $error_massage.= "البريد الالكتروني غير صحيح"."\n";
         }
 
 
