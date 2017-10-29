@@ -22,10 +22,10 @@ class unit_status
         });
         if ($id > 0) {
 
-             R::exec(" UPDATE `unit_status` SET `status_name` = '$status_name'  , `description` = '$description'  WHERE `unit_status`.`id` =".$id);
+          return    R::exec(" UPDATE `unit_status` SET `status_name` = '$status_name'  , `description` = '$description'  WHERE `unit_status`.`id` =".$id);
 
         } else {
-            R::exec("INSERT INTO `unit_status` (`status_name`, `description`) VALUES ('$status_name','$description')");
+         return   R::exec("INSERT INTO `unit_status` (`status_name`, `description`) VALUES ('$status_name','$description')");
         }
     }
 
