@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxvalidator.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/globalization/globalize.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcalendar.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
+    <link rel="stylesheet" href="templates/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="templates/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/scripts/demos.js"></script>
+
+    <script type="text/javascript" src="templates/jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxnumberinput.js"></script>
+
     <style type="text/css">
         .demo-iframe {
             border: none;
@@ -53,8 +59,11 @@
     $(document).ready(function () {
 
         $('#sendButton').jqxButton({ width: 60, height: 25});
-        $('#acceptInput').jqxCheckBox({ width: 130});
+
         $("#phoneInput").jqxMaskedInput({ mask: '(###)###-####', width: 150, height: 22});
+
+
+
         $('.text-input').addClass('jqx-input');
         $('.text-input').addClass('jqx-rc-all');
         if (theme.length > 0) {
@@ -67,8 +76,12 @@
         // initialize validator.
         $('#form').jqxValidator({
             rules: [
-                { input: '#userInput', message: 'Username is required!', action: 'keyup, blur', rule: 'required' },
+                { input: '#userInput', message: 'name is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#userInput', message: 'Your username must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
+                { input: '#college_Input', message: 'Your college name  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
+                { input: '#college_Input', message: 'Your department nameInput name  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
+
+//employee_number
 
                 { input: '#passwordInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#passwordInput', message: 'Your password must be between 4 and 12 characters!', action: 'keyup, blur', rule: 'length=4,12' },
@@ -109,7 +122,7 @@
         <table class="register-table">
             <tr>
                 <td>Username:</td>
-                <td><input name="username" type="text" id="userInput" class="text-input" /></td>
+                <td><input name="name" type="text" id="userInput" class="text-input" /></td>
             </tr>
             <tr>
                 <td>Password:</td>
@@ -120,10 +133,7 @@
                 <td><input type="password" id="passwordConfirmInput" class="text-input" /></td>
             </tr>
 
-            <tr>
-                <td>Birth date:</td>
-                <td><div name="birthdate" id="birthInput"></div></td>
-            </tr>
+
             <tr>
                 <td>E-mail:</td>
                 <td><input name="email" type="text" id="emailInput" class="text-input" /></td>
@@ -131,17 +141,26 @@
 
             <tr>
                 <td>Phone:</td>
-                <td><div name="phonee" id="phoneInput"></div></td>
+                <td><div name="phonenumber_number" id="phoneInput" ></div></td>
+            </tr>
+
+
+            <tr>
+                <td>college name:</td>
+                <td><input name="college_name" type="text" id="college_Input" class="text-input" /></td>
             </tr>
 
             <tr>
-                <td colspan="2" style="padding: 5px;"><div name="acceptterms" id="acceptInput" style="margin-left: 50px;">I accept terms</div></td>
+                <td>department name:</td>
+                <td><input name="department_name" type="text" id="department_nameInput" class="text-input" /></td>
             </tr>
+
+
+
             <tr>
                 <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
             </tr>
         </table>
-        <div class="prompt">*For successful registration, username=admin, password=admin123</div>
     </form>
     <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
 </div>

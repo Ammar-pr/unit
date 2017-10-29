@@ -76,6 +76,10 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
       }
     }
 
+    //   echo $user->check_user_input(htmlspecialchars($_POST['email']),htmlspecialchars($_POST['user_job_number'])
+//,htmlspecialchars($_POST['department_name']),htmlspecialchars($_POST['name']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['phonenumber_number']),htmlspecialchars($_POST['college_name']));
+
+
     public function check_user_input($email,$user_job_number,$department_name,$name,$password,$phonenumber_number,$college_name){
         $name=htmlspecialchars($name);
         $name=trim($name);
@@ -91,29 +95,23 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         if(!is_string($name)  & strlen($name)>3 ) {
 
             $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ";
-        }else if(strlen($name)>3){
-            $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
-        }else if(strlen($name)<12){
+        }else if(strlen($name)>12){
             $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون  أصفر من 12  ";
         }
 
 
-        if(!is_string($college_name)  & strlen($college_name)<3 ) {
+        if(!is_string($college_name)  & strlen($college_name)>3 ) {
 
-            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ,طول الكلمة أكبر من 3 "."\n";
-        }else if(strlen($college_name)<3){
-            $error_massage.="اسم المستخدم اسم الكلية يجب ان يكون اكبر من ثلاثة وأصفر من 12  "."\n";
-        }else if(strlen($college_name)<12){
+            $error_massage.="اسم الكلية يجب ان يكون كلمة وليس رقم ,طول الكلمة أكبر من 3 "."\n";
+        }else if(strlen($college_name)>12){
             $error_massage.="اسم الكلية  يجب ان يكون  أصفر من 12  "."\n";
         }
 
 
-        if(!is_string($department_name)  & strlen($department_name)<3 ) {
+        if(!is_string($department_name)  & strlen($department_name)>3 ) {
 
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
-        }else if(strlen($department_name)<3){
-            $error_massage.="اسم المستخدم اسم القسم يجب ان يكون اكبر من ثلاثة وأصفر من 12  "."\n";
-        }else if(strlen($department_name)<12){
+        }else if(strlen($department_name)>12){
             $error_massage.="اسم القسم  يجب ان يكون  أصفر من 12  "."\n";
         }
 
@@ -126,11 +124,16 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.= "البريد الالكتروني غير صحيح"."\n";
         }
 
-        if(strlen(htmlspecialchars($_POST['password']))<4){
+        if(strlen(htmlspecialchars(""))>4){
          echo "كلمة المرور يجب ان تكون اكبر من 4 خانات";
-        }else if(strlen(htmlspecialchars($_POST['password']))<12) {
-            echo "كلمة المرور يجب أن تكون أقل من 12 خانة ";
+        }else if(strlen(htmlspecialchars($_POST['password']))>12) {
+            $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ";
         }
+         if(!preg_match("/^\d{3}\d{3}\d{4}$/",$phonenumber_number)){
+
+             $error_massage.="يجب ان يكون رقم الهاتف 9 أرقام ويبداً من 5";
+         }
+
         return $error_massage;
 
 
