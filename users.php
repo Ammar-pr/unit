@@ -76,6 +76,29 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
       }
     }
 
+    public function check_user_input($email,$user_job_number,$role_id,$department_id,$name,$password,$phonenumber_number){
+        $name=htmlspecialchars($name);
+        $name=trim($name);
+
+        $error_massage ="";
+        if(!is_string($name)  & strlen($name)>3 ) {
+
+            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ";
+        }else if(strlen($name)>3){
+            $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون اكبر من ثلاثة وأصفر من 12  ";
+        }else if(strlen($name)<12){
+            $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون  أصفر من 12  ";
+        }
+
+
+        return $error_massage;
+
+
+    }
+
+
+
+
 
 
 
