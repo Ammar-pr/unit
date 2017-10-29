@@ -92,27 +92,23 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
 
         $error_massage ="";
-        if(!is_string($name)  & strlen($name)>3 ) {
+        if(!is_string($name)  & strlen($name)<3 ) {
 
             $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ";
-        }else if(strlen($name)>12){
+        }else if(strlen($name)<=12){
             $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون  أصفر من 12  ";
         }
 
 
-        if(!is_string($college_name)  & strlen($college_name)>3 ) {
+        if(!is_string($college_name)  & strlen($college_name)<3 || strlen($college_name)>12) {
 
-            $error_massage.="اسم الكلية يجب ان يكون كلمة وليس رقم ,طول الكلمة أكبر من 3 "."\n";
-        }else if(strlen($college_name)>12){
-            $error_massage.="اسم الكلية  يجب ان يكون  أصفر من 12  "."\n";
+            $error_massage.="اسم الكلية يجب ان يكون كلمة وليس رقم ,طول الكلمة أكبر من 3 ,12 "."\n";
         }
 
 
-        if(!is_string($department_name)  & strlen($department_name)>3  || strlen($department_name)>12) {
+        if(!is_string($department_name)  & strlen($department_name)<3  || strlen($department_name)<=12) {
 
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
-        }else if(strlen($department_name)>12){
-            $error_massage.="اسم القسم  يجب ان يكون  أصفر من 12  "."\n";
         }
 
         if(!is_numeric($user_job_number)){
@@ -124,9 +120,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.= "البريد الالكتروني غير صحيح"."\n";
         }
 
-        if(strlen(htmlspecialchars(""))>4){
-         echo "كلمة المرور يجب ان تكون اكبر من 4 خانات";
-        }else if(strlen($password)<12 || strlen($password)<3) {
+       if(strlen($password)<=12 || strlen($password)<3) {
             $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ,لاتكون أصغر من 3  ";
         }
          if(strlen($phonenumber_number)==13){
