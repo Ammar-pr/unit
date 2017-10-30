@@ -45,7 +45,7 @@ class login
 
         }else {
            $smarty = new Smarty();
-           $smarty->display('login.tpl');
+           $smarty->display('templates/login.tpl');
 
        }
 

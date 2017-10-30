@@ -7,8 +7,8 @@ class colleges
     public function __construct()
     {
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=unit',
-                'root', 'dwddwddwd');
+            R::setup('mysql:host=localhost;dbname=dsr_amnatto',
+                'dsr_amnatto', 'mVNeKCEG]b@W');
 
 
         }
@@ -67,5 +67,3 @@ class colleges
 }
 
 
-$col= new colleges();
-$col->Save(0,"ammar");

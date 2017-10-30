@@ -15,8 +15,6 @@ $smarty->compile_dir = 'templates_c/';
 $smarty->config_dir = 'configs/';
 $smarty->cache_dir = 'cache/';
 
-$smarty->assign('name', 'george smith');
-$smarty->assign('address', '45th & Harris');
 
 // display it
 
