@@ -11,8 +11,8 @@ class users
     public function __construct()
     {
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=dsr_amnatto',
-                'root', 'mVNeKCEG]b@W');
+            R::setup('mysql:host=localhost;dbname=root',
+                'root', 'dwddwddwd');
         }
     }
 
