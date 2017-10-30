@@ -28,12 +28,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
        $col= new colleges();
 
        $college_name=htmlspecialchars($_POST['college_name']);
-       $col->Save(0,"$college_name");
 
 
-       $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
+          $col->Save(0,"$college_name");
 
-       echo var_dump($ob);
+           $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
+          $id=0;
+          foreach($ob as $recotrd){
+          $id= $recotrd['id'];
+    echo "$id"."<br";
+             }
+              $coleges_departement=new colleges_departments ();
+             $college_departement_name=htmlspecialchars($_POST['department_name']);
+
+                $coleges_departement->Save(0,"$college_departement_name",$id);
 
    }
 }

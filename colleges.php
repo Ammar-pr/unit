@@ -67,3 +67,7 @@ class colleges
     }
 
 }
+
+
+$col= new colleges();
+$col->Save(0,"ammar");

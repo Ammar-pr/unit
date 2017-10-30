@@ -91,12 +91,11 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
 
 
-        $error_massage ="";
-        if(!is_string($name)  & strlen($name)<3 ) {
 
-            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم ";
-        }else if(strlen($name)<=12){
-            $error_massage.="اسم المستخدم اسم المستخدم يجب ان يكون  أصفر من 12  ";
+        $error_massage ="";
+        if(!is_string($name)  & strlen($name)<3 || strlen($name)>12 ) {
+
+            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم "."\n";
         }
 
 
@@ -106,7 +105,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         }
 
 
-        if(!is_string($department_name)  & strlen($department_name)<3  || strlen($department_name)<=12) {
+        if(!is_string($department_name)  & strlen($department_name)<3  || strlen($department_name)>12) {
 
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
         }
@@ -120,12 +119,12 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.= "البريد الالكتروني غير صحيح"."\n";
         }
 
-       if(strlen($password)<=12 || strlen($password)<3) {
+       if(strlen($password)>12 || strlen($password)<3) {
             $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ,لاتكون أصغر من 3  ";
         }
-         if(strlen($phonenumber_number)==13){
-
-             $error_massage.="يجب ان يكون رقم الهاتف 10 أرقام";
+         if(strlen($phonenumber_number)>13){
+      echo strlen($phonenumber_number);
+             $error_massage.="يجب ان يكون رقم الهاتف 10 أرقام"."\n";
          }
 
         return $error_massage;
