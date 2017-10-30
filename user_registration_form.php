@@ -62,9 +62,12 @@
 
         $("#phoneInput").jqxMaskedInput({ mask: '(###)###-####', width: 150, height: 22});
 
+        $("#numericInput").jqxNumberInput({ width: '250px', height: '25px', spinButtons: false, inputMode: 'simple', theme: theme });
+
+       // $("#numericInput").jqxNumberInput({ width: '250px', height: '25px' });
 
 
-        $('.text-input').addClass('jqx-input');
+    $('.text-input').addClass('jqx-input');
         $('.text-input').addClass('jqx-rc-all');
         if (theme.length > 0) {
             $('.text-input').addClass('jqx-input-' + theme);
@@ -154,6 +157,13 @@
                 <td>department name:</td>
                 <td><input name="department_name" type="text" id="department_nameInput" class="text-input" /></td>
             </tr>
+            <tr> <td> num  </td>
+                <td>
+                    <div name="user_job_number" id='numericInput'>
+                    </div> </td>
+
+
+</tr>
 
 
 

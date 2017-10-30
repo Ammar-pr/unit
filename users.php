@@ -110,7 +110,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
         }
 
-        if(!is_numeric($user_job_number)){
+        if(is_numeric($user_job_number)){
             $error_massage.="ادخل رقمك الوظيفي   "."\n";
         }
 

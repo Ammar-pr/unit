@@ -14,9 +14,9 @@ require_once ('colleges_departments.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $user = new users();
+$var =(int)htmlspecialchars($_POST['user_job_number']);
+echo $var ;
 
-
-    $_POST['user_job_number']=111;
    $errorMassage= $user->check_user_input(htmlspecialchars($_POST['email']),htmlspecialchars($_POST['user_job_number'])
         ,htmlspecialchars($_POST['department_name']),htmlspecialchars($_POST['name']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['phonenumber_number']),htmlspecialchars($_POST['college_name']));
 
@@ -30,18 +30,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
        $college_name=htmlspecialchars($_POST['college_name']);
 
 
-          $col->Save(0,"$college_name");
+    //      $col->Save(0,"$college_name");
 
-           $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
-          $id=0;
-          foreach($ob as $recotrd){
-          $id= $recotrd['id'];
-    echo "$id"."<br";
-             }
-              $coleges_departement=new colleges_departments ();
-             $college_departement_name=htmlspecialchars($_POST['department_name']);
+      //     $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
+     //     $id=0;
+    //      foreach($ob as $recotrd){
+   //       $id= $recotrd['id'];
+    //         }
+       //       $coleges_departement=new colleges_departments ();
+     //        $college_departement_name=htmlspecialchars($_POST['department_name']);
 
-                $coleges_departement->Save(0,"$college_departement_name",$id);
+          //      $coleges_departement->Save(0,"$college_departement_name",$id);
 
    }
 }
