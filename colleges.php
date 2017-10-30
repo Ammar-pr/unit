@@ -7,12 +7,9 @@ class colleges
     public function __construct()
     {
 
-
-        if (!R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=unit',
-                'root', 'dwddwddwd');
-
-
+        if( !R::testConnection()) {
+            R::setup('mysql:host=localhost;dbname=dsr_amnatto',
+                'root', 'mVNeKCEG]b@W');
         }
 
     }
