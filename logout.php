@@ -5,11 +5,11 @@ class logout {
 function process_logout () {
     session_start();
 
-//require_once(SMARTY_DIR . 'C:/AppServ/www/project/registration_GIT/smarty-master/libs/Smarty.class.php');
-require 'helpFunction.php';
-$help = new helpFunction;
-$help->path_activate_smarty();
-$smarty = new Smarty();
+    date_default_timezone_set('America/New_York');
+
+    require_once'smarty-master/libs/Smarty.class.php';
+
+    $smarty = new Smarty();
 $smarty->template_dir = 'templates/';
 $smarty->compile_dir = 'templates_c/';
 $smarty->config_dir = 'configs/';
@@ -24,10 +24,10 @@ if (isset($_SESSION["username"]) & isset($_SESSION["password"]))
 
 session_unset();
 
-    $smarty->display('indexWithOutLogin.tpl');
+    $smarty->display('index.tpl');
 
     
-}else if(!isset($_SESSION["username"])& !isset($_SESSION["password"])==false){
+}else if(!isset($_SESSION["username"]) & !isset($_SESSION["password"])){
     echo  "you didn't login can not make log out !";
     
                                    echo "

@@ -1,15 +1,55 @@
+<?php
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-30 04:04:38
+  from "C:\xampp\htdocs\unit\templates\login.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32-dev-22',
+  'unifunc' => 'content_59f6dd16e11c95_18199630',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'baed53e58b13df3ef3c493c0e5868cf9ab138a7e' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\login.tpl',
+      1 => 1509350673,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59f6dd16e11c95_18199630 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxvalidator.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxcheckbox.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxvalidator.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/scripts/demos.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"><?php echo '</script'; ?>
+>
 
     <style type="text/css">
         .demo-iframe {
@@ -35,13 +75,16 @@
 </head>
 <body>
 
-<script type="text/javascript">
+<?php echo '<script'; ?>
+ type="text/javascript">
     $(document).ready(function () {
         // Create Link Button.
         $("#jqxButton").jqxLinkButton({ width: '150', height: '25' });
     });
-</script>
-<script type="text/javascript">
+<?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript">
     $(document).ready(function () {
 
         $("#username, #password").addClass('jqx-input');
@@ -67,7 +110,8 @@
             $("#form-iframe").fadeIn('fast');
         });
     });
-</script>
+<?php echo '</script'; ?>
+>
 <div style="height: 219px; display: block; font-size: 13px; font-family: Verdana;">
     <form class="form" id="form" target="form-iframe" method="post" action="login.php" style="width: 650px;">
         <div>
@@ -97,3 +141,5 @@
 
 </div>
 </body>
+<?php }
+}

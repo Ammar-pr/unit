@@ -7,7 +7,7 @@
  */
 session_start();
 date_default_timezone_set('America/New_York');
-
+require_once ('users.php');
 require_once'smarty-master/libs/Smarty.class.php';
 $smarty = new Smarty();
 $smarty->template_dir = 'templates/';
@@ -21,17 +21,22 @@ $smarty->assign('address', '45th & Harris');
 class login
 {
 
-    function check () {
+    public function check () {
 
-        $user_name=htmlspecialchars($_POST['username']);
 
-       if( isse($user_name) & isset ($_POST['password'])){
+       if(   isset($_POST['username']) &  isset ($_POST['password'])  ){
+
+
 
            $user_object=new users();
 
 
-           if( $user_object->login($user_name,$_POST['password'])){
-               // dissplay logout
+           if( $user_object->login(htmlspecialchars($_POST['username']),$_POST['password'])){
+             $_SESSION['username']=htmlspecialchars($_POST['username']);
+              $_SESSION['password']=$_POST['password'];
+               header('Location: index.php');
+
+              echo "login successful";
            }else {
               // user name and password not correct
 
@@ -39,7 +44,8 @@ class login
            }
 
         }else {
-
+           $smarty = new Smarty();
+           $smarty->display('login.tpl');
 
        }
 

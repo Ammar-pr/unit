@@ -82,7 +82,7 @@
                 <td><a href="user_registration_form.php">registration</a>
             </tr>
             <tr>
-                <td><a href="login.php">login</a>
+                <td><a href="./login.php">login</a>
             </tr>
 
 

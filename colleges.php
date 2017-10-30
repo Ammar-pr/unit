@@ -1,5 +1,5 @@
 <?php
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('scripts/RedBeanPHP/rb.php');
 class colleges
 {
 
@@ -7,8 +7,10 @@ class colleges
     public function __construct()
     {
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=root',
+            R::setup('mysql:host=localhost;dbname=unit',
                 'root', 'dwddwddwd');
+
+
         }
 
     }

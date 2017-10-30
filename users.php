@@ -5,14 +5,16 @@
  * Date: 21/10/17
  * Time: 09:18 م
  */
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('scripts/RedBeanPHP/rb.php');
 class users
 {
     public function __construct()
     {
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=root',
+            R::setup('mysql:host=localhost;dbname=unit',
                 'root', 'dwddwddwd');
+
+
         }
     }
 
@@ -44,7 +46,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
                 $coleges_departement=new colleges_departments ();
 
                 $coleges_departement->Save(0,"$department_name",$college_id);
-                $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
+                $hashed_password= password_hash($password, PASSWORD_BCRYPT);
+
+
             R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_name`, `name`, `password`, `phonenumber_number`, `email`, `college_name`) VALUES ( $user_job_number, $role_id, '$department_name', '$name', '$hashed_password', '$phonenumber_number', '$email','$college_name')");
         }}
     }
@@ -77,10 +81,19 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
     public function login($email,$password) {
 
-        $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
-        $userdata=R::getAll( "SELECT * FROM users where email='$email' and  pssword='$hashed_password' " );
+
+
+        $userdata=R::getAll( "SELECT * FROM users where email='$email' " );
+        $password_encrypted="";
+        foreach($userdata as $elm){
+            $password_encrypted=$elm['password'];
+        }
+
+
       if(count($userdata)>0){
-        return true ;
+          if(password_verify($password, $password_encrypted)) {
+              return true;
+          }
       }else{
           return false ;
       }

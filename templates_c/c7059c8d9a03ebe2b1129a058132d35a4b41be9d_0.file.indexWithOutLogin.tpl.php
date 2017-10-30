@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-30 04:03:10
-  from "C:\xampp\htdocs\unit\templates\index.tpl" */
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-30 04:28:28
+  from "C:\xampp\htdocs\unit\templates\indexWithOutLogin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f6dcbe928016_49546196',
+  'unifunc' => 'content_59f6e2ac62af51_29878520',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'fb607665b92a19d3593f2e9a82daad8d38e1707f' => 
+    'c7059c8d9a03ebe2b1129a058132d35a4b41be9d' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\unit\\templates\\index.tpl',
-      1 => 1509349008,
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\indexWithOutLogin.tpl',
+      1 => 1509346532,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f6dcbe928016_49546196 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f6e2ac62af51_29878520 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -135,10 +135,10 @@ function content_59f6dcbe928016_49546196 (Smarty_Internal_Template $_smarty_tpl)
             <tr>
                 <td><a href="user_registration_form.php">registration</a>
             </tr>
-            <tr>
-                <td><a href="./login.php">login</a>
-            </tr>
 
+            <tr>
+                <td><a href="logout.php">logout</a>
+            </tr>
 
 
 

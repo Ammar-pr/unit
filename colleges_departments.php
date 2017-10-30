@@ -5,7 +5,8 @@
  * Date: 15/10/17
  * Time: 02:40 م
  */
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('scripts/RedBeanPHP/rb.php');
+
 class colleges_departments
 {
 
@@ -14,8 +15,10 @@ class colleges_departments
 
 
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=root',
+            R::setup('mysql:host=localhost;dbname=unit',
                 'root', 'dwddwddwd');
+
+
         }
 
     }
