@@ -25,22 +25,11 @@ echo $var ;
        echo $errorMassage;
    }else {
 
-       $col= new colleges();
+       $us=new users();
 
-       $college_name=htmlspecialchars($_POST['college_name']);
+       $us->Save(0,htmlspecialchars($_POST['email']),htmlspecialchars($_POST['user_job_number']),1,htmlspecialchars($_POST['department_name']),htmlspecialchars($_POST['department_name']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['phonenumber_number']),htmlspecialchars($_POST['college_name']));
 
 
-    //      $col->Save(0,"$college_name");
-
-      //     $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
-     //     $id=0;
-    //      foreach($ob as $recotrd){
-   //       $id= $recotrd['id'];
-    //         }
-       //       $coleges_departement=new colleges_departments ();
-     //        $college_departement_name=htmlspecialchars($_POST['department_name']);
-
-          //      $coleges_departement->Save(0,"$college_departement_name",$id);
 
    }
 }

@@ -22,10 +22,11 @@ class users
 
 
 
+
         if ($id > 0) {
             $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
 
-return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_name` ='$department_name', `name` = '$name', `password` = '$password', `phonenumber_number` = $phonenumber_number,   `college_name` = '$college_name' , `email` = '$email' WHERE `users`.`id` =" .$id);
+return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_name` ='$department_name', `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_name` = '$college_name' , `email` = '$email' WHERE `users`.`id` =" .$id);
 
         } else {
 
@@ -33,9 +34,18 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
                 echo "الايميل موجود بالفعل حاول ان تدخل ايميل اخر او نسيان كلمة المرور للمساعدة ";
             }
             else {
+                $col= new colleges();
+                $col->Save(0,"$college_name");
+                $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
+                $college_id=0;
+                foreach($ob as $recotrd){
+                    $college_id= $recotrd['id'];
+                }
+                $coleges_departement=new colleges_departments ();
 
+                $coleges_departement->Save(0,"$department_name",$college_id);
                 $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
-            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_name`, `name`, `password`, `phonenumber_number`, `email`, `college_name`) VALUES ( $user_job_number, $role_id, '$department_name', '$name', '$hashed_password', $phonenumber_number, '$email','$college_name')");
+            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_name`, `name`, `password`, `phonenumber_number`, `email`, `college_name`) VALUES ( $user_job_number, $role_id, '$department_name', '$name', '$hashed_password', '$phonenumber_number', '$email','$college_name')");
         }}
     }
     public function fetchWithPK($id)
@@ -110,7 +120,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
         }
 
-        if(is_numeric($user_job_number)){
+        if(!is_numeric($user_job_number)){
             $error_massage.="ادخل رقمك الوظيفي   "."\n";
         }
 
