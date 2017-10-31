@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 06:50:58
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 06:59:49
   from "C:\xampp\htdocs\unit\templates\controlPanel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f85592c718c9_43576087',
+  'unifunc' => 'content_59f857a53381a8_51554589',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8f59d4bb15066e7432a688406b2d9a4cbebf55c9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\controlPanel.tpl',
-      1 => 1509447053,
+      1 => 1509447585,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f85592c718c9_43576087 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f857a53381a8_51554589 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +51,8 @@ function content_59f85592c718c9_43576087 (Smarty_Internal_Template $_smarty_tpl)
         $(document).ready(function () {
             // Create jqxDockPanel
             $("#jqxDockPanel").jqxDockPanel({ width: 500, height: 320});
-            $("#jqxDockPanel2 > div").css({ width: '20px', height: '20px' });
-            $("#jqxDockPanel2").jqxDockPanel({ width: 300, height: 210, lastchildfill: false});
+            $("#jqxDockPanel2 > div").css({ width: '500px', height: '500px' });
+            $("#jqxDockPanel2").jqxDockPanel({ width: 500, height: 500, lastchildfill: false});
             $("#jqxDockPanel div").css('color', 'red');
             $("#jqxDockPanel2 div").css('color', '#fff');
             // Apply custom layout depending on the user's choice.
@@ -61,13 +61,13 @@ function content_59f85592c718c9_43576087 (Smarty_Internal_Template $_smarty_tpl)
                 $("#jqxDockPanel > div > div").css({ width: 'auto', height: 'auto' });
                 if (position < 55) {
                     $('#first').attr('dock', 'bottom');
-                    $('#first').height('300px');
+                    $('#first').height('500px');
                     $('#second').attr('dock', 'left');
-                    $('#second').width('100px');
+                    $('#second').width('500px');
                     $('#third').attr('dock', 'left');
-                    $('#third').width('100px');
+                    $('#third').width('500px');
                     $('#fourth').attr('dock', 'left');
-                    $('#fourth').width('100px');
+                    $('#fourth').width('500px');
                 } else
                 if (position < 115) {
                     $("#jqxDockPanel > div > div").css({ width: '100px' });
@@ -118,13 +118,13 @@ function content_59f85592c718c9_43576087 (Smarty_Internal_Template $_smarty_tpl)
     <br />
     <div>Layout Types:</div>
     <div id='layout'>
-        <img title='click to apply a new layout' alt='layout types' src='../../images/LayoutTypes.png' />
+        <img title='click to apply a new layout' alt='layout types' src='png.png' />
     </div>
     <br />
     <div>Spiral:</div>
     <div id='jqxDockPanel2'>
         <div id='Div1' dock='left' style='background: #486974;'>
-            1</div>
+            dsdfff</div>
         <div id='Div2' dock='top' style='background: #368ba7;'>
             2</div>
         <div id='Div3' dock='right' style='background: #df7169;'>
