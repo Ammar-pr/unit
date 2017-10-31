@@ -1,3 +1,27 @@
+<?php
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 06:50:58
+  from "C:\xampp\htdocs\unit\templates\controlPanel.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32-dev-22',
+  'unifunc' => 'content_59f85592c718c9_43576087',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8f59d4bb15066e7432a688406b2d9a4cbebf55c9' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\controlPanel.tpl',
+      1 => 1509447053,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59f85592c718c9_43576087 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +34,24 @@
     <link rel="stylesheet" href="jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdockpanel.js"></script>
-    <script type="text/javascript">
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/scripts/demos.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="jqwidgets/jqwidgets/jqxdockpanel.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript">
         $(document).ready(function () {
             // Create jqxDockPanel
             $("#jqxDockPanel").jqxDockPanel({ width: 500, height: 320});
-            $("#jqxDockPanel2 > div").css({ width: '500px', height: '500px' });
+            $("#jqxDockPanel2 > div").css({ width: '20px', height: '20px' });
             $("#jqxDockPanel2").jqxDockPanel({ width: 300, height: 210, lastchildfill: false});
             $("#jqxDockPanel div").css('color', 'red');
             $("#jqxDockPanel2 div").css('color', '#fff');
@@ -67,7 +100,8 @@
                 $('#jqxDockPanel').jqxDockPanel('render');
             });
         });
-    </script>
+    <?php echo '</script'; ?>
+>
 </head>
 <body class='default'>
 <div id='jqxWidget' style="width: 300px; height: 600px; font-size: 13px; font-family: Verdana;">
@@ -101,3 +135,5 @@
 </div>
 </body>
 </html>
+<?php }
+}

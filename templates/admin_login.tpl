@@ -69,9 +69,9 @@
     });
 </script>
 <div style="height: 219px; display: block; font-size: 13px; font-family: Verdana;">
-    <form class="form" id="form" target="form-iframe" method="post" action="login.php" style="width: 650px;">
+    <form class="form" id="form" target="form-iframe" method="post" action="admin_login.php" style="width: 650px;">
         <div>
-            <h2>Login Demo</h2>
+            <h2>admin Login </h2>
         </div>
         <label>Username:</label>
         <div>
@@ -92,7 +92,7 @@
         </div>
 
         <tr>
-            <td><input name="inputHidden" type="hidden" id="inputHidden" value=22  /></td>
+            <td><input name="authorization" type="hidden" id="inputHidden" value=22  /></td>
         </tr>
 
 

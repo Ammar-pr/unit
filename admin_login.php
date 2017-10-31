@@ -22,11 +22,12 @@ class admin_login {
 
     public function check_admin_login () {
 
+        echo "sfdsfd";
 
 
         if(   isset($_POST['username']) &  isset ($_POST['password']) & isset ($_POST['authorization']) ){
 
-
+     echo "sfdsfd";
             $user_object=new users();
 
 

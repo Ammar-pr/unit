@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 03:55:16
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 04:04:48
   from "C:\xampp\htdocs\unit\templates\admin_login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f82c64d90cf3_92512322',
+  'unifunc' => 'content_59f82ea05504a2_86796271',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '38eb6e3aa81efc541961b5bc0e5e4229c281d505' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\admin_login.tpl',
-      1 => 1509436513,
+      1 => 1509437073,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f82c64d90cf3_92512322 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f82ea05504a2_86796271 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -113,9 +113,9 @@ function content_59f82c64d90cf3_92512322 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '</script'; ?>
 >
 <div style="height: 219px; display: block; font-size: 13px; font-family: Verdana;">
-    <form class="form" id="form" target="form-iframe" method="post" action="login.php" style="width: 650px;">
+    <form class="form" id="form" target="form-iframe" method="post" action="admin_login.php" style="width: 650px;">
         <div>
-            <h2>Login Demo</h2>
+            <h2>admin Login </h2>
         </div>
         <label>Username:</label>
         <div>
@@ -136,7 +136,7 @@ function content_59f82c64d90cf3_92512322 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <tr>
-            <td><input name="inputHidden" type="hidden" id="inputHidden" value=22  /></td>
+            <td><input name="authorization" type="hidden" id="inputHidden" value=22  /></td>
         </tr>
 
 
