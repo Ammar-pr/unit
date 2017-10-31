@@ -23,9 +23,10 @@ class controlPanel
         if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & $_SESSION["authorization"]==22 )
 
         {
+
              // open control panel // dissplay login
             $smarty = new Smarty();
-            $smarty->display('templates/controlPanel.tpl');
+            $smarty->display('controlPanel.html');
 
 
         }else {

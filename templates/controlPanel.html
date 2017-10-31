@@ -23,11 +23,12 @@
                 {
                     datatype: "json",
                     datafields: [
-                        { name: 'CompanyName'},
-                        { name: 'ContactName'},
-                        { name: 'ContactTitle'},
-                        { name: 'Address'},
-                        { name: 'City'}
+                        { name: 'title'},
+                        { name: 'request_date'},
+                        { name: 'attachment_request_link'},
+                        { name: 'update'},
+                        { name: 'delete'}
+
                     ],
                     url: 'grid_data.php',
                     cache: false
@@ -39,11 +40,11 @@
                     source: source,
 
                     columns: [
-                        { text: 'Company Name', datafield: 'CompanyName', width: 250},
-                        { text: 'ContactName', datafield: 'ContactName', width: 150 },
-                        { text: 'Contact Title', datafield: 'ContactTitle', width: 180 },
-                        { text: 'Address', datafield: 'Address', width: 200 },
-                        { text: 'City', datafield: 'City', width: 120 }
+                        { text: 'Title ', datafield: 'title', width: 250},
+                        { text: 'date ', datafield: 'request_date', width: 150 },
+                        { text: 'link ', datafield: 'attachment_request_link', width: 180 },
+                        { text: 'update ', datafield: 'update', width: 180 },
+                        { text: 'delete ', datafield: 'delete', width: 180 }
                     ]
                 });
         });
