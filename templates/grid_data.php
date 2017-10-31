@@ -1,4 +1,6 @@
 ﻿<?php
+session_start();
+
 /**
  * Created by PhpStorm.
  * User: GRENADY
@@ -12,7 +14,7 @@
 // connection String
 
 
-
+if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & $_SESSION["authorization"]==22 ) {
     $mysqli = new mysqli('localhost', 'root', 'dwddwddwd', 'unit');
     /* check connection */
     if (mysqli_connect_errno()) {
@@ -20,17 +22,14 @@
         exit();
     }
 // get data and store in a json array
-    $from = 0;
-    $to = 4;
-    $id=1;
-    $query = "SELECT title ,request_date , attachment_request_link , id  FROM `units_requests`  where id_responder=".$id;
+
+    $id = 1;
+    $query = "SELECT title ,request_date , attachment_request_link , id  FROM `units_requests`   where id_responder IS NOT NULL";
 
 
     $result = $mysqli->prepare($query);
-//$result->bind_param('ii', $from, $to);
     $result->execute();
-    /* bind result variables */
-    $result->bind_result($title, $request_date, $attachment_request_link,$id);
+    $result->bind_result($title, $request_date, $attachment_request_link, $id);
     /* fetch values */
     while ($result->fetch()) {
         $orders[] = array(
@@ -38,11 +37,11 @@
             'request_date' => $request_date,
             'attachment_request_link' => "<a href=$attachment_request_link> attachment request link</a>",
             'update' => "<a href=update.php?id=$id> update this </a>",
-            'delete' =>  "<a href=delete.php?id=$id> delete  this </a>"
+            'delete' => "<a href=delete.php?id=$id> delete  this </a>",
+            'reply'=>'reply'
         );
     }
     echo json_encode($orders);
-    /* close statement */
     $result->close();
-    /* close connection */
     $mysqli->close();
+}

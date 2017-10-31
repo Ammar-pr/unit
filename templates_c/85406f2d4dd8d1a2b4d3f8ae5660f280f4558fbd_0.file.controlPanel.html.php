@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 07:44:27
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 10:19:18
   from "C:\xampp\htdocs\unit\templates\controlPanel.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f8621b5fc211_27618966',
+  'unifunc' => 'content_59f886660b2c00_67103873',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\controlPanel.html',
-      1 => 1509449324,
+      1 => 1509459435,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f8621b5fc211_27618966 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f886660b2c00_67103873 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,11 +72,13 @@ function content_59f8621b5fc211_27618966 (Smarty_Internal_Template $_smarty_tpl)
                 {
                     datatype: "json",
                     datafields: [
-                        { name: 'CompanyName'},
-                        { name: 'ContactName'},
-                        { name: 'ContactTitle'},
-                        { name: 'Address'},
-                        { name: 'City'}
+                        { name: 'title'},
+                        { name: 'request_date'},
+                        { name: 'attachment_request_link'},
+                        { name: 'update'},
+                        { name: 'delete'},
+                        { name: 'reply'}
+
                     ],
                     url: 'grid_data.php',
                     cache: false
@@ -88,11 +90,12 @@ function content_59f8621b5fc211_27618966 (Smarty_Internal_Template $_smarty_tpl)
                     source: source,
 
                     columns: [
-                        { text: 'Company Name', datafield: 'CompanyName', width: 250},
-                        { text: 'ContactName', datafield: 'ContactName', width: 150 },
-                        { text: 'Contact Title', datafield: 'ContactTitle', width: 180 },
-                        { text: 'Address', datafield: 'Address', width: 200 },
-                        { text: 'City', datafield: 'City', width: 120 }
+                        { text: 'Title ', datafield: 'title', width: 250},
+                        { text: 'date ', datafield: 'request_date', width: 150 },
+                        { text: 'link ', datafield: 'attachment_request_link', width: 180 },
+                        { text: 'update ', datafield: 'update', width: 180 },
+                        { text: 'delete ', datafield: 'delete', width: 180 },
+                        { text: 'replay ', datafield: 'reply', width: 180 }
                     ]
                 });
         });

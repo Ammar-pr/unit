@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/controlPanel.html" afterPath="$PROJECT_DIR$/templates/controlPanel.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/grid_data.php" afterPath="$PROJECT_DIR$/templates/grid_data.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +17,8 @@
       <file leaf-file-name="controlPanel.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/controlPanel.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+            <state relative-caret-position="435">
+              <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -26,28 +27,24 @@
       <file leaf-file-name="controlPanel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="47" />
+            <state relative-caret-position="131">
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grid_data.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="grid_data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="74" />
+            <state relative-caret-position="371">
+              <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="18" />
               <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <marker date="1509458205789" expanded="true" signature="483:589" ph="SELECT title... units_requests" />
-                <marker date="1509458205789" expanded="true" signature="483:631" ph="SELECT title... units_requests" />
-                <marker date="1509458205789" expanded="true" signature="562:563" ph="SELECT title... units_requests " />
-                <marker date="1509458205789" expanded="true" signature="562:589" ph="SELECT `requ... units_requests" />
-                <marker date="1509458205789" expanded="true" signature="702:729" ph="/* bind resu... " />
-                <marker date="1509458205789" expanded="true" signature="813:831" ph="/* fetch val... " />
-                <marker date="1509458205789" expanded="true" signature="1267:1288" ph="/* close sta... " />
-                <marker date="1509458205789" expanded="true" signature="1315:1337" ph="/* close con... " />
+                <marker date="1509459390764" expanded="true" signature="575:689" ph="SELECT title... units_requests" />
+                <marker date="1509459390764" expanded="true" signature="575:731" ph="SELECT title... units_requests" />
+                <marker date="1509459390764" expanded="true" signature="654:655" ph="SELECT title... units_requests " />
+                <marker date="1509459390764" expanded="true" signature="654:689" ph="SELECT `requ... units_requests" />
+                <marker date="1509459390764" expanded="true" signature="841:859" ph="/* fetch val... " />
               </folding>
             </state>
           </provider>
@@ -71,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controlPanel.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controlPanel.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/controlPanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="131">
+              <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -134,8 +131,8 @@
         <option value="$PROJECT_DIR$/grid_data.php" />
         <option value="$PROJECT_DIR$/templates/controlPanel.tpl" />
         <option value="$PROJECT_DIR$/controlPanel.php" />
-        <option value="$PROJECT_DIR$/templates/controlPanel.html" />
         <option value="$PROJECT_DIR$/templates/grid_data.php" />
+        <option value="$PROJECT_DIR$/templates/controlPanel.html" />
       </list>
     </option>
   </component>
@@ -228,12 +225,12 @@
       <updated>1509013024738</updated>
       <workItem from="1509013034461" duration="379000" />
       <workItem from="1509256735110" duration="42399000" />
-      <workItem from="1509344773476" duration="29205000" />
+      <workItem from="1509344773476" duration="30278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71983000" />
+    <option name="totallyTimeSpent" value="73056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="660" extended-state="6" />
@@ -561,14 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/controlPanel.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/units_requests.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -585,37 +574,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlPanel.php">
+    <entry file="file://$PROJECT_DIR$/templates/controlPanel.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="435">
+          <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/controlPanel.html">
+    <entry file="file://$PROJECT_DIR$/controlPanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="131">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="74" />
+        <state relative-caret-position="371">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="18" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1509458205789" expanded="true" signature="483:589" ph="SELECT title... units_requests" />
-            <marker date="1509458205789" expanded="true" signature="483:631" ph="SELECT title... units_requests" />
-            <marker date="1509458205789" expanded="true" signature="562:563" ph="SELECT title... units_requests " />
-            <marker date="1509458205789" expanded="true" signature="562:589" ph="SELECT `requ... units_requests" />
-            <marker date="1509458205789" expanded="true" signature="702:729" ph="/* bind resu... " />
-            <marker date="1509458205789" expanded="true" signature="813:831" ph="/* fetch val... " />
-            <marker date="1509458205789" expanded="true" signature="1267:1288" ph="/* close sta... " />
-            <marker date="1509458205789" expanded="true" signature="1315:1337" ph="/* close con... " />
+            <marker date="1509459390764" expanded="true" signature="575:689" ph="SELECT title... units_requests" />
+            <marker date="1509459390764" expanded="true" signature="575:731" ph="SELECT title... units_requests" />
+            <marker date="1509459390764" expanded="true" signature="654:655" ph="SELECT title... units_requests " />
+            <marker date="1509459390764" expanded="true" signature="654:689" ph="SELECT `requ... units_requests" />
+            <marker date="1509459390764" expanded="true" signature="841:859" ph="/* fetch val... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/controlPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
