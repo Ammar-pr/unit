@@ -88,7 +88,6 @@
 
         <div>
             <a style='margin-left: 25px;' target="_blank" href="index.php" id='jqxButton'>go to main page</a>
-            <h2>*For successful login, username=am, password=am</h2>
 
         </div>
 

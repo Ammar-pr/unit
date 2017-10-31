@@ -33,7 +33,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         } else {
 
             if(count (R::getAll( "SELECT * FROM users where email='$email' "  ))==1 ) {
-                echo "الايميل موجود بالفعل حاول ان تدخل ايميل اخر او نسيان كلمة المرور للمساعدة ";
+                echo "الايميل موجود بالفعل حاول ان تدخل ايميل اخر  ";
             }
             else {
                 $col= new colleges();
@@ -82,23 +82,31 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
     public function login($email,$password ,$authorization) {
 
 
+        if(strlen($authorization)==0) {
+            $userdata = R::getAll("SELECT * FROM users where email='$email' ");
+            $password_encrypted = "";
+            foreach ($userdata as $elm) {
+                $password_encrypted = $elm['password'];
+            }
 
-        $userdata=R::getAll( "SELECT * FROM users where email='$email' " );
-        $password_encrypted="";
-        foreach($userdata as $elm){
-            $password_encrypted=$elm['password'];
+
+            if (count($userdata) > 0) {
+                if (password_verify($password, $password_encrypted)) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+
+        } else {
+
+            $userdata = R::getAll("SELECT * FROM users where email='$email' ");
+            $password_encrypted = "";
+            foreach ($userdata as $elm) {
+                $password_encrypted = $elm['password'];
+            }
+
         }
-
-
-      if(count($userdata)>0){
-          if(password_verify($password, $password_encrypted)) {
-              return true;
-          }
-      }else{
-          return false ;
-      }
-
-
 
     }
 
