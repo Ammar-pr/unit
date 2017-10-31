@@ -15,8 +15,6 @@ $smarty->compile_dir = 'templates_c/';
 $smarty->config_dir = 'configs/';
 $smarty->cache_dir = 'cache/';
 
-$smarty->assign('name', 'george smith');
-$smarty->assign('address', '45th & Harris');
 
 class login
 {
@@ -31,7 +29,7 @@ class login
            $user_object=new users();
 
 
-           if( $user_object->login(htmlspecialchars($_POST['username']),$_POST['password'])){
+           if($user_object->login(htmlspecialchars($_POST['username']),$_POST['password'],'')){
              $_SESSION['username']=htmlspecialchars($_POST['username']);
               $_SESSION['password']=$_POST['password'];
                header('Location: index.php');

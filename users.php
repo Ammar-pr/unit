@@ -79,7 +79,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
     }
 
 
-    public function login($email,$password) {
+    public function login($email,$password ,$authorization) {
 
 
 
@@ -97,6 +97,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
       }else{
           return false ;
       }
+
+
+
     }
 
     //   echo $user->check_user_input(htmlspecialchars($_POST['email']),htmlspecialchars($_POST['user_job_number'])
