@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlPanel.php" afterPath="$PROJECT_DIR$/controlPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid_data.php" afterPath="$PROJECT_DIR$/grid_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/controlPanel.tpl" afterPath="$PROJECT_DIR$/templates/controlPanel.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/8f59d4bb15066e7432a688406b2d9a4cbebf55c9_0.file.controlPanel.tpl.php" afterPath="$PROJECT_DIR$/templates_c/8f59d4bb15066e7432a688406b2d9a4cbebf55c9_0.file.controlPanel.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/grid_data.php" afterPath="$PROJECT_DIR$/templates/grid_data.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,18 +36,18 @@
       <file leaf-file-name="grid_data.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state relative-caret-position="320">
+              <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="74" />
               <folding>
                 <element signature="e#6#89#0#PHP" expanded="true" />
-                <marker date="1509457057377" expanded="true" signature="483:584" ph="SELECT title... units_requests" />
-                <marker date="1509457057377" expanded="true" signature="483:626" ph="SELECT title... units_requests" />
-                <marker date="1509457057377" expanded="true" signature="557:558" ph="SELECT title... units_requests " />
-                <marker date="1509457057377" expanded="true" signature="557:584" ph="SELECT `requ... units_requests" />
-                <marker date="1509457057377" expanded="true" signature="697:724" ph="/* bind resu... " />
-                <marker date="1509457057377" expanded="true" signature="804:822" ph="/* fetch val... " />
-                <marker date="1509457057377" expanded="true" signature="1156:1177" ph="/* close sta... " />
-                <marker date="1509457057377" expanded="true" signature="1204:1226" ph="/* close con... " />
+                <marker date="1509458205789" expanded="true" signature="483:589" ph="SELECT title... units_requests" />
+                <marker date="1509458205789" expanded="true" signature="483:631" ph="SELECT title... units_requests" />
+                <marker date="1509458205789" expanded="true" signature="562:563" ph="SELECT title... units_requests " />
+                <marker date="1509458205789" expanded="true" signature="562:589" ph="SELECT `requ... units_requests" />
+                <marker date="1509458205789" expanded="true" signature="702:729" ph="/* bind resu... " />
+                <marker date="1509458205789" expanded="true" signature="813:831" ph="/* fetch val... " />
+                <marker date="1509458205789" expanded="true" signature="1267:1288" ph="/* close sta... " />
+                <marker date="1509458205789" expanded="true" signature="1315:1337" ph="/* close con... " />
               </folding>
             </state>
           </provider>
@@ -232,12 +228,12 @@
       <updated>1509013024738</updated>
       <workItem from="1509013034461" duration="379000" />
       <workItem from="1509256735110" duration="42399000" />
-      <workItem from="1509344773476" duration="27938000" />
+      <workItem from="1509344773476" duration="29205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70716000" />
+    <option name="totallyTimeSpent" value="71983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="660" extended-state="6" />
@@ -607,18 +603,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="320">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="74" />
           <folding>
             <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1509457057377" expanded="true" signature="483:584" ph="SELECT title... units_requests" />
-            <marker date="1509457057377" expanded="true" signature="483:626" ph="SELECT title... units_requests" />
-            <marker date="1509457057377" expanded="true" signature="557:558" ph="SELECT title... units_requests " />
-            <marker date="1509457057377" expanded="true" signature="557:584" ph="SELECT `requ... units_requests" />
-            <marker date="1509457057377" expanded="true" signature="697:724" ph="/* bind resu... " />
-            <marker date="1509457057377" expanded="true" signature="804:822" ph="/* fetch val... " />
-            <marker date="1509457057377" expanded="true" signature="1156:1177" ph="/* close sta... " />
-            <marker date="1509457057377" expanded="true" signature="1204:1226" ph="/* close con... " />
+            <marker date="1509458205789" expanded="true" signature="483:589" ph="SELECT title... units_requests" />
+            <marker date="1509458205789" expanded="true" signature="483:631" ph="SELECT title... units_requests" />
+            <marker date="1509458205789" expanded="true" signature="562:563" ph="SELECT title... units_requests " />
+            <marker date="1509458205789" expanded="true" signature="562:589" ph="SELECT `requ... units_requests" />
+            <marker date="1509458205789" expanded="true" signature="702:729" ph="/* bind resu... " />
+            <marker date="1509458205789" expanded="true" signature="813:831" ph="/* fetch val... " />
+            <marker date="1509458205789" expanded="true" signature="1267:1288" ph="/* close sta... " />
+            <marker date="1509458205789" expanded="true" signature="1315:1337" ph="/* close con... " />
           </folding>
         </state>
       </provider>

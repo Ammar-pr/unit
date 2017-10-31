@@ -23,22 +23,22 @@
     $from = 0;
     $to = 4;
     $id=1;
-    $query = "SELECT title ,request_date , attachment_request_link  FROM `units_requests`  where id_responder=".$id;
+    $query = "SELECT title ,request_date , attachment_request_link , id  FROM `units_requests`  where id_responder=".$id;
 
 
     $result = $mysqli->prepare($query);
 //$result->bind_param('ii', $from, $to);
     $result->execute();
     /* bind result variables */
-    $result->bind_result($title, $request_date, $attachment_request_link);
+    $result->bind_result($title, $request_date, $attachment_request_link,$id);
     /* fetch values */
     while ($result->fetch()) {
         $orders[] = array(
             'title' => $title,
             'request_date' => $request_date,
-            'attachment_request_link' => "<a href=$attachment_request_link> d</a>",
-            'update' => 'link',
-            'delete' => 'link'
+            'attachment_request_link' => "<a href=$attachment_request_link> attachment request link</a>",
+            'update' => "<a href=update.php?id=$id> update this </a>",
+            'delete' =>  "<a href=delete.php?id=$id> delete  this </a>"
         );
     }
     echo json_encode($orders);
