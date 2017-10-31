@@ -111,9 +111,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         $college_name=htmlspecialchars($college_name);
         $college_name=trim($college_name);
 
-
-
-
+        $user_job_num=(int)$user_job_number;
 
         $error_massage ="";
         if(!is_string($name)  & strlen($name)<3 || strlen($name)>12 ) {
@@ -133,7 +131,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
         }
 
-        if(!is_numeric($user_job_number)){
+        if(!is_numeric($user_job_num)){
+            $error_massage.="ادخل رقمك الوظيفي   "."\n";
+        } else if($user_job_num<=0){
             $error_massage.="ادخل رقمك الوظيفي   "."\n";
         }
 

@@ -157,7 +157,7 @@
                 <td>department name:</td>
                 <td><input name="department_name" type="text" id="department_nameInput" class="text-input" /></td>
             </tr>
-            <tr> <td> num  </td>
+            <tr> <td> employee number   </td>
                 <td>
                     <div name="user_job_number" id='numericInput'>
                     </div> </td>
