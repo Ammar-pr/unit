@@ -33,7 +33,7 @@ class admin_login {
             if($user_object->login(htmlspecialchars($_POST['username']),$_POST['password'],$_POST['authorization'])){
                 $_SESSION['username']=htmlspecialchars($_POST['username']);
                 $_SESSION['password']=$_POST['password'];
-                $_SESSION['authorization']=$_POST['authorization'];
+                $_SESSION['authorization']=$_POST['authorization']; //22
 
                 header('Location: controlPanel.php');
 

@@ -100,10 +100,18 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
         } else {
 
-            $userdata = R::getAll("SELECT * FROM users where email='$email'  ");
+            $userdata = R::getAll("SELECT * FROM users where `email`='$email'  and role_id=$authorization");
             $password_encrypted = "";
             foreach ($userdata as $elm) {
                 $password_encrypted = $elm['password'];
+            }
+
+            if (count($userdata) > 0) {
+                if (password_verify($password, $password_encrypted)) {
+                    return true;
+                }
+            } else {
+                return false;
             }
 
         }
