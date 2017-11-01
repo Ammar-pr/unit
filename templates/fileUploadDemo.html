@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <title>jQuery File Upload Sample</title>
-    <link type="text/css" rel="Stylesheet" href="templates/jqwidgets/styles/jqx.base.css" />
-    <script type="text/javascript" src="templates/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxfileupload.js"></script>
+    <link type="text/css" rel="Stylesheet" href="jqwidgets/styles/jqx.base.css" />
+    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxfileupload.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#jqxFileUpload').jqxFileUpload({
                 theme: 'energyblue',
                 width: 300,
-                uploadUrl: 'fileUpload.php',
-                fileInputName: 'fileInput'
+                uploadUrl: '../fileUpload.php',
+                fileInputName: 'fileToUpload'
             });
 
             $('#jqxButton').jqxButton({
