@@ -14,7 +14,8 @@ session_start();
 // connection String
 
 
-if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & $_SESSION["authorization"]==22 ) {
+if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & isset($_SESSION["authorization"]) ) {
+  if($_SESSION["authorization"]==22){
     $mysqli = new mysqli('localhost', 'root', 'dwddwddwd', 'unit');
     /* check connection */
     if (mysqli_connect_errno()) {
@@ -44,4 +45,7 @@ if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & $_SESSION["auth
     echo json_encode($orders);
     $result->close();
     $mysqli->close();
+      }}else {
+
+    echo "dont have access to this page ....";
 }

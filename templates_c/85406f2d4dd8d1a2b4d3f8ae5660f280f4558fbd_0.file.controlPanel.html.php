@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-31 10:19:18
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-01 03:11:10
   from "C:\xampp\htdocs\unit\templates\controlPanel.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f886660b2c00_67103873',
+  'unifunc' => 'content_59f9738e7bf6f1_96030185',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\controlPanel.html',
-      1 => 1509459435,
+      1 => 1509520154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f886660b2c00_67103873 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f9738e7bf6f1_96030185 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +80,7 @@ function content_59f886660b2c00_67103873 (Smarty_Internal_Template $_smarty_tpl)
                         { name: 'reply'}
 
                     ],
-                    url: 'grid_data.php',
+                    url: '../grid_data.php',
                     cache: false
                 };
             var dataAdapter = new $.jqx.dataAdapter(source);

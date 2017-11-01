@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controlPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fileUploadDemo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/ags.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/agskkk.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/f.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/qqqq.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/sadfff.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/ssad.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/sss.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/sssssss.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/vbncxfh.docx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fileUpload.php" afterPath="$PROJECT_DIR$/fileUpload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlPanel.php" afterPath="$PROJECT_DIR$/controlPanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid_data.php" afterPath="$PROJECT_DIR$/grid_data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/controlPanel.html" afterPath="$PROJECT_DIR$/templates/controlPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd_0.file.controlPanel.html.php" afterPath="$PROJECT_DIR$/templates_c/85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd_0.file.controlPanel.html.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +26,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controlPanel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controlPanel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlPanel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid_data.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grid_data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+              <folding>
+                <marker date="1509520617231" expanded="true" signature="616:729" ph="SELECT title... units_requests" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deleting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,8 +61,8 @@
       <file leaf-file-name="controlPanel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/controlPanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="288">
+              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -104,16 +118,17 @@
         <option value="$PROJECT_DIR$/users.php" />
         <option value="$PROJECT_DIR$/templates/admin_login.tpl" />
         <option value="$PROJECT_DIR$/admin_login.php" />
-        <option value="$PROJECT_DIR$/grid_data.php" />
         <option value="$PROJECT_DIR$/templates/controlPanel.tpl" />
-        <option value="$PROJECT_DIR$/controlPanel.php" />
-        <option value="$PROJECT_DIR$/templates/grid_data.php" />
         <option value="$PROJECT_DIR$/imageUpload.php" />
         <option value="$PROJECT_DIR$/controlPanel.html" />
         <option value="$PROJECT_DIR$/fileUploadDemo.html" />
         <option value="$PROJECT_DIR$/fileUpload.php" />
         <option value="$PROJECT_DIR$/templates/fileUploadDemo.html" />
+        <option value="$PROJECT_DIR$/templates/grid_data.php" />
         <option value="$PROJECT_DIR$/templates/controlPanel.html" />
+        <option value="$PROJECT_DIR$/controlPanel.php" />
+        <option value="$PROJECT_DIR$/deleting.php" />
+        <option value="$PROJECT_DIR$/grid_data.php" />
       </list>
     </option>
   </component>
@@ -207,12 +222,12 @@
       <workItem from="1509013034461" duration="379000" />
       <workItem from="1509256735110" duration="42399000" />
       <workItem from="1509344773476" duration="40021000" />
-      <workItem from="1509516221376" duration="2820000" />
+      <workItem from="1509516221376" duration="4026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85619000" />
+    <option name="totallyTimeSpent" value="86825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="660" extended-state="6" />
@@ -584,14 +599,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imageUpload.php" />
-    <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fileUploadDemo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -640,16 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grid_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1509459390764" expanded="true" signature="575:688" ph="SELECT title... units_requests" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fileUpload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -666,10 +663,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/controlPanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="288">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -677,8 +682,26 @@
     <entry file="file://$PROJECT_DIR$/controlPanel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+          <folding>
+            <marker date="1509520617231" expanded="true" signature="616:729" ph="SELECT title... units_requests" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -26,8 +26,9 @@ class controlPanel
 
              // open control panel // dissplay login
             $smarty = new Smarty();
-            $smarty->display('controlPanel.html');
+           //$smarty->display('controlPanel.html');
 
+           header('Location: templates/controlPanel.html');
 
         }else {
 
