@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/controlPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/grid_data.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid_data.php" afterPath="$PROJECT_DIR$/grid_data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fileUploadDemo.html" afterPath="$PROJECT_DIR$/fileUploadDemo.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controlPanel.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controlPanel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlPanel.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
@@ -63,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fileUploadDemo.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fileUploadDemo.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fileUploadDemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="80">
+              <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -151,8 +149,8 @@
         <option value="$PROJECT_DIR$/templates/grid_data.php" />
         <option value="$PROJECT_DIR$/templates/controlPanel.html" />
         <option value="$PROJECT_DIR$/imageUpload.php" />
-        <option value="$PROJECT_DIR$/fileUploadDemo.html" />
         <option value="$PROJECT_DIR$/controlPanel.html" />
+        <option value="$PROJECT_DIR$/fileUploadDemo.html" />
       </list>
     </option>
   </component>
@@ -246,12 +244,12 @@
       <workItem from="1509013034461" duration="379000" />
       <workItem from="1509256735110" duration="42399000" />
       <workItem from="1509344773476" duration="40021000" />
-      <workItem from="1509516221376" duration="409000" />
+      <workItem from="1509516221376" duration="878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83208000" />
+    <option name="totallyTimeSpent" value="83677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="660" extended-state="7" />
@@ -628,16 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fileUploadDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/grid_data.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -659,6 +647,16 @@
         <state relative-caret-position="112">
           <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileUploadDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
