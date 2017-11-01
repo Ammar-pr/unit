@@ -22,30 +22,31 @@ class admin_login {
 
     public function check_admin_login () {
 
-        echo "sfdsfd";
+
 
 
         if(   isset($_POST['username']) &  isset ($_POST['password']) & isset ($_POST['authorization']) ){
 
-     echo "sfdsfd";
-            $user_object=new users();
+        if($_POST['authorization']==22) {
+            $user_object = new users();
 
 
-            if($user_object->login(htmlspecialchars($_POST['username']),$_POST['password'],$_POST['authorization'])){
-                $_SESSION['username']=htmlspecialchars($_POST['username']);
-                $_SESSION['password']=$_POST['password'];
-                $_SESSION['authorization']=$_POST['authorization']; //22
+            if ($user_object->login(htmlspecialchars($_POST['username']), $_POST['password'], $_POST['authorization'])) {
+                $_SESSION['username'] = htmlspecialchars($_POST['username']);
+                $_SESSION['password'] = $_POST['password'];
+                $_SESSION['authorization'] = $_POST['authorization']; //22
 
                 header('Location: controlPanel.php');
 
                 echo "login  admin successful";
-            }else {
+            } else {
                 // user name and password not correct
 
                 echo "user name and password not correct for admin ";
             }
-
+        }
         }else {
+
             $smarty = new Smarty();
             $smarty->display('templates/admin_login.tpl');
 
