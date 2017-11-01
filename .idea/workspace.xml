@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlPanel.php" afterPath="$PROJECT_DIR$/controlPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid_data.php" afterPath="$PROJECT_DIR$/grid_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/controlPanel.html" afterPath="$PROJECT_DIR$/templates/controlPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd_0.file.controlPanel.html.php" afterPath="$PROJECT_DIR$/templates_c/85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd_0.file.controlPanel.html.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deleting.php" afterPath="$PROJECT_DIR$/deleting.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grid_data.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="grid_data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grid_data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+            <state relative-caret-position="163">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <marker date="1509520617231" expanded="true" signature="616:729" ph="SELECT title... units_requests" />
               </folding>
@@ -48,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deleting.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="deleting.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deleting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="304">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -127,8 +124,8 @@
         <option value="$PROJECT_DIR$/templates/grid_data.php" />
         <option value="$PROJECT_DIR$/templates/controlPanel.html" />
         <option value="$PROJECT_DIR$/controlPanel.php" />
-        <option value="$PROJECT_DIR$/deleting.php" />
         <option value="$PROJECT_DIR$/grid_data.php" />
+        <option value="$PROJECT_DIR$/deleting.php" />
       </list>
     </option>
   </component>
@@ -222,12 +219,12 @@
       <workItem from="1509013034461" duration="379000" />
       <workItem from="1509256735110" duration="42399000" />
       <workItem from="1509344773476" duration="40021000" />
-      <workItem from="1509516221376" duration="4026000" />
+      <workItem from="1509516221376" duration="4241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86825000" />
+    <option name="totallyTimeSpent" value="87040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="660" extended-state="6" />
@@ -687,21 +684,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deleting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grid_data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+        <state relative-caret-position="163">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <marker date="1509520617231" expanded="true" signature="616:729" ph="SELECT title... units_requests" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
