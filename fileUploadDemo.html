@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>jQuery File Upload Sample</title>
-    <link type="text/css" rel="Stylesheet" href="templates/jqwidgets/jqwidgets/styles/jqx.base.css" />
+    <link type="text/css" rel="Stylesheet" href="templates/jqwidgets/styles/jqx.base.css" />
     <script type="text/javascript" src="templates/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxcore.js"></script>
     <script type="text/javascript" src="templates/jqwidgets/jqwidgets/jqxbuttons.js"></script>
@@ -10,27 +10,28 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#jqxFileUpload').jqxFileUpload({
+                theme: 'energyblue',
                 width: 300,
-                accept: 'docx/*',
-                uploadUrl: '/imageUpload.php',
-                fileInputName: 'fileToUpload'
+                uploadUrl: 'upload.php',
+                fileInputName: 'fileInput'
             });
 
+            $('#jqxButton').jqxButton({
+                theme: 'energyblue',
+                height: '30px'
+            });
 
-
-        $('#jqxFileUpload').on('uploadEnd', function (event) {
-            var args = event.args;
-            var fileName = args.file;
-            var serverResponse = args.response;
-            // Your code here.
-            console.log(args);
-            console.log(fileName);
-            console.log(serverResponse);
-        });});
+            $('#jqxButton').on('click', function () {
+                $('#jqxFileUpload').jqxFileUpload('uploadFile', 0);
+            }); });
     </script>
 </head>
 <body>
 <div id="jqxFileUpload">
+
+
 </div>
+<input style="margin-top: 20px;" type="button" id="jqxButton" value="Upload a file" />
+
 </body>
 </html>
