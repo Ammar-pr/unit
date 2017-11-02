@@ -25,7 +25,7 @@ if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & isset($_SESSION
 // get data and store in a json array
 
     $id = 1;
-    $query = "SELECT title ,request_date , attachment_request_link , id  FROM `units_requests`   where id_responder IS NOT NULL";
+    $query = "SELECT `title` ,`request_date` , `attachment_request_link` , `id`  FROM `units_requests`   where id_responder IS NOT NULL";
 
 
     $result = $mysqli->prepare($query);
