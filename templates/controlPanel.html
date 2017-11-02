@@ -17,8 +17,6 @@
     <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
-
             var source =
                 {
                     datatype: "json",
@@ -29,17 +27,14 @@
                         { name: 'update'},
                         { name: 'delete'},
                         { name: 'reply'}
-
                     ],
                     url: '../grid_data.php',
                     cache: false
                 };
             var dataAdapter = new $.jqx.dataAdapter(source);
-
             $("#jqxgrid").jqxGrid(
                 {
                     source: source,
-
                     columns: [
                         { text: 'Title ', datafield: 'title', width: 250},
                         { text: 'date ', datafield: 'request_date', width: 150 },

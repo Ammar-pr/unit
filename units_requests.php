@@ -29,6 +29,21 @@ class units_requests
             R::exec("INSERT INTO `units_requests` ( `id_requester`, `request_date`, `status_id`, `unit_id`, `attachment_request_link` , `title` , `file_hash_request`) VALUES ( $id_requester,  Now(),$status_id , $unit_id, '$attachment_request_link', '$title','$md5file')");
         }
     }
+
+    public  function reply_request($id,$attachment_response_link,$request_status_id) {
+        if ($id > 0) {
+
+        $path=$attachment_response_link;
+            $md5file = md5_file($path);
+            return R::exec("UPDATE `units_requests` SET  `response_date` = Now(), `attachment_response_link` = '$attachment_response_link',`unit_id`=$request_status_id ,`file_hash_response` = '$md5file' WHERE `units_requests`.`id` =".$id );
+
+        }else {
+            echo "id is zero , cannot update with id like this , no request number ! .....";
+        }
+
+    }
+
+
     public function fetchWithPK($id)
     {
         if ($id > 0) {
