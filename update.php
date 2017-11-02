@@ -47,18 +47,16 @@ class updating
                 if ($status) {
 
                 $unit= new units_requests();
-                 $value=   $unit->fetchWithPK(intval($_GET['id']));
-
-              foreach ($value as $v=>$k){
-                  echo $v=>$k;
-                    }
+                    $arr=   $unit->fetchWithPK(4);
+                    if (count($arr)>1){
+                    echo $arr['id'];
             //   print_r($value);
 
                 }
             }
 
         }
-    }
+    }}
 }
 $up=new updating();
 $up->show_update_templates ();

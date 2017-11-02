@@ -11,8 +11,10 @@ class unit_status
     public function __construct()
     {
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=unit',
-                'root', 'dwddwddwd');
+            R::setup('mysql:host=localhost;dbname=dsr_amnatto',
+                'dsr_amnatto', 'mVNeKCEG]b@W');
+
+
         }
     }
     public function Save($id, $status_name,$description)

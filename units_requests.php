@@ -11,8 +11,10 @@ class units_requests
     public function __construct()
     {
         if( !R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=unit',
-                'root', 'dwddwddwd');
+            R::setup('mysql:host=localhost;dbname=dsr_amnatto',
+                'dsr_amnatto', 'mVNeKCEG]b@W');
+
+
         }
     }
     public function SaveRequest($id,$id_requester, $status_id,$attachment_request_link,$title,$unit_id,$id_responder,$attachment_response_link)

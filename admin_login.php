@@ -1,11 +1,12 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: GRENADY
  * Date: 30/10/17
  * Time: 10:16 م
  */
-session_start();
+
 date_default_timezone_set('America/New_York');
 require_once ('users.php');
 require_once'smarty-master/libs/Smarty.class.php';

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: GRENADY
- * Date: 29/10/17
- * Time: 10:33 م
- */
 session_start();
 date_default_timezone_set('America/New_York');
 require_once ('users.php');

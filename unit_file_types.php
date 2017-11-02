@@ -12,9 +12,9 @@ class unit_file_types
     {
 
 
-        if (!R::testConnection()) {
-            R::setup('mysql:host=localhost;dbname=unit',
-                'root', 'dwddwddwd');
+        if( !R::testConnection()) {
+            R::setup('mysql:host=localhost;dbname=dsr_amnatto',
+                'dsr_amnatto', 'mVNeKCEG]b@W');
 
 
         }

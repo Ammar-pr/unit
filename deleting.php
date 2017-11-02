@@ -1,11 +1,12 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: GRENADY
  * Date: 31/10/17
  * Time: 11:13 م
  */
-session_start();
+
 
 require_once ('units_requests.php');
 class deleting
