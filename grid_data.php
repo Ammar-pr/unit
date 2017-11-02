@@ -37,7 +37,7 @@ if(isset($_SESSION["username"]) & isset($_SESSION["password"]) & isset($_SESSION
             'title' => $title,
             'request_date' => $request_date,
             'attachment_request_link' => "<a href=$attachment_request_link> attachment request link</a>",
-            'update' => "<a href=update.php?id=$id> update this </a>",
+            'update' => "<a href=../update.php?id=$id> update this </a>",
             'delete' => "<a href=../deleting.php?id=$id> delete  this </a>",
             'reply'=>"<a href=../file_Upload.php?id=$id> reply  this </a>",
 // file_Upload
