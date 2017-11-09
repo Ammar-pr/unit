@@ -43,3 +43,5 @@ class controlPanel
 
 $control = new controlPanel();
 $control->validate_page_access();
+
+?>
