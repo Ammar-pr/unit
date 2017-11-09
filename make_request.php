@@ -31,7 +31,9 @@ class make_request
             if ($user_object->login($_SESSION["username"], $_SESSION["password"], '')) {
 
 
-                header('Location: templates/make_request.tpl');
+
+                $smarty = new Smarty();
+                $smarty->display('templates/make_request.tpl');
 
             } else {
 

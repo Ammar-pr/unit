@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-30 04:04:38
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-09 16:29:17
   from "C:\xampp\htdocs\unit\templates\login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f6dd16e11c95_18199630',
+  'unifunc' => 'content_5a04c8ad251414_55077981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'baed53e58b13df3ef3c493c0e5868cf9ab138a7e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\login.tpl',
-      1 => 1509350673,
+      1 => 1509431665,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f6dd16e11c95_18199630 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a04c8ad251414_55077981 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -132,7 +132,6 @@ function content_59f6dd16e11c95_18199630 (Smarty_Internal_Template $_smarty_tpl)
 
         <div>
             <a style='margin-left: 25px;' target="_blank" href="index.php" id='jqxButton'>go to main page</a>
-            <h2>*For successful login, username=am, password=am</h2>
 
         </div>
 

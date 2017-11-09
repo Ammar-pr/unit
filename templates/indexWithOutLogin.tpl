@@ -88,7 +88,10 @@
 
 
 
-        </table>
+        </table>  <tr>
+            <td><a href="./make_request.php">register new request </a>
+        </tr>
+
     </form>
     <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
 </div>

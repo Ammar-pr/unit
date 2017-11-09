@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-10-30 04:28:28
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-09 16:31:27
   from "C:\xampp\htdocs\unit\templates\indexWithOutLogin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_59f6e2ac62af51_29878520',
+  'unifunc' => 'content_5a04c92fd15f12_20100781',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c7059c8d9a03ebe2b1129a058132d35a4b41be9d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\indexWithOutLogin.tpl',
-      1 => 1509346532,
+      1 => 1510263083,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f6e2ac62af51_29878520 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a04c92fd15f12_20100781 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -142,7 +142,10 @@ function content_59f6e2ac62af51_29878520 (Smarty_Internal_Template $_smarty_tpl)
 
 
 
-        </table>
+        </table>  <tr>
+            <td><a href="./make_request.php">register new request </a>
+        </tr>
+
     </form>
     <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
 </div>
