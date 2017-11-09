@@ -35,17 +35,19 @@ class make_request
 
             } else {
 
-                // cannot access the login page
 
                 $smarty = new Smarty();
                 $smarty->display('templates/Admin_Warning.tpl');
             }
+        }else {
+            echo "cannot access this page , please login or sign up";
+
         }
 
     }
 
 }
 
-$control = new controlPanel();
-$control->validate_page_access();
+$request_firt_step = new make_request();
+$request_firt_step->validate_page_access();
 ?>

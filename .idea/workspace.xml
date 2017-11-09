@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/validation.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.tpl" afterPath="$PROJECT_DIR$/templates/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/make_request.tpl" afterPath="$PROJECT_DIR$/templates/make_request.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/make_request.php" afterPath="$PROJECT_DIR$/make_request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/fb607665b92a19d3593f2e9a82daad8d38e1707f_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/templates_c/fb607665b92a19d3593f2e9a82daad8d38e1707f_0.file.index.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users.php" afterPath="$PROJECT_DIR$/users.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,38 +38,38 @@
       <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="191" column="2" lean-forward="false" selection-start-line="191" selection-start-column="2" selection-end-line="191" selection-end-column="2" />
               <folding>
-                <marker date="1510262069491" expanded="true" signature="680:963" ph="UPDATE `user... " />
-                <marker date="1510262069491" expanded="true" signature="1025:1065" ph="SELECT * FRO... users" />
-                <marker date="1510262069491" expanded="true" signature="1735:2007" ph="INSERT INTO `users`... " />
-                <marker date="1510262069491" expanded="true" signature="2267:2286" ph="SELECT * FRO... users" />
-                <marker date="1510262069491" expanded="true" signature="2389:2419" ph="DELETE FROM " />
-                <marker date="1510262069491" expanded="true" signature="2506:2525" ph="DELETE FROM " />
-                <marker date="1510262069491" expanded="true" signature="2677:2717" ph="SELECT * FRO... users" />
-                <marker date="1510262069491" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
-                <marker date="1510262069491" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
+                <marker date="1510262626119" expanded="true" signature="680:963" ph="UPDATE `user... " />
+                <marker date="1510262626119" expanded="true" signature="1025:1065" ph="SELECT * FRO... users" />
+                <marker date="1510262626119" expanded="true" signature="1735:2007" ph="INSERT INTO `users`... " />
+                <marker date="1510262626119" expanded="true" signature="2267:2286" ph="SELECT * FRO... users" />
+                <marker date="1510262626119" expanded="true" signature="2389:2419" ph="DELETE FROM " />
+                <marker date="1510262626119" expanded="true" signature="2506:2525" ph="DELETE FROM " />
+                <marker date="1510262626119" expanded="true" signature="2677:2717" ph="SELECT * FRO... users" />
+                <marker date="1510262626119" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
+                <marker date="1510262626119" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="make_request.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="make_request.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/make_request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="93">
+              <caret line="28" column="74" lean-forward="true" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="445">
-              <caret line="88" column="70" lean-forward="false" selection-start-line="88" selection-start-column="70" selection-end-line="88" selection-end-column="70" />
+              <caret line="88" column="43" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -158,10 +157,10 @@
         <option value="$PROJECT_DIR$/templates/controlPanel.html" />
         <option value="$PROJECT_DIR$/scripts/validation.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/make_request.php" />
         <option value="$PROJECT_DIR$/templates/make_request.tpl" />
-        <option value="$PROJECT_DIR$/users.php" />
         <option value="$PROJECT_DIR$/templates/index.tpl" />
+        <option value="$PROJECT_DIR$/users.php" />
+        <option value="$PROJECT_DIR$/make_request.php" />
       </list>
     </option>
   </component>
@@ -251,12 +250,12 @@
       <workItem from="1509256735110" duration="42399000" />
       <workItem from="1509344773476" duration="40021000" />
       <workItem from="1509516221376" duration="37640000" />
-      <workItem from="1510011097472" duration="6233000" />
+      <workItem from="1510011097472" duration="6594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126672000" />
+    <option name="totallyTimeSpent" value="127033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="702" extended-state="6" />
@@ -319,15 +318,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1510262069491" expanded="true" signature="680:963" ph="UPDATE `user... " />
-            <marker date="1510262069491" expanded="true" signature="1025:1065" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="1735:2007" ph="INSERT INTO `users`... " />
-            <marker date="1510262069491" expanded="true" signature="2267:2286" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="2389:2419" ph="DELETE FROM " />
-            <marker date="1510262069491" expanded="true" signature="2506:2525" ph="DELETE FROM " />
-            <marker date="1510262069491" expanded="true" signature="2677:2717" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="680:963" ph="UPDATE `user... " />
+            <marker date="1510262626119" expanded="true" signature="1025:1065" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="1735:2007" ph="INSERT INTO `users`... " />
+            <marker date="1510262626119" expanded="true" signature="2267:2286" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="2389:2419" ph="DELETE FROM " />
+            <marker date="1510262626119" expanded="true" signature="2506:2525" ph="DELETE FROM " />
+            <marker date="1510262626119" expanded="true" signature="2677:2717" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -674,36 +673,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="88" column="43" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="191" column="2" lean-forward="false" selection-start-line="191" selection-start-column="2" selection-end-line="191" selection-end-column="2" />
           <folding>
-            <marker date="1510262069491" expanded="true" signature="680:963" ph="UPDATE `user... " />
-            <marker date="1510262069491" expanded="true" signature="1025:1065" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="1735:2007" ph="INSERT INTO `users`... " />
-            <marker date="1510262069491" expanded="true" signature="2267:2286" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="2389:2419" ph="DELETE FROM " />
-            <marker date="1510262069491" expanded="true" signature="2506:2525" ph="DELETE FROM " />
-            <marker date="1510262069491" expanded="true" signature="2677:2717" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
-            <marker date="1510262069491" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="680:963" ph="UPDATE `user... " />
+            <marker date="1510262626119" expanded="true" signature="1025:1065" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="1735:2007" ph="INSERT INTO `users`... " />
+            <marker date="1510262626119" expanded="true" signature="2267:2286" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="2389:2419" ph="DELETE FROM " />
+            <marker date="1510262626119" expanded="true" signature="2506:2525" ph="DELETE FROM " />
+            <marker date="1510262626119" expanded="true" signature="2677:2717" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
+            <marker date="1510262626119" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/make_request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="88" column="70" lean-forward="false" selection-start-line="88" selection-start-column="70" selection-end-line="88" selection-end-column="70" />
+        <state relative-caret-position="93">
+          <caret line="28" column="74" lean-forward="true" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding />
         </state>
       </provider>

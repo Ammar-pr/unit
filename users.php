@@ -189,6 +189,6 @@ $us=new users();
 //$us->Save(0,'xrtetxf@hotmail.com',15444,2,27,'amdf',503448951,'drdfevd');
 //$id,$email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name)
 
-$us->Save(0,'sdadf@hotmail.com',12321,1,'sdfs','ahhmad','212112','0503348971','collge of good');
+//$us->Save(0,'sdadf@hotmail.com',12321,1,'sdfs','ahhmad','212112','0503348971','collge of good');
 
 //$us->check();
