@@ -85,6 +85,10 @@
                 <td><a href="./login.php">login</a>
             </tr>
 
+            <tr>
+                <td><a href="./make_request.php">register new request </a>
+            </tr>
+
 
 
 

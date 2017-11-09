@@ -6,13 +6,15 @@
  * Time: 09:18 م
  */
 require_once ('scripts/RedBeanPHP/rb.php');
+require_once ('colleges.php');
+require_once ('colleges_departments.php');
 class users
 {
     public function __construct()
     {
         if( !R::testConnection()) {
             R::setup('mysql:host=localhost;dbname=dsr_amnatto',
-                'dsr_amnatto', 'mVNeKCEG]b@W');
+                'root', 'mVNeKCEG]b@W');
 
 
         }
@@ -183,8 +185,10 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 }
 
 
-//$us=new users();
+$us=new users();
 //$us->Save(0,'xrtetxf@hotmail.com',15444,2,27,'amdf',503448951,'drdfevd');
-//$id,$user_name,$user_job_number,$role_id,$department_id,$name,$password,$phonenumber_number,$department_id
+//$id,$email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name)
+
+$us->Save(0,'sdadf@hotmail.com',12321,1,'sdfs','ahhmad','212112','0503348971','collge of good');
 
 //$us->check();

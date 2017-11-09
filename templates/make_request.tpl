@@ -12,8 +12,8 @@
     <script type="text/javascript" src="jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
     <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
 
-    <script type="scripts/thumbnails.js" type="text/javascript" ></script>
-    <link rel="stylesheet" href="css/default.css" />
+    <script type="./js/validation.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="./css/default.css" />
 
 </head>
 <body>
