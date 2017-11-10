@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-09 16:23:52
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-10 18:35:54
   from "C:\xampp\htdocs\unit\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_5a04c768902b55_83971720',
+  'unifunc' => 'content_5a0637da2a2218_01361419',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb607665b92a19d3593f2e9a82daad8d38e1707f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\index.tpl',
-      1 => 1510262417,
+      1 => 1510263083,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a04c768902b55_83971720 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0637da2a2218_01361419 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -139,9 +139,6 @@ function content_5a04c768902b55_83971720 (Smarty_Internal_Template $_smarty_tpl)
                 <td><a href="./login.php">login</a>
             </tr>
 
-            <tr>
-                <td><a href="./make_request.php">register new request </a>
-            </tr>
 
 
 

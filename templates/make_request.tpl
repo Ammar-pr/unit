@@ -12,10 +12,21 @@
     <script type="text/javascript" src="jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
     <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
 
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+
+
+
     <link rel="stylesheet" href="./css/styles.css" />
 
     <script type="text/javascript" src="js/validation.js"></script>
-
+    <script type="text/javascript" src="js/dropdownlist.js"></script>
 
 </head>
 <body>
@@ -51,6 +62,14 @@
                 <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
             </tr>
         </table>
+
+
+            <div name="list" id="dropdownlist"></div>
+
+        <div>
+            <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
+        </div>
+
         <div class="prompt">*For successful registration, username=admin, password=admin123</div>
     </form>
     <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
