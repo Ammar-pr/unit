@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/validation.js" afterPath="$PROJECT_DIR$/js/validation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/make_request.php" afterPath="$PROJECT_DIR$/make_request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.tpl" afterPath="$PROJECT_DIR$/templates/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/indexWithOutLogin.tpl" afterPath="$PROJECT_DIR$/templates/indexWithOutLogin.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/make_request.tpl" afterPath="$PROJECT_DIR$/templates/make_request.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/baed53e58b13df3ef3c493c0e5868cf9ab138a7e_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/templates_c/baed53e58b13df3ef3c493c0e5868cf9ab138a7e_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c7059c8d9a03ebe2b1129a058132d35a4b41be9d_0.file.indexWithOutLogin.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c7059c8d9a03ebe2b1129a058132d35a4b41be9d_0.file.indexWithOutLogin.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/0ffa2313d5ea789abaf457c29c6f58f5a6affaff_0.file.make_request.tpl.php" afterPath="$PROJECT_DIR$/templates_c/0ffa2313d5ea789abaf457c29c6f58f5a6affaff_0.file.make_request.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +28,8 @@
       <file leaf-file-name="make_request.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/make_request.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="301">
+              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -54,8 +48,18 @@
       <file leaf-file-name="validation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/validation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="208">
+              <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_registration_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_registration_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="114" column="40" lean-forward="false" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -185,8 +189,8 @@
         <option value="$PROJECT_DIR$/templates/index.tpl" />
         <option value="$PROJECT_DIR$/templates/indexWithOutLogin.tpl" />
         <option value="$PROJECT_DIR$/make_request.php" />
-        <option value="$PROJECT_DIR$/js/validation.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/js/validation.js" />
         <option value="$PROJECT_DIR$/templates/make_request.tpl" />
       </list>
     </option>
@@ -282,12 +286,12 @@
       <workItem from="1509256735110" duration="42399000" />
       <workItem from="1509344773476" duration="40021000" />
       <workItem from="1509516221376" duration="37640000" />
-      <workItem from="1510011097472" duration="8506000" />
+      <workItem from="1510011097472" duration="9509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128945000" />
+    <option name="totallyTimeSpent" value="129948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="702" extended-state="6" />
@@ -632,14 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_registration_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="45" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Login.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -722,14 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -738,10 +726,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user_registration_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="114" column="40" lean-forward="false" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/make_request.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="53" />
+        <state relative-caret-position="301">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding />
         </state>
       </provider>

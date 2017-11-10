@@ -25,42 +25,25 @@
             <h2>Register</h2>
         </div>
         <table class="register-table">
+
+
+
             <tr>
-                <td>Username:</td>
-                <td><input name="username" type="text" id="userInput" class="text-input" /></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input name="password" type="password" id="passwordInput" class="text-input" /></td>
-            </tr>
-            <tr>
-                <td>Confirm password:</td>
-                <td><input type="password" id="passwordConfirmInput" class="text-input" /></td>
-            </tr>
-            <tr>
-                <td>Real name:</td>
+                <td>title:</td>
                 <td><input name="realname" type="text" id="realNameInput" class="text-input" /></td>
             </tr>
+
             <tr>
-                <td>Birth date:</td>
-                <td><div name="birthdate" id="birthInput"></div></td>
+                <td>unit name :</td>
+                <td><input name="realname" type="text" id="realNameInput" class="text-input" /></td>
             </tr>
+
             <tr>
-                <td>E-mail:</td>
-                <td><input name="email" type="text" id="emailInput" class="text-input" /></td>
+                <td>attachment  </td>
+                <td><input name="realname" type="text" id="realNameInput" class="text-input" /></td>
             </tr>
-            <tr>
-                <td>SSN:</td>
-                <td><div name="ssn" id="ssnInput"></div></td>
-            </tr>
-            <tr>
-                <td>Phone:</td>
-                <td><div name="phone" id="phoneInput"></div></td>
-            </tr>
-            <tr>
-                <td>Zip code:</td>
-                <td><div name="zip" id="zipInput"></div></td>
-            </tr>
+
+
             <tr>
                 <td colspan="2" style="padding: 5px;"><div name="acceptterms" id="acceptInput" style="margin-left: 50px;">I accept terms</div></td>
             </tr>

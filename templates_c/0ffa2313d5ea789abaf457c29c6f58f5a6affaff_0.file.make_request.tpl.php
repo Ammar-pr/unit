@@ -1,18 +1,18 @@
 <?php
-/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-09 18:39:54
+/* Smarty version {Smarty::SMARTY_VERSION}, created on 2017-11-09 18:57:05
   from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-22',
-  'unifunc' => 'content_5a04e74a52ed84_96558657',
+  'unifunc' => 'content_5a04eb517fa648_40568033',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
-      1 => 1510270788,
+      1 => 1510271821,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a04e74a52ed84_96558657 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a04eb517fa648_40568033 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,42 +71,25 @@ function content_5a04e74a52ed84_96558657 (Smarty_Internal_Template $_smarty_tpl)
             <h2>Register</h2>
         </div>
         <table class="register-table">
+
+
+
             <tr>
-                <td>Username:</td>
-                <td><input name="username" type="text" id="userInput" class="text-input" /></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input name="password" type="password" id="passwordInput" class="text-input" /></td>
-            </tr>
-            <tr>
-                <td>Confirm password:</td>
-                <td><input type="password" id="passwordConfirmInput" class="text-input" /></td>
-            </tr>
-            <tr>
-                <td>Real name:</td>
+                <td>title:</td>
                 <td><input name="realname" type="text" id="realNameInput" class="text-input" /></td>
             </tr>
+
             <tr>
-                <td>Birth date:</td>
-                <td><div name="birthdate" id="birthInput"></div></td>
+                <td>unit name :</td>
+                <td><input name="realname" type="text" id="realNameInput" class="text-input" /></td>
             </tr>
+
             <tr>
-                <td>E-mail:</td>
-                <td><input name="email" type="text" id="emailInput" class="text-input" /></td>
+                <td>attachment  </td>
+                <td><input name="realname" type="text" id="realNameInput" class="text-input" /></td>
             </tr>
-            <tr>
-                <td>SSN:</td>
-                <td><div name="ssn" id="ssnInput"></div></td>
-            </tr>
-            <tr>
-                <td>Phone:</td>
-                <td><div name="phone" id="phoneInput"></div></td>
-            </tr>
-            <tr>
-                <td>Zip code:</td>
-                <td><div name="zip" id="zipInput"></div></td>
-            </tr>
+
+
             <tr>
                 <td colspan="2" style="padding: 5px;"><div name="acceptterms" id="acceptInput" style="margin-left: 50px;">I accept terms</div></td>
             </tr>
