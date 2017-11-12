@@ -14,7 +14,7 @@ class users
     {
         if( !R::testConnection()) {
             R::setup('mysql:host=localhost;dbname=dsr_amnatto',
-                'root', 'mVNeKCEG]b@W');
+                'dsr_amnatto', 'mVNeKCEG]b@W');
 
 
         }

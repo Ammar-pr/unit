@@ -35,13 +35,7 @@ function smarty_modifier_date_format($string, $format = null, $default_date = ''
     /**
      * require_once the {@link shared.make_timestamp.php} plugin
      */
-    static $is_loaded = false;
-    if (!$is_loaded) {
-        if (!is_callable('smarty_make_timestamp')) {
-            require_once(SMARTY_PLUGINS_DIR . 'shared.make_timestamp.php');
-        }
-        $is_loaded = true;
-    }
+    require_once(SMARTY_PLUGINS_DIR . 'shared.make_timestamp.php');
     if ($string != '' && $string != '0000-00-00' && $string != '0000-00-00 00:00:00') {
         $timestamp = smarty_make_timestamp($string);
     } elseif ($default_date != '') {
@@ -50,21 +44,9 @@ function smarty_modifier_date_format($string, $format = null, $default_date = ''
         return;
     }
     if ($formatter == 'strftime' || ($formatter == 'auto' && strpos($format, '%') !== false)) {
-        if (Smarty::$_IS_WINDOWS) {
-            $_win_from = array('%D',
-                               '%h',
-                               '%n',
-                               '%r',
-                               '%R',
-                               '%t',
-                               '%T');
-            $_win_to = array('%m/%d/%y',
-                             '%b',
-                             "\n",
-                             '%I:%M:%S %p',
-                             '%H:%M',
-                             "\t",
-                             '%H:%M:%S');
+        if (DS == '\\') {
+            $_win_from = array('%D', '%h', '%n', '%r', '%R', '%t', '%T');
+            $_win_to = array('%m/%d/%y', '%b', "\n", '%I:%M:%S %p', '%H:%M', "\t", '%H:%M:%S');
             if (strpos($format, '%e') !== false) {
                 $_win_from[] = '%e';
                 $_win_to[] = sprintf('%\' 2d', date('j', $timestamp));

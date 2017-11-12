@@ -28,19 +28,14 @@
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @author   Ralf Strehle (minor optimization) <ralf dot strehle at yahoo dot de>
  *
- * @param array                     $params parameters
- *
- * @param \Smarty_Internal_Template $template
+ * @param array $params parameters
  *
  * @return string
  * @uses     smarty_function_escape_special_chars()
  */
-function smarty_function_html_options($params, Smarty_Internal_Template $template)
+function smarty_function_html_options($params)
 {
-    if (!isset($template->smarty->_cache[ '_required_sesc' ])) {
-        require_once(SMARTY_PLUGINS_DIR . 'shared.escape_special_chars.php');
-        $template->smarty->_cache[ '_required_sesc' ] = true;
-    }
+    require_once(SMARTY_PLUGINS_DIR . 'shared.escape_special_chars.php');
 
     $name = null;
     $values = null;

@@ -3,53 +3,71 @@
 
 session_start();
 
+require('setup.php');
 
-date_default_timezone_set('America/New_York');
-require_once ('users.php');
-require_once'smarty-master/libs/Smarty.class.php';
-$smarty = new Smarty();
-$smarty->template_dir = 'templates/';
-$smarty->compile_dir = 'templates_c/';
-$smarty->config_dir = 'configs/';
-$smarty->cache_dir = 'cache/';
+$smarty=new Smarty_Unit();
 
-class make_request
-{
+       
+                
+                
+                
+                //require_once $smarty->_get_plugin_filepath('function', 'html_options');
+                $smarty->auto_literal = false;
 
+                               $smarty->display('make_reques.tpl');
 
+                
+                
+                
+                
+                
+          //      $smarty->debugging = TRUE;
 
+  
 
-
-
-
-    public function validate_page_access ()
-    {
-
-
-        if (isset($_SESSION["username"]) & isset($_SESSION["password"])) {
-            $user_object = new users();
-            if ($user_object->login($_SESSION["username"], $_SESSION["password"], '')) {
-
-
-
-                $smarty = new Smarty();
-                $smarty->display('templates/make_request.tpl');
-
-            } else {
-
-
-                $smarty = new Smarty();
-                $smarty->display('templates/Admin_Warning.tpl');
-            }
-        }else {
-            echo "cannot access this page , please login or sign up";
-
-        }
-
-    }
-
-}
-
-$request_firt_step = new make_request();
-$request_firt_step->validate_page_access();
+//class make_request
+//{
+//
+//
+//
+//
+//
+//
+//
+//    public function validate_page_access ()
+//    {
+//
+//
+//        if (isset($_SESSION["username"]) & isset($_SESSION["password"])) {
+//            $user_object = new users();
+//            if ($user_object->login($_SESSION["username"], $_SESSION["password"], '')) {
+//
+//                $smarty = new Smarty();
+//                $smarty->template_dir = 'templates/';
+//                $smarty->compile_dir = 'templates_c/';
+//                $smarty->config_dir = 'configs/';
+//                $smarty->cache_dir = 'cache/';
+//                $smarty->debugging = TRUE;
+//
+//
+//
+//                $smarty->display('make_request.tpl');
+//
+//            } else {
+//
+//
+//                $smarty = new Smarty();
+//                $smarty->display('templates/Admin_Warning.tpl');
+//            }
+//        }else {
+//            echo "cannot access this page , please login or sign up";
+//
+//        }
+//
+//    }
+//
+//}
+//
+//$request_firt_step = new make_request();
+//$request_firt_step->validate_page_access();
 ?>

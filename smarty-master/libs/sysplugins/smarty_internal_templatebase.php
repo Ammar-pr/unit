@@ -14,7 +14,7 @@
  * @package      Smarty
  * @subpackage   Template
  *
- * @property int $_objType
+ * @property Smarty $smarty
  *
  * The following methods will be dynamically loaded by the extension handler when they are called.
  * They are located in a corresponding Smarty_Internal_Method_xxxx class
@@ -35,7 +35,7 @@
  * @method Smarty_Internal_TemplateBase registerResource(string $name, mixed $resource_handler)
  * @method Smarty_Internal_TemplateBase setAutoloadFilters(mixed $filters, string $type = null)
  * @method Smarty_Internal_TemplateBase setDebugTemplate(string $tpl_name)
- * @method Smarty_Internal_TemplateBase setDefaultModifiers(mixed $modifiers)
+ * @method Smarty_Internal_TemplateBase setDefaultModifier(mixed $modifiers)
  * @method Smarty_Internal_TemplateBase unloadFilter(string $type, string $name)
  * @method Smarty_Internal_TemplateBase unregisterCacheResource(string $name)
  * @method Smarty_Internal_TemplateBase unregisterObject(string $object_name)
@@ -74,13 +74,6 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
      * @var integer
      */
     public $cache_lifetime = 3600;
-
-    /**
-     * Array of source information for known template functions
-     *
-     * @var array
-     */
-    public $tplFunctions = array();
 
     /**
      * universal cache
@@ -154,21 +147,21 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
      */
     private function _execute($template, $cache_id, $compile_id, $parent, $function)
     {
-        $smarty = $this->_getSmartyObj();
+        $smarty = $this->_objType == 1 ? $this : $this->smarty;
         $saveVars = true;
         if ($template === null) {
-            if (!$this->_isTplObj()) {
+            if ($this->_objType != 2) {
                 throw new SmartyException($function . '():Missing \'$template\' parameter');
             } else {
                 $template = $this;
             }
         } elseif (is_object($template)) {
-            /* @var Smarty_Internal_Template $template */
-            if (!isset($template->_objType) || !$template->_isTplObj()) {
+            if (!isset($template->_objType) || $template->_objType != 2) {
                 throw new SmartyException($function . '():Template object expected');
             }
         } else {
             // get template object
+            /* @var Smarty_Internal_Template $template */
             $saveVars = false;
 
             $template = $smarty->createTemplate($template, $cache_id, $compile_id, $parent ? $parent : $this, false);
@@ -182,15 +175,6 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
         try {
             $_smarty_old_error_level =
                 isset($smarty->error_reporting) ? error_reporting($smarty->error_reporting) : null;
-            if ($this->_objType == 2) {
-                /* @var Smarty_Internal_Template $this */
-                $template->tplFunctions = $this->tplFunctions;
-                $template->inheritance = $this->inheritance;
-            }
-            /* @var Smarty_Internal_Template $parent */
-            if (isset($parent->_objType) && ($parent->_objType == 2) && !empty($parent->tplFunctions)) {
-                $template->tplFunctions = array_merge($parent->tplFunctions, $template->tplFunctions);
-            }
             if ($function == 2) {
                 if ($template->caching) {
                     // return cache status of template
@@ -198,7 +182,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
                         $template->loadCached();
                     }
                     $result = $template->cached->isCached($template);
-                    Smarty_Internal_Template::$isCacheTplObj[ $template->_getTemplateId() ] = $template;
+                    $template->smarty->_cache[ 'isCached' ][ $template->_getTemplateId() ] = $template;
                 } else {
                     return false;
                 }
@@ -218,10 +202,10 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
                     $template->tpl_vars = $savedTplVars;
                     $template->config_vars = $savedConfigVars;
                 } else {
-                    if (!$function && !isset(Smarty_Internal_Template::$tplObjCache[ $template->templateId ])) {
+                    if (!$function && !isset($smarty->_cache[ 'tplObjects' ][ $template->templateId ])) {
                         $template->parent = null;
                         $template->tpl_vars = $template->config_vars = array();
-                        Smarty_Internal_Template::$tplObjCache[ $template->templateId ] = $template;
+                        $smarty->_cache[ 'tplObjects' ][ $template->templateId ] = $template;
                     }
                 }
             }

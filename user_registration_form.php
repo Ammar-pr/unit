@@ -62,9 +62,7 @@
 
         $("#phoneInput").jqxMaskedInput({ mask: '(###)###-####', width: 150, height: 22});
 
-        $("#numericInput").jqxNumberInput({ width: '250px', height: '25px', spinButtons: false, inputMode: 'simple', theme: theme });
-
-       // $("#numericInput").jqxNumberInput({ width: '250px', height: '25px' });
+  $("#numericInput").jqxMaskedInput({ width: '250px', height: '25px'});
 
 
     $('.text-input').addClass('jqx-input');
@@ -82,9 +80,7 @@
                 { input: '#userInput', message: 'name is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#userInput', message: 'Your username must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
                 { input: '#college_Input', message: 'Your college name  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
-                { input: '#college_Input', message: 'Your department nameInput name  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
-
-//employee_number
+                { input: '#department_nameInput', message: 'Your department  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
 
                 { input: '#passwordInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#passwordInput', message: 'Your password must be between 4 and 12 characters!', action: 'keyup, blur', rule: 'length=4,12' },

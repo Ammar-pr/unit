@@ -35,15 +35,8 @@
  */
 function smarty_block_textformat($params, $content, $template, &$repeat)
 {
-    static $mb_wordwrap_loaded = false;
     if (is_null($content)) {
         return;
-    }
-    if (Smarty::$_MBSTRING && !$mb_wordwrap_loaded) {
-        if (!is_callable('smarty_modifier_mb_wordwrap')) {
-            require_once(SMARTY_PLUGINS_DIR . 'modifier.mb_wordwrap.php');
-        }
-        $mb_wordwrap_loaded = true;
     }
 
     $style = null;
@@ -91,17 +84,16 @@ function smarty_block_textformat($params, $content, $template, &$repeat)
         }
         // convert mult. spaces & special chars to single space
         $_paragraph =
-            preg_replace(array('!\s+!' . Smarty::$_UTF8_MODIFIER,
-                               '!(^\s+)|(\s+$)!' . Smarty::$_UTF8_MODIFIER),
-                         array(' ',
-                               ''), $_paragraph);
+            preg_replace(array('!\s+!' . Smarty::$_UTF8_MODIFIER, '!(^\s+)|(\s+$)!' . Smarty::$_UTF8_MODIFIER),
+                         array(' ', ''), $_paragraph);
         // indent first line
         if ($indent_first > 0) {
             $_paragraph = str_repeat($indent_char, $indent_first) . $_paragraph;
         }
         // wordwrap sentences
         if (Smarty::$_MBSTRING) {
-            $_paragraph = smarty_modifier_mb_wordwrap($_paragraph, $wrap - $indent, $wrap_char, $wrap_cut);
+            require_once(SMARTY_PLUGINS_DIR . 'shared.mb_wordwrap.php');
+            $_paragraph = smarty_mb_wordwrap($_paragraph, $wrap - $indent, $wrap_char, $wrap_cut);
         } else {
             $_paragraph = wordwrap($_paragraph, $wrap - $indent, $wrap_char, $wrap_cut);
         }

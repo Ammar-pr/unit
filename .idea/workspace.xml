@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9bcbe23-bd1e-4288-965e-3a0107e855e3" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates_c/0c5db7fa3b745fd3fb35d5158ef5ae5732cf8958_0.file.fileUploadDemo.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates_c/38eb6e3aa81efc541961b5bc0e5e4229c281d505_0.file.admin_login.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates_c/85406f2d4dd8d1a2b4d3f8ae5660f280f4558fbd_0.file.controlPanel.html.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates_c/8f59d4bb15066e7432a688406b2d9a4cbebf55c9_0.file.controlPanel.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates_c/d3493238ee4fbeec0b86a4c3db51d10f334e4527_0.file.fileUploadDemo.html.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/make_request.php" afterPath="$PROJECT_DIR$/make_request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ex.html" afterPath="$PROJECT_DIR$/templates/ex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/make_request.tpl" afterPath="$PROJECT_DIR$/templates/make_request.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/0ffa2313d5ea789abaf457c29c6f58f5a6affaff_0.file.make_request.tpl.php" afterPath="$PROJECT_DIR$/templates_c/0ffa2313d5ea789abaf457c29c6f58f5a6affaff_0.file.make_request.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/baed53e58b13df3ef3c493c0e5868cf9ab138a7e_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/templates_c/baed53e58b13df3ef3c493c0e5868cf9ab138a7e_0.file.login.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c7059c8d9a03ebe2b1129a058132d35a4b41be9d_0.file.indexWithOutLogin.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c7059c8d9a03ebe2b1129a058132d35a4b41be9d_0.file.indexWithOutLogin.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/fb607665b92a19d3593f2e9a82daad8d38e1707f_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/templates_c/fb607665b92a19d3593f2e9a82daad8d38e1707f_0.file.index.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,44 +25,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="make_request.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-193">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dropdownlist.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/dropdownlist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_request.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/make_request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_request.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/make_request.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/validation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_registration_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_registration_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1824">
-              <caret line="114" column="40" lean-forward="false" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="40" />
+            <state relative-caret-position="272">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,7 +68,7 @@
       <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1935">
+            <state relative-caret-position="3056">
               <caret line="191" column="61" lean-forward="true" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="65" />
               <folding>
                 <marker date="1510262626119" expanded="true" signature="680:963" ph="UPDATE `user... " />
@@ -75,58 +81,6 @@
                 <marker date="1510262626119" expanded="true" signature="2677:2720" ph="SELECT * FRO... users" />
                 <marker date="1510262626119" expanded="true" signature="3155:3211" ph="SELECT * FRO... users" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ex.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="58" column="39" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dropdownlist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/dropdownlist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dropdownlistdata.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dropdownlistdata.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-              <folding>
-                <marker date="1510277454690" expanded="true" signature="370:418" ph="SELECT name,... unit_service_type" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make_request.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/make_request.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexWithOutLogin.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/indexWithOutLogin.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1488">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/data.php" />
         <option value="$PROJECT_DIR$/templates/index.php" />
         <option value="$PROJECT_DIR$/templates/registration.php" />
         <option value="$PROJECT_DIR$/test/users_test.php" />
@@ -202,14 +155,15 @@
         <option value="$PROJECT_DIR$/users.php" />
         <option value="$PROJECT_DIR$/templates/index.tpl" />
         <option value="$PROJECT_DIR$/templates/indexWithOutLogin.tpl" />
-        <option value="$PROJECT_DIR$/make_request.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/validation.js" />
         <option value="$PROJECT_DIR$/templates/BindDropDowList toMySQLDatabase.html" />
         <option value="$PROJECT_DIR$/templates/dropdownlistdata.php" />
         <option value="$PROJECT_DIR$/js/dropdownlist.js" />
         <option value="$PROJECT_DIR$/templates/ex.html" />
+        <option value="$PROJECT_DIR$/templates/make_request.html" />
         <option value="$PROJECT_DIR$/templates/make_request.tpl" />
+        <option value="$PROJECT_DIR$/make_request.php" />
       </list>
     </option>
   </component>
@@ -220,9 +174,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="120" />
-    <option name="y" value="53" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="173" />
+    <option name="y" value="245" />
     <option name="width" value="1260" />
     <option name="height" value="606" />
   </component>
@@ -310,16 +264,15 @@
       <workItem from="1509344773476" duration="40021000" />
       <workItem from="1509516221376" duration="37640000" />
       <workItem from="1510011097472" duration="15116000" />
-      <workItem from="1510355519943" duration="1084000" />
+      <workItem from="1510355519943" duration="8685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136639000" />
+    <option name="totallyTimeSpent" value="144240000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="702" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="702" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18594436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -372,25 +325,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_0.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="425" column="53" lean-forward="false" selection-start-line="425" selection-start-column="45" selection-end-line="425" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/colleges_departments_test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -677,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/make_request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/BindDropDowList toMySQLDatabase.html" />
     <entry file="file://$PROJECT_DIR$/user_registration_form.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -702,14 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dropdownlistdata.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -720,9 +642,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/make_request.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
+        <state relative-caret-position="3056">
           <caret line="191" column="61" lean-forward="true" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="65" />
           <folding>
             <marker date="1510262626119" expanded="true" signature="680:963" ph="UPDATE `user... " />
@@ -738,30 +692,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="58" column="39" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/dropdownlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="144">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/make_request.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

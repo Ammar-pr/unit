@@ -5,8 +5,7 @@ $(document).ready(function () {
         {
             datatype: "json",
             datafields: [
-                { name: 'name'},
-                { name: 'id'}
+                { name: 'name'}
             ],
             url: 'dropdownlistdata.php',
             async: false
@@ -20,8 +19,7 @@ $(document).ready(function () {
             width: 250,
             height: 25,
             selectedIndex: 0,
-            displayMember: 'name',
-            valueMember: 'id'
+            displayMember: 'name'
         });
     $('#sendButton').jqxButton({ width: 70});
 });

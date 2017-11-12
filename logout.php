@@ -20,11 +20,10 @@ $smarty->cache_dir = 'cache/';
 
 if (isset($_SESSION["username"]) & isset($_SESSION["password"]))
 {
-    echo "log out is done";
 
 session_unset();
 
-    $smarty->display('index.tpl');
+    header('Location: index.php');
 
     
 }else if(!isset($_SESSION["username"]) & !isset($_SESSION["password"])){
