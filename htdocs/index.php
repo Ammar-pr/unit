@@ -16,9 +16,9 @@ $smarty->cache_dir = 'cache/';
 
 if(isset($_SESSION['username']) & isset($_SESSION['password'])){
 
-    $smarty->display('indexWithOutLogin.tpl');
+    $smarty->display('../templates/indexWithOutLogin.tpl');
 }else {
-    $smarty->display('index.tpl');
+    $smarty->display('../templates/index.tpl');
 }
 
 
