@@ -1,3 +1,25 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-11-12 05:36:55
+  from "C:\xampp\htdocs\unit\templates\make_request.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a082447401997_22516390',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '286a69b5f3d464e88b948356daa04d28d553aa74' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.html',
+      1 => 1510483002,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5a082447401997_22516390 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +36,7 @@
 <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>	
 
   <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script> 
-	{literal}
+	
     <script type="text/javascript">
     
     
@@ -47,7 +69,7 @@
 		});        
         $('#sendButton').jqxButton({ width: 70});
 	});
-         {/literal}
+         
     </script>
 </head>
 <body class='default'>
@@ -59,4 +81,5 @@
      <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
    </div>
 </body>
-</html>
+</html><?php }
+}
