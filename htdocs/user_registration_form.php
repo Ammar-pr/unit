@@ -30,7 +30,7 @@
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcombobox.js"></script>
 
     <style type="text/css">
-        .demo-iframe {
+        #demo-iframe {
             border: none;
             width: 600px;
             height: 400px;
@@ -165,6 +165,44 @@
                 },
                 { input: '#emailInput', message: 'E-mail is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#emailInput', message: 'Invalid e-mail!', action: 'keyup', rule: 'email' },
+         { input: '#deps', message: 'You must select a deparment name ', action: 'change', rule: function () {
+                    var selectedIndexSection = $('#deps').text();
+                
+              
+                    if (selectedIndexSection == "Select department name...") {
+                     
+                       return false ;
+                    }else {
+                        return true ;
+                    } 
+                }},
+            
+          
+               { input: '#colleges', message: 'You must select a colleges', action: 'change', rule: function () {
+                    var selectedIndexSection = $('#colleges').text();
+                
+              
+                    if (selectedIndexSection == "Select college...") {
+                  
+                       return false ;
+                    }else {
+                        return true ;
+                    } 
+                }},
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
                { input: '#numericInput', message: 'employee number is required!', action: 'valuechanged, blur', rule: 'number' },
                 { input: '#phoneInput', message: 'Invalid phone number!', action: 'valuechanged, blur', rule: 'phone' }
               ]
@@ -186,7 +224,7 @@
     });
 </script>
 <div style="height: 219px;">
-    <form class="form" id="form" target="_self"  method="post" action="registration.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+    <form class="form" id="form" target="demo-iframe"  method="post" action="registration.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
         <div>
             <h2>Register</h2>
         </div>
@@ -255,7 +293,12 @@
             <tr>
                 <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
             </tr>
+            <tr>
+            <div id="demo-iframe"></div>
+                </td>
         </table>
+        
+   
     </form>
    
 </div>
