@@ -1,46 +1,104 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-11-19 05:28:03
+  from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a115cb38a9512_09372189',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
+      1 => 1510778664,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a115cb38a9512_09372189 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '267695a115cb358aec6_64492745';
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <title id="Description">jqxFileUpload with php example.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />		
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />		
 
-    <title id='Description'>In this example is demonstrated how to populate the jqxDropDownList with data from MySQL Database. Each item in the list has label and value fields. The label is displayed to the user. When you click on the Submit button, the selected item's value will be displayed.</title> 
-    <link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
-<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>	
+        <link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"><?php echo '</script'; ?>
+>
+   
+    
+    
+    
+    
+        <link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+    
+    
+    
+    
+    
+    
+    
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"><?php echo '</script'; ?>
+>	
 
-  <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script> 
-  
+  <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"><?php echo '</script'; ?>
+> 
+
+       <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"><?php echo '</script'; ?>
+> 
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"><?php echo '</script'; ?>
+> 
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"><?php echo '</script'; ?>
+>
  
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"></script> 
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"></script> 
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"></script>
-
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
-
     
+     
     
-  
-	
-    <script type="text/javascript">
-    
-    
-            $(document).ready(function () {
-                 $('#jqxFileUpload').jqxFileUpload({
+    <?php echo '<script'; ?>
+ type="text/javascript">
+        $(document).ready(function () {
+            $('#jqxFileUpload').jqxFileUpload({
                 width: 200,
                 accept: 'doc/*',
                 uploadUrl: '../htdocs/file_up.php',
-                contentType: "charset=utf-8",
                 fileInputName: 'fileToUpload',
-                
             });
+            
             $('#jqxFileUpload').on('uploadEnd', function (event) {
                 var args = event.args;
                 var fileName = args.file;
@@ -50,7 +108,8 @@
                 console.log(fileName);
                 console.log(serverResponse);
             });
-		$('#sendButton').jqxButton({ width: 60, height: 25});
+
+$('#sendButton').jqxButton({ width: 60, height: 25});
 		$('.text-input').addClass('jqx-input');
 		$('.text-input').addClass('jqx-rc-all');
  
@@ -105,14 +164,19 @@
 			valueMember: 'id'
 		});        
      
-        
-        
-	});
-       
-    </script>
+
+
+
+
+        });
+
+
+
+    <?php echo '</script'; ?>
+>
     
-  
-    <style type="text/css">
+    
+     <style type="text/css">
         .demo-iframe {
             border: none;
             width: 600px;
@@ -146,13 +210,14 @@
        .prompt {
             margin-top: 10px; font-size: 10px;
         }
-    </style>
-    
-    
+    </style> 
+     
     
 </head>
-    <div style="height: 219px;">
-        <form class="form" id="form" target="form-iframe"  method="post" action="save_request.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+<body>
+    
+           <div style="height: 219px;">
+        <form class="form" id="form" target="form-iframe"  method="post" action="../htdocs/save_request.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
             <div>
                 <h2>تسجيل طلب جديد</h2>
             </div>
@@ -174,7 +239,11 @@
                  
                     <tr>
                     <td> ارفق الرسالة البحثية</td>
-                    
+                    <td>
+                                    <div id="jqxFileUpload">
+
+</div>
+                    </td>
                     <td>
 
                     </td>
@@ -186,12 +255,22 @@
                        <tr>
                         <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
                     </tr>
-                </table>
-             <div id="jqxFileUpload">
+              
+
+        </form>
+                     <td> ارفق الرسالة البحثية</td>
+                    <td>
+                                    <div id="jqxFileUpload">
 
 </div>
-        </form>
+                    </td>
+                    
+                      </table>
         <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
     </div>
+
+<br />
 </body>
 </html>
+<?php }
+}

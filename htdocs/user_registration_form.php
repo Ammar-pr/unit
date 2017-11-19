@@ -8,15 +8,26 @@
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcalendar.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
+    
+   
 
-    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxtooltip.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxnumberinput.js"></script>
+    
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
+        <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+	<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>	
+
+    
+     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
+     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcombobox.js"></script>
 
     <style type="text/css">
         .demo-iframe {
@@ -58,6 +69,67 @@
 <script type="text/javascript">
     $(document).ready(function () {
 
+                		var collegeSource =
+		{
+			datatype: "json",
+			datafields: [
+				{ name: 'name'},
+				{ name: 'id'}
+			],
+			url: '../scripts/cascadingcombobox_data.php',
+			cache: false,
+            async: false
+		};
+		var customersAdapter = new $.jqx.dataAdapter(collegeSource);
+		$("#colleges").jqxDropDownList(
+		{
+			source: customersAdapter,
+			
+			width: 200,
+			height: 25,
+			promptText: "Select college...",
+			displayMember: 'name',
+			valueMember: 'id'
+		});    
+		var ordersSource =
+		{
+			datatype: "json",
+			datafields: [
+				{ name: 'id_col_dep'},
+                                { name: 'department_name'}
+                                
+				
+				
+			],
+			url: '../scripts/cascadingcombobox_data.php',
+			cache: false,
+			async: false
+		};
+		var ordersAdapter = new $.jqx.dataAdapter(ordersSource);
+		
+		$("#deps").jqxDropDownList(
+		{
+			
+			width: 200,
+			height: 25,
+			disabled: true,
+			promptText: "Select department name...",
+			displayMember: 'department_name',
+			valueMember: 'id_col_dep',
+			autoDropDownHeight: true
+		});   
+		
+		$("#colleges").bind('select', function(event)
+		{
+			if (event.args)
+			{
+				$("#deps").jqxDropDownList({ disabled: false, selectedIndex: -1});		
+				var value = event.args.item.value;
+				ordersSource.data = {id: value};
+				ordersAdapter = new $.jqx.dataAdapter(ordersSource);
+				$("#deps").jqxDropDownList({source: ordersAdapter});
+			}
+		});   
         $('#sendButton').jqxButton({ width: 60, height: 25});
 
         $("#phoneInput").jqxMaskedInput({ mask: '(###)###-####', width: 150, height: 22});
@@ -79,8 +151,6 @@
             rules: [
                 { input: '#userInput', message: 'name is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#userInput', message: 'Your username must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
-                { input: '#college_Input', message: 'Your college name  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
-                { input: '#department_nameInput', message: 'Your department  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
 
                 { input: '#passwordInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#passwordInput', message: 'Your password must be between 4 and 12 characters!', action: 'keyup, blur', rule: 'length=4,12' },
@@ -95,7 +165,7 @@
                 },
                 { input: '#emailInput', message: 'E-mail is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#emailInput', message: 'Invalid e-mail!', action: 'keyup', rule: 'email' },
-
+               { input: '#numericInput', message: 'employee number is required!', action: 'valuechanged, blur', rule: 'number' },
                 { input: '#phoneInput', message: 'Invalid phone number!', action: 'valuechanged, blur', rule: 'phone' }
               ]
         });
@@ -111,6 +181,8 @@
         $("#form").on('validationSuccess', function () {
             $("#form-iframe").fadeIn('fast');
         });
+          
+        
     });
 </script>
 <div style="height: 219px;">
@@ -146,12 +218,29 @@
 
             <tr>
                 <td>college name:</td>
-                <td><input name="college_name" type="text" id="college_Input" class="text-input" /></td>
+                <td>
+	
+  <div>
+    <div  name="college_id" id="colleges"></div>
+	<div style='clear: both;'></div>
+   <br />
+   </div>
+    
+                    
+                    
+                </td>
+                
             </tr>
 
             <tr>
                 <td>department name:</td>
-                <td><input name="department_name" type="text" id="department_nameInput" class="text-input" /></td>
+                <td>              
+                    
+                     
+    <div name="dep_id" id="deps"></div>
+
+                    
+</td>
             </tr>
             <tr> <td> employee number   </td>
                 <td>
@@ -168,7 +257,7 @@
             </tr>
         </table>
     </form>
-    <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
+   
 </div>
 </body>
 </html>

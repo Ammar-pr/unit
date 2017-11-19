@@ -29,7 +29,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     $uploadOk = 0;
 }
 // Allow certain file formats rtf
-if($document_FileType != "docx"  & $document_FileType != "doc"  & $document_FileType != "rtf") {
+if($document_FileType != "docx"  & $document_FileType != "doc"  & $document_FileType != "pdf") {
     echo "Sorry, only docx files are allowed.";
     $uploadOk = 0;
 

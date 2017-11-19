@@ -22,7 +22,7 @@ class users
 
 
 
-    public function Save($id,$email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name)
+    public function Save($id,$email,$user_job_number,$role_id,$department_num,$name,$password,$phonenumber_number,$college_num)
     {
 
 
@@ -31,25 +31,17 @@ class users
         if ($id > 0) {
             $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
 
-return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_name` ='$department_name', `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_name` = '$college_name' , `email` = '$email' WHERE `users`.`id` =" .$id);
+return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_num` =$department_num, `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_num` = $college_num , `email` = '$email' WHERE `users`.`id` =" .$id);
 
         } else {
 
           
-                $col= new colleges();
-                $col->Save(0,"$college_name");
-                $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
-                $college_id=0;
-                foreach($ob as $recotrd){
-                    $college_id= $recotrd['id'];
-                }
-                $coleges_departement=new colleges_departments ();
 
-                $coleges_departement->Save(0,"$department_name",$college_id);
+             
                 $hashed_password= password_hash($password, PASSWORD_BCRYPT);
 
 
-            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_name`, `name`, `password`, `phonenumber_number`, `email`, `college_name`) VALUES ( $user_job_number, $role_id, '$department_name', '$name', '$hashed_password', '$phonenumber_number', '$email','$college_name')");
+            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_num`, `name`, `password`, `phonenumber_number`, `email`, `college_num`) VALUES ( $user_job_number, $role_id, $department_num, '$name', '$hashed_password', '$phonenumber_number', '$email',$college_num)");
         }
     }
     public function fetchWithPK($id)
@@ -160,13 +152,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 //,htmlspecialchars($_POST['department_name']),htmlspecialchars($_POST['name']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['phonenumber_number']),htmlspecialchars($_POST['college_name']));
 
 
-    public function check_user_input($email,$user_job_number,$department_name,$name,$password,$phonenumber_number,$college_name){
+    public function check_user_input($email,$user_job_number,$dep_num,$name,$password,$phonenumber_number,$college_num){
         $name=htmlspecialchars($name);
         $name=trim($name);
-        $department_name=htmlspecialchars($department_name);
-        $department_name=trim($department_name);
-        $college_name=htmlspecialchars($college_name);
-        $college_name=trim($college_name);
 
         $user_job_num=(int)$user_job_number;
 
@@ -177,16 +165,15 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         }
 
 
-        if(!is_string($college_name)  & strlen($college_name)<3 || strlen($college_name)>12) {
+        if($college_num==0) {
 
-            $error_massage.="اسم الكلية يجب ان يكون كلمة وليس رقم ,طول الكلمة أكبر من 3 ,12 "."\n";
+            $error_massage   ="الرجاء اختيار  الكلية"."\n";
         }
 
 
-        if(!is_string($department_name)  & strlen($department_name)<3  || strlen($department_name)>12) {
+        if($dep_num==0) {
 
-            $error_massage.="اسم القسم يجب ان يكون كلمة وليس رقم ,عدد الحروف اكبر من 3 "."\n";
-        }
+ $error_massage   ="الرجاء اختيار   القسم"."\n";        }
 
         if(!is_numeric($user_job_num)){
             $error_massage.="ادخل رقمك الوظيفي   "."\n";
