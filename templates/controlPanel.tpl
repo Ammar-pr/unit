@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <title id='Description'>In this example is demonstrated how to bind jqxGrid to MySQL Database.</title>
-    <link rel="stylesheet" href="jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxmenu.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxgrid.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxgrid.selection.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxgrid.filter.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
+    <link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
 

@@ -2,21 +2,21 @@
 <html>
 <head>
     <link rel="stylesheet" href="templates/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxvalidator.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/globalization/globalize.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcalendar.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
 
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxtooltip.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxnumberinput.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxnumberinput.js"></script>
 
     <style type="text/css">
         .demo-iframe {
@@ -78,19 +78,20 @@
             <h2>index main page </h2>
         </div>
         <table class="register-table">
-            <tr>
-                <td><a href="user_registration_form.php">registration</a>
-            </tr>
+      
 
             <tr>
                 <td><a href="logout.php">logout</a>
             </tr>
 
-
-
-        </table>  <tr>
+<tr>
             <td><a href="./make_request.php">register new request </a>
         </tr>
+ <tr>
+            <td><a href="./inbox_user.php">check my requests </a>
+        </tr>
+
+        </table>  
 
     </form>
     <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>

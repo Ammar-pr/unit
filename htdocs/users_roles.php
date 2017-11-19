@@ -1,6 +1,6 @@
 <?php
 
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
 class users_roles
 {
 

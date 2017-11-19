@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxvalidator.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
 
     <style type="text/css">
         .demo-iframe {
@@ -69,7 +69,7 @@
     });
 </script>
 <div style="height: 219px; display: block; font-size: 13px; font-family: Verdana;">
-    <form class="form" id="form" target="form-iframe" method="post" action="admin_login.php" style="width: 650px;">
+    <form class="form" id="form" target="_self" method="post" action="../htdocs/admin_login.php" style="width: 650px;">
         <div>
             <h2>admin Login </h2>
         </div>

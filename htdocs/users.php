@@ -5,7 +5,7 @@
  * Date: 21/10/17
  * Time: 09:18 م
  */
-require_once ('scripts/RedBeanPHP/rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
 require_once ('colleges.php');
 require_once ('colleges_departments.php');
 class users
@@ -21,6 +21,7 @@ class users
     }
 
 
+
     public function Save($id,$email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name)
     {
 
@@ -34,10 +35,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
         } else {
 
-            if(count (R::getAll( "SELECT * FROM users where email='$email' "  ))==1 ) {
-                echo "الايميل موجود بالفعل حاول ان تدخل ايميل اخر  ";
-            }
-            else {
+          
                 $col= new colleges();
                 $col->Save(0,"$college_name");
                 $ob = R::find( 'colleges', ' name LIKE ? ', ["$college_name%" ] );
@@ -52,7 +50,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
 
             R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_name`, `name`, `password`, `phonenumber_number`, `email`, `college_name`) VALUES ( $user_job_number, $role_id, '$department_name', '$name', '$hashed_password', '$phonenumber_number', '$email','$college_name')");
-        }}
+        }
     }
     public function fetchWithPK($id)
     {
@@ -81,6 +79,44 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
     }
 
 
+    
+    public function get_user_id($email){
+         $userdata = R::getAll("SELECT * FROM users where email='$email' ");
+            $id = 0;
+            foreach ($userdata as $elm) {
+                $id = $elm['id'];
+            }
+            
+            
+            if($id>0){
+                return $id;
+            }else {
+                return 0;
+            }
+    }
+    
+    
+       public function get_user_role($email){
+         $userdata = R::getAll("SELECT * FROM users where email='$email' ");
+            $id = 0;
+            foreach ($userdata as $elm) {
+                $role_id = $elm['role_id'];
+            }
+            
+            
+            if($role_id>0){
+                return $role_id;
+            }else {
+                return 0;
+            }
+    }
+    
+    
+    
+    
+    
+    
+    
     public function login($email,$password ,$authorization) {
 
 
@@ -161,7 +197,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error_massage.= "البريد الالكتروني غير صحيح"."\n";
-        }
+        } else if(count (R::getAll( "SELECT * FROM users where email='$email' "  ))==1 ) {
+                $error_massage.=  "الايميل موجود بالفعل حاول ان تدخل ايميل اخر  ";
+            }
 
        if(strlen($password)>12 || strlen($password)<3) {
             $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ,لاتكون أصغر من 3  ";
@@ -189,6 +227,6 @@ $us=new users();
 //$us->Save(0,'xrtetxf@hotmail.com',15444,2,27,'amdf',503448951,'drdfevd');
 //$id,$email,$user_job_number,$role_id,$department_name,$name,$password,$phonenumber_number,$college_name)
 
-//$us->Save(0,'sdadf@hotmail.com',12321,1,'sdfs','ahhmad','212112','0503348971','collge of good');
+//$us->Save(0,'qqq@hotmail.com',84545,1,'fdghsdf','nmoia','123456','05487588','rgfhbsdf');
 
 //$us->check();

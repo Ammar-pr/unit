@@ -1,5 +1,6 @@
 <?php
 $mysqli = new mysqli('localhost', 'dsr_amnatto', 'mVNeKCEG]b@W', 'dsr_amnatto');
+$mysqli->set_charset("utf8");
 if (mysqli_connect_errno())
 	{
 	printf("Connect failed: %s\n", mysqli_connect_error());
@@ -7,19 +8,17 @@ if (mysqli_connect_errno())
 	}
 $from = 0;
 $to = 30;
-$query = "SELECT CompanyName, ContactName, ContactTitle, Address, City FROM customers LIMIT ?,?";
+
+$query = "SELECT name,id FROM unit_service_type LIMIT ?,?";
 $result = $mysqli->prepare($query);
 $result->bind_param('ii', $from, $to);
 $result->execute();
-$result->bind_result($CompanyName, $ContactName, $ContactTitle, $Address, $City);
+$result->bind_result($name,$id);
 while ($result->fetch())
 	{
 	$orders[] = array(
-		'CompanyName' => $CompanyName,
-		'ContactName' => $ContactName,
-		'ContactTitle' => $ContactTitle,
-		'Address' => $Address,
-		'City' => $City
+		'name' => $name,
+		'id' => $id
 	);
 	}
 echo json_encode($orders);

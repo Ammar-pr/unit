@@ -6,14 +6,7 @@
  * Time: 09:30 م
  */
 session_start();
-date_default_timezone_set('America/New_York');
-require_once ('units_requests.php');
-require_once'smarty-master/libs/Smarty.class.php';
-$smarty = new Smarty();
-$smarty->template_dir = 'templates/';
-$smarty->compile_dir = 'templates_c/';
-$smarty->config_dir = 'configs/';
-$smarty->cache_dir = 'cache/';
+require'../lib/smarty-master/setup.php';
 class updating
 {
 

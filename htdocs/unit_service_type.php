@@ -5,7 +5,9 @@
  * Date: 16/10/17
  * Time: 12:45 ص
  */
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
+
+
 class unit_service_type
 {
 

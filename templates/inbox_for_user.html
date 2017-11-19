@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+<title id='Description'>In this example is demonstrated how to bind jqxGrid to MySQL Database.</title>
+<link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+<script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxgrid.selection.js"></script>	
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxgrid.filter.js"></script>		
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>	
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>	
+<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>	
+<script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+	   
+        
+		var source =
+		{
+			datatype: "json",
+			datafields: [
+				{ name: 'title'},
+				{ name: 'request_date'},
+				{ name: 'attachment_request_link'},
+                                { name: 'attachment_response_link'},
+                                { name: 'response_date'},
+                                { name: 'status_id'}
+                              
+			],
+			url: '../htdocs/grid_data_user.php',
+			cache: false
+		};
+		var dataAdapter = new $.jqx.dataAdapter(source);
+			
+		$("#jqxgrid").jqxGrid(
+		{
+		source: source,
+		
+		columns: [
+			{ text: 'title', datafield: 'title', width: 250},
+			{ text: 'request_date', datafield: 'request_date', width: 150 },
+			{ text: 'attachment_request_link', datafield: 'attachment_request_link', width: 180 },
+                        { text: 'attachment_response_link', datafield: 'attachment_response_link', width: 180 },
+                        { text: 'response_date', datafield: 'response_date', width: 180 },
+                        { text: 'status_id', datafield: 'status_id', width: 180 }
+                       
+		]
+		});        
+	});
+        
+        
+</script>
+   <style type="text/css">
+        .demo-iframe {
+            border: none;
+            width: 600px;
+            height: 200px;
+            clear: both;
+            display: none;
+        }
+        .form #password, .form #username {
+            height: 24px;
+            margin-top: 5px;
+            width: 150px;
+        }
+        .form #rememberme {
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+        .prompt {
+            margin-top: 10px; font-size: 10px;
+        }
+        </style>
+</head>
+  <div>
+            <h2>user requests inbox </h2>
+        </div>
+	<body class='default'>
+		<div id="jqxgrid"></div>
+                
+                  <div>
+            <a style='margin-left: 25px;' target="_self" href="../htdocs/index.php" id='jqxButton'>go to main page</a>
+
+        </div>
+	</body>
+</html>

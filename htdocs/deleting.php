@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 /**
  * Created by PhpStorm.
  * User: GRENADY
@@ -40,15 +41,18 @@ public static function GET( $value)
         if (isset($_SESSION["username"]) & isset($_SESSION["password"]) & isset($_SESSION["authorization"])) {
 
             if ($_SESSION["authorization"] == 22) {
-
+ echo "sdf";
 
   if(isset($_GET['id'])) {
       $status = deleting::GET(intval($_GET['id']));
       if ($status) {
           $unit_request_del = new units_requests();
           if ($unit_request_del->delete(intval($_GET['id'])) == 1) {
-              echo "delete is done";
-              header('Location: templates/controlPanel.html');
+         //     echo "delete is done";
+              require'../lib/smarty-master/setup.php';
+                $smarty=new Smarty_Unit();
+                   $smarty->display('../templates/controlPanel.html');
+             
           }
       }
 

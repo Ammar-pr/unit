@@ -2,21 +2,21 @@
 <html>
 <head>
     <link rel="stylesheet" href="templates/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxvalidator.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/globalization/globalize.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcalendar.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdatetimeinput.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxmaskedinput.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
 
-    <script type="text/javascript" src="jqwidgets/scripts/demos.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxtooltip.js"></script>
-    <script type="text/javascript" src="jqwidgets/jqwidgets/jqxnumberinput.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxnumberinput.js"></script>
 
     <style type="text/css">
         .demo-iframe {

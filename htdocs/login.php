@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once ('users.php');
-require'../lib/smarty-master/setup.php';
 
 class login
 {
@@ -17,8 +16,12 @@ class login
 
 
            if($user_object->login(htmlspecialchars($_POST['username']),$_POST['password'],'')){
-             $_SESSION['username']=htmlspecialchars($_POST['username']);
+            $authorization= $user_object->get_user_role($_POST['username']);
+               $_SESSION['username']=htmlspecialchars($_POST['username']);
               $_SESSION['password']=$_POST['password'];
+              $_SESSION['user_id']=$user_object->get_user_id($_SESSION['username']);
+              $_SESSION['authorization']=$authorization;
+      
                header('Location: index.php');
 
               echo "login successful";
@@ -29,14 +32,16 @@ class login
            }
 
         }else {
-           $smarty = new Smarty();
+            require'../lib/smarty-master/setup.php';
+
+          $smarty=new Smarty_Unit();
            $smarty->display('../templates/login.tpl');
 
        }
 
 
 
-    }
+    } 
 
 }
 

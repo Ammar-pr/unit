@@ -1,20 +1,6 @@
 <?php
 session_start();
-/**
- * Created by PhpStorm.
- * User: GRENADY
- * Date: 30/10/17
- * Time: 10:24 م
- */
 
-date_default_timezone_set('America/New_York');
-require_once ('users.php');
-require_once'smarty-master/libs/Smarty.class.php';
-$smarty = new Smarty();
-$smarty->template_dir = 'templates/';
-$smarty->compile_dir = 'templates_c/';
-$smarty->config_dir = 'configs/';
-$smarty->cache_dir = 'cache/';
 class controlPanel
 {
 
@@ -26,14 +12,15 @@ class controlPanel
         {
 
 
-           header('Location: templates/controlPanel.html');
+           header('Location: ../templates/controlPanel.html');
 
         }else {
 
             // cannot access the login page
+       require'../lib/smarty-master/setup.php';
 
-            $smarty = new Smarty();
-            $smarty->display('templates/Admin_Warning.tpl');
+          $smarty=new Smarty_Unit();
+            $smarty->display('../templates/Admin_Warning.tpl');
         }
 }
 

@@ -5,12 +5,12 @@
  * Date: 15/10/17
  * Time: 11:02 م
  */
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
+
 class unit_file_types
 {
     public  function __construct()
     {
-
 
         if( !R::testConnection()) {
             R::setup('mysql:host=localhost;dbname=dsr_amnatto',

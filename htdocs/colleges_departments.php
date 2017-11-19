@@ -1,12 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: GRENADY
- * Date: 15/10/17
- * Time: 02:40 م
- */
-require_once ('scripts/RedBeanPHP/rb.php');
-
+require_once ('../scripts/RedBeanPHP/rb.php');
 class colleges_departments
 {
 

@@ -1,15 +1,5 @@
-
 <?php
-
-// load Smarty library
-
-//define('SMARTY_DIR', 'c:/xampp/htdocs/unit/smarty-master/libs/');
 require_once'libs/Smarty.class.php';
-// The setup.php file is a good place to load
-// required application library files, and you
-// can do that right here. An example:
-// require('guestbook/guestbook.lib.php');
-
 class Smarty_Unit extends Smarty {
 
    function __construct()

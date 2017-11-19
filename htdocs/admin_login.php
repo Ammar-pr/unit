@@ -1,20 +1,7 @@
-<?php
-session_start();
-/**
- * Created by PhpStorm.
- * User: GRENADY
- * Date: 30/10/17
- * Time: 10:16 م
- */
+<?php session_start();
 
-date_default_timezone_set('America/New_York');
-require_once ('users.php');
-require_once'smarty-master/libs/Smarty.class.php';
-$smarty = new Smarty();
-$smarty->template_dir = 'templates/';
-$smarty->compile_dir = 'templates_c/';
-$smarty->config_dir = 'configs/';
-$smarty->cache_dir = 'cache/';
+
+require 'users.php';
 
 class admin_login {
 
@@ -37,9 +24,14 @@ class admin_login {
                 $_SESSION['password'] = $_POST['password'];
                 $_SESSION['authorization'] = $_POST['authorization']; //22
 
-                header('Location: controlPanel.php');
+                 require'../lib/smarty-master/setup.php';
 
-                echo "login  admin successful";
+
+            $smarty=new Smarty_Unit();
+                     
+$smarty->display('../templates/controlPanel.html');
+                      
+      //          echo "login  admin successful";
             } else {
                 // user name and password not correct
 
@@ -47,9 +39,12 @@ class admin_login {
             }
         }
         }else {
+            
+            require'../lib/smarty-master/setup.php';
+
 
             $smarty = new Smarty();
-            $smarty->display('templates/admin_login.tpl');
+            $smarty->display('../templates/admin_login.tpl');
 
         }
 

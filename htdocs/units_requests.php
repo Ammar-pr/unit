@@ -5,7 +5,7 @@
  * Date: 21/10/17
  * Time: 09:18 م
  */
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
 class units_requests
 {
     public function __construct()
@@ -28,7 +28,15 @@ class units_requests
         if ($id > 0) {
             R::exec("UPDATE `units_requests` SET `id_responder` = $id_responder, `response_date` = Now(), `attachment_response_link` = '$attachment_response_link', `file_hash_response` = '$md5file' WHERE `units_requests`.`id` =".$id );
         } else {
-            R::exec("INSERT INTO `units_requests` ( `id_requester`, `request_date`, `status_id`, `unit_id`, `attachment_request_link` , `title` , `file_hash_request`) VALUES ( $id_requester,  Now(),$status_id , $unit_id, '$attachment_request_link', '$title','$md5file')");
+            if(count (R::getAll( "SELECT * FROM units_requests where title='$title' "  ))==1 ){
+                echo "عنوان الطلب متكرر بالرجاء كتابة عنوان اخر";
+                return false ;
+            }  else {
+                            R::exec("INSERT INTO `units_requests` ( `id_requester`, `request_date`, `status_id`, `unit_id`, `attachment_request_link` , `title` , `file_hash_request`, `id_responder`) VALUES ( $id_requester,  Now(),$status_id , $unit_id, '$attachment_request_link', '$title','$md5file',$id_responder)");
+                            echo "تم تسجيل طلبك بنجاح";
+                            return true;
+            }
+            
         }
     }
 
@@ -37,7 +45,7 @@ class units_requests
 
         $path=$attachment_response_link;
             $md5file = md5_file($path);
-            return R::exec("UPDATE `units_requests` SET  `response_date` = Now(), `attachment_response_link` = '$attachment_response_link',`unit_id`=$request_status_id ,`file_hash_response` = '$md5file' WHERE `units_requests`.`id` =".$id );
+            return R::exec("UPDATE `units_requests` SET  `response_date` = Now(), `attachment_response_link` = '$attachment_response_link',`status_id`=33 ,`file_hash_response` = '$md5file' WHERE `units_requests`.`id` =".$id );
 
         }else {
             echo "id is zero , cannot update with id like this , no request number ! .....";

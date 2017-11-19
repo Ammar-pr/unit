@@ -5,7 +5,7 @@
  * Date: 16/10/17
  * Time: 02:08 ص
  */
-require_once ('scripts\RedBeanPHP\rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
 class unit_status
 {
     public function __construct()

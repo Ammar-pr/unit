@@ -1,5 +1,5 @@
 <?php
-require_once ('scripts/RedBeanPHP/rb.php');
+require_once ('../scripts/RedBeanPHP/rb.php');
 class colleges
 {
 
