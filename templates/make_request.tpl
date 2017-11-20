@@ -47,15 +47,28 @@
                 fileInputName: 'fileToUpload',
             });
             
+ 
+
+            
+            
             $('#jqxFileUpload').on('uploadEnd', function (event) {
                 var args = event.args;
                 var fileName = args.file;
                 var serverResponse = args.response;
+               if(serverResponse==""){
+                   
+               }
+            else {
+                alert(serverResponse);
+            }
+               
                 // Your code here.
                 console.log(args);
                 console.log(fileName);
-                console.log(serverResponse);
+              console.log(serverResponse);
             });
+
+           
 
 $('#sendButton').jqxButton({ width: 60, height: 25});
 		$('.text-input').addClass('jqx-input');
@@ -135,6 +148,15 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
     </script>
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
      <style type="text/css">
         .demo-iframe {
             border: none;
@@ -199,7 +221,7 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
                     <tr>
                     <td> ارفق الرسالة البحثية</td>
                     <td>
-                                    <div id="jqxFileUpload">
+                                    <div id="jqxFileUpload" onchange="validate_fileupload(this.value);">
 
 </div>
                     </td>
@@ -217,15 +239,10 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
               
 
         </form>
-                     <td> ارفق الرسالة البحثية</td>
-                    <td>
-                                    <div id="jqxFileUpload">
-
-</div>
-                    </td>
+              
                     
                       </table>
-        <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
+        <iframe  id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
     </div>
 
 <br />

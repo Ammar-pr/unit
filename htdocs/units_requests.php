@@ -88,3 +88,11 @@ class units_requests
         return R::exec("DELETE FROM `units_requests` ");
     }
 }
+
+
+//
+//$units_requests= new units_requests();
+//
+//echo $attachment_response_link=$units_requests->fetchAll()[5]['attachment_request_link'];
+//echo"<br>";
+//     echo "<a href='".$attachment_response_link."'> attachment response</a>";

@@ -27,8 +27,8 @@ while ($result->fetch())
 	$orders[] = array(
 		'title' => $title,
 		'request_date' => $request_date,
-		'attachment_request_link' => "<a href=".$attachment_request_link."> attachment request link</a>",
-            'attachment_response_link' => "<a href=".$attachment_response_link."> response</a>",
+		'attachment_request_link' => "<a href='".$attachment_request_link."'> attachment request link</a>",
+            'attachment_response_link' => "<a href='".$attachment_response_link."'> response</a>",
             'response_date' => $response_date,
             'status_id'=>$status_id
             

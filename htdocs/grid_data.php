@@ -18,8 +18,8 @@ while ($result->fetch())
 	$orders[] = array(
 		'title' => $title,
 		'request_date' => $request_date,
-		'attachment_request_link' => "<a href=".$attachment_request_link."> attachment request link</a>",
-            'attachment_response_link' => "<a href=".$attachment_response_link."> attachment response</a>",
+		'attachment_request_link' => "<a href='".$attachment_request_link."'> attachment request link</a>",
+            'attachment_response_link' => "<a href='".$attachment_response_link."'> attachment response</a>",
             'id'=>"<a href=../htdocs/file_Upload.php?id=".$id."> reply  this </a>",
              'delete' => "<a href=../htdocs/deleting.php?id=".$id."> delete  this </a>"
             

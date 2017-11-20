@@ -27,9 +27,10 @@ class save_request {
       // get_user_id
       
         $us=new users();
-        if(isset($_SESSION['attachment_request_link']))
+        if(isset($_SESSION['attachment_request_link']) & $_SESSION['attachment_request_link']!="")
       {
-         $path=$_SESSION['attachment_request_link'];
+        
+        // $_SESSION['attachment_request_link']="";
        if( $us->get_user_id($_SESSION['username'])>0){
   
       
@@ -38,15 +39,17 @@ class save_request {
       $id=$us->get_user_id($_SESSION['username']);
       $var =(int)htmlspecialchars($_POST['list']);
       $unit = new units_requests();
-   $unit->SaveRequest(0,$id, 32,$path,$title,$var,1,'');
+   $unit->SaveRequest(0,$id, 32,$_SESSION['attachment_request_link'],$title,$var,1,'');
+    //$path=$_SESSION['attachment_request_link'];
 //     public function SaveRequest($id,$id_requester, $status_id,$attachment_request_link,$title,$unit_id,$id_responder,$attachment_response_link)
-
+         
        }else {
            
            echo "cannot save the request ";
        }
       }else{
-          echo"please uplode the attachments";
+          echo"الرجاء رفع ملف";
+          return "need to uplode the attachment ";
       }
      
     }

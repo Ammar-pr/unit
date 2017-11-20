@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-20 00:17:44
+/* Smarty version 3.1.30, created on 2017-11-20 05:36:11
   from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a1265780c6271_26548738',
+  'unifunc' => 'content_5a12b01b704fb3_20095269',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
-      1 => 1511155049,
+      1 => 1511174160,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5a1265780c6271_26548738 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a12b01b704fb3_20095269 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,15 +69,28 @@ function content_5a1265780c6271_26548738 (Smarty_Internal_Template $_smarty_tpl)
                 fileInputName: 'fileToUpload',
             });
             
+ 
+
+            
+            
             $('#jqxFileUpload').on('uploadEnd', function (event) {
                 var args = event.args;
                 var fileName = args.file;
                 var serverResponse = args.response;
+               if(serverResponse==""){
+                   
+               }
+            else {
+                alert(serverResponse);
+            }
+               
                 // Your code here.
                 console.log(args);
                 console.log(fileName);
-                console.log(serverResponse);
+              console.log(serverResponse);
             });
+
+           
 
 $('#sendButton').jqxButton({ width: 60, height: 25});
 		$('.text-input').addClass('jqx-input');
@@ -157,6 +170,15 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
     </script>
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
      <style type="text/css">
         .demo-iframe {
             border: none;
@@ -221,7 +243,7 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
                     <tr>
                     <td> ارفق الرسالة البحثية</td>
                     <td>
-                                    <div id="jqxFileUpload">
+                                    <div id="jqxFileUpload" onchange="validate_fileupload(this.value);">
 
 </div>
                     </td>
@@ -239,15 +261,10 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
               
 
         </form>
-                     <td> ارفق الرسالة البحثية</td>
-                    <td>
-                                    <div id="jqxFileUpload">
-
-</div>
-                    </td>
+              
                     
                       </table>
-        <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
+        <iframe  id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
     </div>
 
 <br />
