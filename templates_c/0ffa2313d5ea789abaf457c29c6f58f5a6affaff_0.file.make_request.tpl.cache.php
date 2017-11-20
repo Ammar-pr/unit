@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-19 05:28:03
+/* Smarty version 3.1.30, created on 2017-11-20 00:17:44
   from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a115cb38a9512_09372189',
+  'unifunc' => 'content_5a126578087bb4_86763374',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
-      1 => 1510778664,
+      1 => 1511155049,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a115cb38a9512_09372189 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '267695a115cb358aec6_64492745';
+function content_5a126578087bb4_86763374 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '224405a126577e93f45_58854852';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -123,8 +123,19 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 		// initialize validator.
 		$('#form').jqxValidator({
 			rules: [
-			{ input: '#userInput', message: 'title  is required!', action: 'keyup, blur', rule: 'required' },
-			{ input: '#userInput', message: 'Your request title  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
+			{ input: '#userInput', message: 'العنوان !', action: 'keyup, blur', rule: 'required' },
+                          { input: '#dropdownlist', message: 'الرجاء اختيار الوحدة', action: 'change', rule: function () {
+                    var selectedIndexSection = $('#dropdownlist').text();
+                
+              
+                    if (selectedIndexSection == "الرجاء اختيار وحدة") {
+                     
+                       return false ;
+                    }else {
+                        return true ;
+                    } 
+                }},
+			{ input: '#userInput', message: 'يجب ان يكون العنوان من   اربعة احرف الى  أربعين حرف!', action: 'keyup, blur', rule: 'length=3,40' },
 			
 			
 			]
@@ -159,7 +170,8 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 			
 			width: 250,
 			height: 25,
-			selectedIndex: 0,
+			
+                        promptText: "الرجاء اختيار وحدة",
 			displayMember: 'name',
 			valueMember: 'id'
 		});        

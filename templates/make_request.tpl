@@ -71,8 +71,19 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 		// initialize validator.
 		$('#form').jqxValidator({
 			rules: [
-			{ input: '#userInput', message: 'title  is required!', action: 'keyup, blur', rule: 'required' },
-			{ input: '#userInput', message: 'Your request title  must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
+			{ input: '#userInput', message: 'العنوان !', action: 'keyup, blur', rule: 'required' },
+                          { input: '#dropdownlist', message: 'الرجاء اختيار الوحدة', action: 'change', rule: function () {
+                    var selectedIndexSection = $('#dropdownlist').text();
+                
+              
+                    if (selectedIndexSection == "الرجاء اختيار وحدة") {
+                     
+                       return false ;
+                    }else {
+                        return true ;
+                    } 
+                }},
+			{ input: '#userInput', message: 'يجب ان يكون العنوان من   اربعة احرف الى  أربعين حرف!', action: 'keyup, blur', rule: 'length=3,40' },
 			
 			
 			]
@@ -107,7 +118,8 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 			
 			width: 250,
 			height: 25,
-			selectedIndex: 0,
+			
+                        promptText: "الرجاء اختيار وحدة",
 			displayMember: 'name',
 			valueMember: 'id'
 		});        
