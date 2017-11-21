@@ -12,6 +12,8 @@ public function save_post_values($title,$unit_num,$file_path_name){
     // finsh saveing 
     // send confriming save massage ...
     
+    
+    if($this->check_post_values()==""){
     $new_request= new units_requests();
     if(isset($_SESSION['username'])){
         $user_info=new users();
@@ -23,7 +25,9 @@ public function save_post_values($title,$unit_num,$file_path_name){
         }
     }
     
-    
+    } else {
+        return $this->check_post_values();
+    }
     
 }
 
@@ -37,11 +41,15 @@ public function check_post_values (){
    $single_unit_object_number=(int)$_POST['list'];
    
    
-   if(strlen($title)<=0 || strlen($title)>3  || strlen($title)<40){
-       
+   if(strlen($title)>3  || strlen($title)<40){
+       $massage.="the title lenght should be btween 3,40 \n";
+   }else if(strlen($title) ==0){
+       $massage.="please insert the title  \n";
+   }if($single_unit_object_number==0){
+       $massage.="please choose unit from the list apove ..";
    }
    
-   
+   return $massage;
     
 }
 
