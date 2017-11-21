@@ -27,6 +27,24 @@ public function save_post_values($title,$unit_num,$file_path_name){
     
 }
 
+
+
+
+public function check_post_values (){
+    
+   $massage=""; 
+   $title=trim( $_POST['title']);
+   $single_unit_object_number=(int)$_POST['list'];
+   
+   
+   if(strlen($title)<=0 || strlen($title)>3  || strlen($title)<40){
+       
+   }
+   
+   
+    
+}
+
 public function upload_file () {
 
     
