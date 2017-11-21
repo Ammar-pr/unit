@@ -40,33 +40,7 @@
     
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#jqxFileUpload').jqxFileUpload({
-                width: 200,
-                accept: 'doc/*',
-                uploadUrl: '../htdocs/file_up.php',
-                fileInputName: 'fileToUpload',
-            });
-            
- 
-
-            
-            
-            $('#jqxFileUpload').on('uploadEnd', function (event) {
-                var args = event.args;
-                var fileName = args.file;
-                var serverResponse = args.response;
-               if(serverResponse==""){
-                   
-               }
-            else {
-                alert(serverResponse);
-            }
-               
-                // Your code here.
-                console.log(args);
-                console.log(fileName);
-              console.log(serverResponse);
-            });
+     
 
            
 
@@ -198,7 +172,7 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 <body>
     
            <div style="height: 219px;">
-        <form class="form" id="form" target="form-iframe"  method="post" action="../htdocs/save_request.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+        <form class="form" id="form" target="form-iframe"  method="post" action="../htdocs/file_up.php"   enctype="multipart/form-data" style="font-size: 13px; font-family: Verdana; width: 650px;">
             <div>
                 <h2>تسجيل طلب جديد</h2>
             </div>
@@ -221,9 +195,9 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
                     <tr>
                     <td> ارفق الرسالة البحثية</td>
                     <td>
-                                    <div id="jqxFileUpload" onchange="validate_fileupload(this.value);">
 
-</div>
+    <input type="file" name="file" id="fileToUpload">
+
                     </td>
                     <td>
 
@@ -234,7 +208,7 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
                     </tr>
                     
                        <tr>
-                        <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
+                        <td colspan="2" style="text-align: center;"><input name="submit" type="submit" value="Send" id="sendButton" /></td>
                     </tr>
               
 

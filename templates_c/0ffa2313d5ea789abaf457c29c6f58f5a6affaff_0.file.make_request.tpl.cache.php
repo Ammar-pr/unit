@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-20 05:36:11
+/* Smarty version 3.1.30, created on 2017-11-21 03:36:35
   from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a12b01b6b6be2_01330465',
+  'unifunc' => 'content_5a13e5936f6189_17723986',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
-      1 => 1511174160,
+      1 => 1511253390,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a12b01b6b6be2_01330465 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '158205a12b01b581b33_09352699';
+function content_5a13e5936f6189_17723986 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '140525a13e5935a2b09_60863960';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,33 +92,7 @@ $_smarty_tpl->compiled->nocache_hash = '158205a12b01b581b33_09352699';
     <?php echo '<script'; ?>
  type="text/javascript">
         $(document).ready(function () {
-            $('#jqxFileUpload').jqxFileUpload({
-                width: 200,
-                accept: 'doc/*',
-                uploadUrl: '../htdocs/file_up.php',
-                fileInputName: 'fileToUpload',
-            });
-            
- 
-
-            
-            
-            $('#jqxFileUpload').on('uploadEnd', function (event) {
-                var args = event.args;
-                var fileName = args.file;
-                var serverResponse = args.response;
-               if(serverResponse==""){
-                   
-               }
-            else {
-                alert(serverResponse);
-            }
-               
-                // Your code here.
-                console.log(args);
-                console.log(fileName);
-              console.log(serverResponse);
-            });
+     
 
            
 
@@ -251,7 +225,7 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 <body>
     
            <div style="height: 219px;">
-        <form class="form" id="form" target="form-iframe"  method="post" action="../htdocs/save_request.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+        <form class="form" id="form" target="form-iframe"  method="post" action="../htdocs/file_up.php"   enctype="multipart/form-data" style="font-size: 13px; font-family: Verdana; width: 650px;">
             <div>
                 <h2>تسجيل طلب جديد</h2>
             </div>
@@ -274,9 +248,9 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
                     <tr>
                     <td> ارفق الرسالة البحثية</td>
                     <td>
-                                    <div id="jqxFileUpload" onchange="validate_fileupload(this.value);">
 
-</div>
+    <input type="file" name="file" id="fileToUpload">
+
                     </td>
                     <td>
 
@@ -287,7 +261,7 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
                     </tr>
                     
                        <tr>
-                        <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
+                        <td colspan="2" style="text-align: center;"><input name="submit" type="submit" value="Send" id="sendButton" /></td>
                     </tr>
               
 
