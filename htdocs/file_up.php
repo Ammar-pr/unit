@@ -50,15 +50,19 @@ public function check_post_values (){
    $massage=""; 
    $title=trim( htmlspecialchars($_POST['title']));
    $single_unit_object_number=(int)$_POST['list'];
-   
+                            $request_info_title_status= new units_requests();
+      $status=  $request_info_title_status->check_title($title);
    
    if(strlen($title)<3  || strlen($title)>40){
        $massage.="the title lenght should be btween 3,40 \n";
    }else if(strlen($title) ==0){
        $massage.="please insert the title  \n";
-   }if($single_unit_object_number==0){
+   }else if($single_unit_object_number==0){
        $massage.="please choose unit from the list apove ..";
-   }
+   }else  if($status==false){
+           $massage.= "title    allready   exist \n ";
+           
+        }
    
    return $massage;
     
@@ -86,25 +90,18 @@ public function upload_file () {
         $allowed=array('docx','pdf','doc','rtf');
         $massage="";
         $pass=0;
-        
-                           $request_info_title_status= new units_requests();
-        $request_info_title_status->check_title($title);
-      
-                     
-                         if($request_info_title_status==false){
-           $massage.= "title allready exist \n ";
-           
-        }
-         if($size==0){
-           $massage.= "please uplaod the file \n ";
-            
-//            echo " <meta http-equiv='refresh'
-//   content='1; url=make_request.php'>";
-         }if($size>600000){
+if ($this->check_post_values()!=""){
+    $massage.= $this->check_post_values();
+}
+         
+    else if($size=="0" ){
+    echo "please uplaod the file \n";
+   $massage.= "please uplaod the file \n ";
+                     }else if($size>600000){
                 $massage.= "the file is to big"; 
          }
         
-        if(in_array($file_ext, $allowed)==false)
+         else if(in_array($file_ext, $allowed)==false)
         {
            $massage.=  "you can only uplad docx , pdf , doc ,rtf \n";
 
@@ -112,40 +109,45 @@ public function upload_file () {
           $pass=1;
         
              
-        }     if (file_exists($target_file)) {
+        }      else if (file_exists($target_file)) {
        $massage.= "Sorry, file already exists. \n";
          $pass=1;
    
-        } if($massage!=""){
+        } else {
     
     echo $massage;
     
     
-}else {
+} if($massage==!"") {
+    echo $massage;
+    
+}else{
             if($error==0){
                  if($pass==0){
                      
-                 // check title ,
+              
               if( move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)==true){
-                   echo "تم الرفع بالنجاح \n";
+                   echo "upload is done \n";
+                   $this->save_post_values($target_file);
                   
                }else {
-                   echo "فشل رفع ملف";
+                   echo "fild upload";
                      }
         
                 
              
                 
                  }else {
-                     echo "لم يتم الرفع ";
+                     echo "fild upload \n ";
+                    echo $massage;
                       
                  } 
-            }
+            
         }
         
-    }
+    }}
     
-    
+   
 }
 
 
