@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-21 05:43:50
+/* Smarty version 3.1.30, created on 2017-11-22 13:24:07
   from "C:\xampp\htdocs\unit\templates\fileUploadDemoo.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a1403669bc961_11000668',
+  'unifunc' => 'content_5a15c0c78a05b1_46901079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1ee3b08d015be40845875521cb9209afdadf2b1a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\fileUploadDemoo.html',
-      1 => 1510813265,
+      1 => 1511375043,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a1403669bc961_11000668 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '249435a140366861033_58109484';
+function content_5a15c0c78a05b1_46901079 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '89505a15c0c77ff0c5_55862214';
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +47,7 @@ $_smarty_tpl->compiled->nocache_hash = '249435a140366861033_58109484';
             $('#jqxFileUpload').jqxFileUpload({
                 width: 300,
                 accept: 'docx/*',
-                uploadUrl: '/htdocs/fileUpload.php',
+                uploadUrl: 'fileUpload.php',
                 fileInputName: 'fileToUpload'
             });
             $('#jqxFileUpload').on('uploadEnd', function (event) {
@@ -58,6 +58,7 @@ $_smarty_tpl->compiled->nocache_hash = '249435a140366861033_58109484';
                 console.log(args);
                 console.log(fileName);
                 console.log(serverResponse);
+                alert(serverResponse);
             });
         });
     <?php echo '</script'; ?>

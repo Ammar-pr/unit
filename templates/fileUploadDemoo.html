@@ -13,7 +13,7 @@
             $('#jqxFileUpload').jqxFileUpload({
                 width: 300,
                 accept: 'docx/*',
-                uploadUrl: '/htdocs/fileUpload.php',
+                uploadUrl: 'fileUpload.php',
                 fileInputName: 'fileToUpload'
             });
             $('#jqxFileUpload').on('uploadEnd', function (event) {
@@ -24,6 +24,7 @@
                 console.log(args);
                 console.log(fileName);
                 console.log(serverResponse);
+                alert(serverResponse);
             });
         });
     </script>

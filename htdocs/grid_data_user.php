@@ -24,11 +24,16 @@ $result->bind_result($title, $request_date, $attachment_request_link,$attachment
 /* fetch values */
 while ($result->fetch())
 	{
+        $attachment=  "<a href='".$attachment_response_link."'> attachment response</a>";
+
+    if(strlen($attachment_response_link)==0){
+     $attachment="no response yet";
+    }
 	$orders[] = array(
 		'title' => $title,
 		'request_date' => $request_date,
 		'attachment_request_link' => "<a href='".$attachment_request_link."'> attachment request link</a>",
-            'attachment_response_link' => "<a href='".$attachment_response_link."'> response</a>",
+            'attachment_response_link' => $attachment,
             'response_date' => $response_date,
             'status_id'=>$status_id
             

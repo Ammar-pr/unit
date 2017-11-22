@@ -48,8 +48,10 @@ public function save_post_values($file_path_name){
 public function check_post_values (){
     
    $massage=""; 
-   $title=trim( htmlspecialchars($_POST['title']));
+   $title=trim(htmlspecialchars($_POST['title']));
    $single_unit_object_number=(int)$_POST['list'];
+  echo $title;
+  echo $single_unit_object_number;
                             $request_info_title_status= new units_requests();
       $status=  $request_info_title_status->check_title($title);
    
@@ -58,7 +60,7 @@ public function check_post_values (){
    }else if(strlen($title) ==0){
        $massage.="please insert the title  \n";
    }else if($single_unit_object_number==0){
-       $massage.="please choose unit from the list apove ..";
+       $massage.="please choose unit from the list apove ...";
    }else  if($status==false){
            $massage.= "title    allready   exist \n ";
            
