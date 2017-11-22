@@ -7,6 +7,32 @@ protected   $path   = "../attachments/";
 
 
 
+public function check_captcha () {
+     if(!empty($_POST['captcha_code'])){
+        
+        //get captcha code from session
+        $captchaCode = $_SESSION['captchaCode'];
+        
+        //get captcha code from input field
+        $enteredcaptchaCode = $_POST['captcha_code'];
+        
+        //verify the captcha code
+        if($enteredcaptchaCode === $captchaCode){
+            $succMsg = 'Entered captcha code has matched.';
+        }else{
+            $errMsg = 'Captcha code not matched, please try again.';
+        }
+        
+    }else{
+        $errMsg = 'Please enter the captcha code.';
+    }
+    
+    
+   return $errMsg;
+    
+}
+
+
 public function save_post_values($file_path_name){
     // make new object form class units_reqest 
     // save a  new request with assgin values 

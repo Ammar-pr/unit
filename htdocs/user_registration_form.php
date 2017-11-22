@@ -287,7 +287,21 @@
 
 
 </tr>
-
+<tr>
+    
+    
+    <td>
+        captcha :
+    </td>
+    <td>
+        <img src="captcha.php" id="capImage"/>
+<br/>Can't read the image? click here to  <a href="javascript:void(0);" onclick="javascript:$('#capImage').attr('src','../ca/captcha.php');">refresh</a>.
+           Enter the code: <input name="captcha_code" type="text" id="captcha" class="text-input" value="">
+      
+    <td>
+    </td>
+    
+</tr>
 
 
             <tr>
