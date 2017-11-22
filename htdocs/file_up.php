@@ -6,13 +6,16 @@ protected   $path   = "../attachments/";
 
 
 
-public function save_post_values($title,$unit_num,$file_path_name){
+public function save_post_values($file_path_name){
     // make new object form class units_reqest 
     // save a  new request with assgin values 
     // finsh saveing 
     // send confriming save massage ...
     
-    
+   
+  $title=trim( htmlspecialchars($_POST['title']));
+   $unit_num=(int)$_POST['list'];
+
     if($this->check_post_values()==""){
     $new_request= new units_requests();
     if(isset($_SESSION['username'])){
@@ -37,7 +40,7 @@ public function save_post_values($title,$unit_num,$file_path_name){
 public function check_post_values (){
     
    $massage=""; 
-   $title=trim( $_POST['title']);
+   $title=trim( htmlspecialchars($_POST['title']));
    $single_unit_object_number=(int)$_POST['list'];
    
    
@@ -100,9 +103,13 @@ public function upload_file () {
 }else {
             if($error==0){
                  if($pass==0){
-                move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+               if( move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)==true){
+                   echo "تم الرفع بالنجاح \n";
+                   $this->save_post_values($target_file);
+               }else {
+                   echo "فشل رفع ملف";
+               }
                 
-                echo "Information successfully stored ";
                  } 
             }
         }
