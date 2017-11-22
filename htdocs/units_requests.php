@@ -34,7 +34,7 @@ class units_requests
             }  else {
                          return   R::exec("INSERT INTO `units_requests` ( `id_requester`, `request_date`, `status_id`, `unit_id`, `attachment_request_link` , `title` , `file_hash_request`, `id_responder`) VALUES ( $id_requester,  Now(),$status_id , $unit_id, '$attachment_request_link', '$title','$md5file',$id_responder)");
                             echo "تم تسجيل طلبك بنجاح";
-                            return true;
+                         //   return true;
             }
             
         }

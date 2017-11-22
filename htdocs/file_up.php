@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'units_requests.php';
 require_once 'users.php';
 class uplad_file {
@@ -11,19 +12,20 @@ public function save_post_values($file_path_name){
     // save a  new request with assgin values 
     // finsh saveing 
     // send confriming save massage ...
-    
    
   $title=trim( htmlspecialchars($_POST['title']));
    $unit_num=(int)$_POST['list'];
 
     if($this->check_post_values()==""){
+          
     $new_request= new units_requests();
     if(isset($_SESSION['username'])){
+            echo "1";
         $user_info=new users();
-        $user_info->get_user_id($_SESSION['username']);
+        $user_id_requester=$user_info->get_user_id($_SESSION['username']);
         
-        if($user_info!=0){
-                $new_request->SaveRequest(0, $user_info, 33, $file_path_name, $title, $unit_num, 0, '');
+        if($user_id_requester!=0){
+                $new_request->SaveRequest(0, $user_id_requester, 33, $file_path_name, $title, $unit_num, 0, '');
 
         }
     }
@@ -44,7 +46,7 @@ public function check_post_values (){
    $single_unit_object_number=(int)$_POST['list'];
    
    
-   if(strlen($title)>3  || strlen($title)<40){
+   if(strlen($title)<3  || strlen($title)>40){
        $massage.="the title lenght should be btween 3,40 \n";
    }else if(strlen($title) ==0){
        $massage.="please insert the title  \n";
@@ -63,8 +65,11 @@ public function upload_file () {
     
     if(isset($_FILES['file']))
     {
+                $target_file = $this->path . basename($_FILES["file"]["name"]);
+
+
         
-        $target_file = $this->path . basename($_FILES["file"]["name"]);
+        
         $file=$_FILES['file'];
         $name=$file['name'];
         $tmp=$file['tmp_name'];
@@ -86,15 +91,16 @@ public function upload_file () {
         
         if(in_array($file_ext, $allowed)==false)
         {
-           if (file_exists($target_file)) {
-      $massage.= "Sorry, file already exists. \n";
-         $pass=1;
-   
-        }
-          $massage.=  "you can only uplad docx , pdf , doc ,rtf \n";
-             $pass=1;
+           $massage.=  "you can only uplad docx , pdf , doc ,rtf \n";
+
+  
+          $pass=1;
         
              
+        }     if (file_exists($target_file)) {
+       $massage.= "Sorry, file already exists. \n";
+         $pass=1;
+   
         } if($massage!=""){
     
     echo $massage;
@@ -110,6 +116,9 @@ public function upload_file () {
                    echo "فشل رفع ملف";
                }
                 
+                 }else {
+                     echo "لم يتم الرفع ";
+                      
                  } 
             }
         }
