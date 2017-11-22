@@ -15,17 +15,23 @@ public function save_post_values($file_path_name){
    
   $title=trim( htmlspecialchars($_POST['title']));
    $unit_num=(int)$_POST['list'];
+   
+      
 
     if($this->check_post_values()==""){
           
     $new_request= new units_requests();
     if(isset($_SESSION['username'])){
-            echo "1";
         $user_info=new users();
+        
+        
         $user_id_requester=$user_info->get_user_id($_SESSION['username']);
         
         if($user_id_requester!=0){
+            
+        
                 $new_request->SaveRequest(0, $user_id_requester, 33, $file_path_name, $title, $unit_num, 0, '');
+                return "";
 
         }
     }
@@ -80,6 +86,15 @@ public function upload_file () {
         $allowed=array('docx','pdf','doc','rtf');
         $massage="";
         $pass=0;
+        
+                           $request_info_title_status= new units_requests();
+        $request_info_title_status->check_title($title);
+      
+                     
+                         if($request_info_title_status==false){
+           $massage.= "title allready exist \n ";
+           
+        }
          if($size==0){
            $massage.= "please uplaod the file \n ";
             
@@ -109,12 +124,17 @@ public function upload_file () {
 }else {
             if($error==0){
                  if($pass==0){
-               if( move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)==true){
+                     
+                 // check title ,
+              if( move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)==true){
                    echo "تم الرفع بالنجاح \n";
-                   $this->save_post_values($target_file);
+                  
                }else {
                    echo "فشل رفع ملف";
-               }
+                     }
+        
+                
+             
                 
                  }else {
                      echo "لم يتم الرفع ";

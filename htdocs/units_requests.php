@@ -17,6 +17,15 @@ class units_requests
 
         }
     }
+    
+    public  function check_title ($title){
+         if(count (R::getAll( "SELECT * FROM units_requests where title='$title' "  ))==1 ){
+               
+                return false ;
+            }else {
+                return true ;
+            }
+    }
     public function SaveRequest($id,$id_requester, $status_id,$attachment_request_link,$title,$unit_id,$id_responder,$attachment_response_link)
     {
         if(strlen($attachment_request_link)>0){
@@ -28,14 +37,11 @@ class units_requests
         if ($id > 0) {
             R::exec("UPDATE `units_requests` SET `id_responder` = $id_responder, `response_date` = Now(), `attachment_response_link` = '$attachment_response_link', `file_hash_response` = '$md5file' WHERE `units_requests`.`id` =".$id );
         } else {
-            if(count (R::getAll( "SELECT * FROM units_requests where title='$title' "  ))==1 ){
-                echo "عنوان الطلب متكرر بالرجاء كتابة عنوان اخر";
-                return false ;
-            }  else {
+           
                          return   R::exec("INSERT INTO `units_requests` ( `id_requester`, `request_date`, `status_id`, `unit_id`, `attachment_request_link` , `title` , `file_hash_request`, `id_responder`) VALUES ( $id_requester,  Now(),$status_id , $unit_id, '$attachment_request_link', '$title','$md5file',$id_responder)");
                             echo "تم تسجيل طلبك بنجاح";
-                         //   return true;
-            }
+                            return true;
+            
             
         }
     }
