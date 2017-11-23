@@ -1,4 +1,29 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.30, created on 2017-11-23 05:40:38
+  from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a16a5a6c91236_81386374',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
+      1 => 1511433635,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a16a5a6c91236_81386374 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '150865a16a5a6b5cd10_66602576';
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title id="Description">jqxFileUpload with php example.</title>
@@ -6,9 +31,15 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
         <link rel="stylesheet" href="../scripts/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/scripts/jquery-1.11.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcore.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"><?php echo '</script'; ?>
+>
    
     
     
@@ -22,23 +53,44 @@
     
     
     
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"></script>
-        <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
-<script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>	
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxscrollbar.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdropdownlist.js"><?php echo '</script'; ?>
+>	
 
-  <script type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"></script> 
+  <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/scripts/demos.js"><?php echo '</script'; ?>
+> 
 
-       <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"></script> 
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"></script> 
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"></script>
+       <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxvalidator.js"><?php echo '</script'; ?>
+> 
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/globalization/globalize.js"><?php echo '</script'; ?>
+> 
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxbuttons.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxfileupload.js"><?php echo '</script'; ?>
+>
  
     
 
     
-    <script type="text/javascript">
+    <?php echo '<script'; ?>
+ type="text/javascript">
         $(document).ready(function () {
      
 
@@ -119,7 +171,8 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 
 
 
-    </script>
+    <?php echo '</script'; ?>
+>
     
     
     
@@ -213,6 +266,26 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
               
                
                
+                             <tr>
+                                 <td>  Enter the code
+                                 </td>
+               
+                   <td>
+                                 <input name="captcha_code" type="text" value="">
+
+                        </td>
+            
+                        
+                        <td>
+                            
+                            <img src="captcha.php" id="capImage"/>
+<br/>Can't read the image? click here to  <a href="javascript:void(0);" onclick="javascript:$('#capImage').attr('src','../ca/captcha.php');">refresh</a>.
+
+                        </td>
+                    
+                    
+               
+                    </tr>
                
  
                
@@ -224,3 +297,5 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 <br />
 </body>
 </html>
+<?php }
+}

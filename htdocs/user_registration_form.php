@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -158,12 +159,25 @@
                 { input: '#passwordConfirmInput', message: 'Passwords doesn\'t match!', action: 'keyup, focus', rule: function (input, commit) {
                     // call commit with false, when you are doing server validation and you want to display a validation error on this field.
                     if (input.val() === $('#passwordInput').val()) {
+                        
+                      
                         return true;
-                    }
-                    return false;
+                    }else {  return false;}
+                    
                 }
                 },
                 { input: '#emailInput', message: 'E-mail is required!', action: 'keyup, blur', rule: 'required' },
+                { input: '#captcha', message: 'Captcah is required!', action: 'keyup, blur', rule: 'required' },
+                { input: '#captcha', message: 'Captcah doesn\'t match!!', action: 'keyup, blur', rule: function (input, commit) {
+                        var captach_session_var=<?php echo $_SESSION['captchaCode']; ?>
+                       
+                        if(captach_session_var==input.val()){
+                            alert("1");
+                            return true ;
+                }else {
+                    alert("2");
+                 return false;
+    }}},
                 { input: '#emailInput', message: 'Invalid e-mail!', action: 'keyup', rule: 'email' },
          { input: '#deps', message: 'You must select a deparment name ', action: 'change', rule: function () {
                     var selectedIndexSection = $('#deps').text();
@@ -296,7 +310,7 @@
     <td>
         <img src="captcha.php" id="capImage"/>
 <br/>Can't read the image? click here to  <a href="javascript:void(0);" onclick="javascript:$('#capImage').attr('src','../ca/captcha.php');">refresh</a>.
-           Enter the code: <input name="captcha_code" type="text" id="captcha" class="text-input" value="">
+           Enter the code: <input class="text-input" name="captcha_code" type="text" id="captcha"  value="">
       
     <td>
     </td>

@@ -1,4 +1,26 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.30, created on 2017-11-23 05:40:38
+  from "C:\xampp\htdocs\unit\templates\make_request.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a16a5a6cee967_22519856',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0ffa2313d5ea789abaf457c29c6f58f5a6affaff' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\unit\\templates\\make_request.tpl',
+      1 => 1511433635,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 3600,
+),true)) {
+function content_5a16a5a6cee967_22519856 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title id="Description">jqxFileUpload with php example.</title>
@@ -213,6 +235,26 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
               
                
                
+                             <tr>
+                                 <td>  Enter the code
+                                 </td>
+               
+                   <td>
+                                 <input name="captcha_code" type="text" value="">
+
+                        </td>
+            
+                        
+                        <td>
+                            
+                            <img src="captcha.php" id="capImage"/>
+<br/>Can't read the image? click here to  <a href="javascript:void(0);" onclick="javascript:$('#capImage').attr('src','../ca/captcha.php');">refresh</a>.
+
+                        </td>
+                    
+                    
+               
+                    </tr>
                
  
                
@@ -224,3 +266,5 @@ $('#sendButton').jqxButton({ width: 60, height: 25});
 <br />
 </body>
 </html>
+<?php }
+}

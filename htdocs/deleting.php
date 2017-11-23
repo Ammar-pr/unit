@@ -54,10 +54,10 @@ public function check_submit()
          $unit_request_del = new units_requests();
           if ($unit_request_del->delete($id)) {
               //   echo "2";
-              echo "delete is done";
+              echo "delete is done you will be convert to admin inbox page ";
               $_POST['id']=0;
                 
-                echo "<meta http-equiv='refresh' content='0.8; url=../htdocs/controlPanel.php/'>"; 
+                echo "<meta http-equiv='refresh' content='0.8; url=controlPanel.php'>"; 
                
              
           }
