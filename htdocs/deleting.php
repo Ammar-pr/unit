@@ -81,6 +81,10 @@ public function check_submit()
     $id=$_GET['id'];
     echo $id;
    // echo $id=39;
+    $smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
+$smarty->setCompileCheck(false);
+
+
    $smarty->assign('id',$id);
 
    $smarty->display('../templates/del.tpl');
