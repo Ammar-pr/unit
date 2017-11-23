@@ -56,7 +56,9 @@ public function check_submit()
               //   echo "2";
               echo "delete is done";
               $_POST['id']=0;
-                echo '<meta http-equiv="Refresh" content="3; url=../htdocs/controlPanel.php/>';
+                
+                echo "<meta http-equiv='refresh' content='0.8; url=../htdocs/controlPanel.php/'>"; 
+               
              
           }
          }
