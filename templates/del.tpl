@@ -22,13 +22,16 @@
        { width: '120px', height: '35px', theme: 'darkblue' });
        
        
+            $("#jqxButton").jqxLinkButton({ width: '120', height: '35px' , theme: 'HighContrast'});
     });
  </script>
-    <h2>please confirm deleting </h2>
-            <form class="form" id="form" target="_parent"  method="post" action="../htdocs/delete.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+    <h2>please confirm deleting  your id is {$id}</h2>
+            <form class="form" id="form" target="_parent"  method="post" action="../htdocs/deleting.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
 
-       <inpt type="hidden" value="1111" name="id">
-    <input type="submit" name="sumbit" value="submit" id='myButton' >
+         <a style='margin-left: 25px;' target="_blank" href="../htdocs/index.php" id='jqxButton'>go  back </a>      
+         <input type="hidden" name="id" value={$id} > 
+
+    <input type="submit" name="submit" value="delete" id='myButton' >
 
             </form>
 

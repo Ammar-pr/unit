@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-23 02:17:04
+/* Smarty version 3.1.30, created on 2017-11-23 03:44:17
   from "C:\xampp\htdocs\unit\templates\del.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a1675f0594bd5_39610699',
+  'unifunc' => 'content_5a168a61954132_52343379',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b662719bc6ca4c97edae5e48e6aea5038909aff' => 
     array (
       0 => 'C:\\xampp\\htdocs\\unit\\templates\\del.tpl',
-      1 => 1511421407,
+      1 => 1511426648,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5a1675f0594bd5_39610699 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a168a61954132_52343379 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -44,13 +44,16 @@ function content_5a1675f0594bd5_39610699 (Smarty_Internal_Template $_smarty_tpl)
        { width: '120px', height: '35px', theme: 'darkblue' });
        
        
+            $("#jqxButton").jqxLinkButton({ width: '120', height: '35px' , theme: 'HighContrast'});
     });
  </script>
-    <h2>please confirm deleting </h2>
-            <form class="form" id="form" target="_parent"  method="post" action="../htdocs/delete.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+    <h2>please confirm deleting  your id is 38</h2>
+            <form class="form" id="form" target="_parent"  method="post" action="../htdocs/deleting.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
 
-       <inpt type="hidden" value="1111" name="id">
-    <input type="submit" value="delete" id='myButton' >
+         <a style='margin-left: 25px;' target="_blank" href="../htdocs/index.php" id='jqxButton'>go  back </a>      
+         <input type="hidden" name="id" value=38 > 
+
+    <input type="submit" name="submit" value="delete" id='myButton' >
 
             </form>
 

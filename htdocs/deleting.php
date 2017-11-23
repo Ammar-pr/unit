@@ -39,29 +39,30 @@ public static function GET( $value)
 public function check_submit()
 {
   //  echo $_POST['id'];
-     echo "ff";
-    if(isset($_POST['submit'])){
-               echo "ff111";
    
+   if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+     
+} echo "1";
+
+         if (isset($_SESSION["username"]) & isset($_SESSION["password"]) & isset($_SESSION["authorization"])) {
+  echo "1";
+            if ($_SESSION["authorization"] == 22 & isset($_POST['id']) & $_POST['id']!=0) {
+             echo "1";
+         $id=$_POST['id'];
+         echo "the id is ".$id;
+         $unit_request_del = new units_requests();
+          if ($unit_request_del->delete($id)) {
+              //   echo "2";
+              echo "delete is done";
+              $_POST['id']=0;
+                echo '<meta http-equiv="Refresh" content="3; url=../htdocs/controlPanel.php/>';
+             
+          }
+         }
+      }
     }
-//    if( $_POST['submit']=='delete' & isset($_POST['id'])){
-//        $id =$_POST['id'];
-//         if (isset($_SESSION["username"]) & isset($_SESSION["password"]) & isset($_SESSION["authorization"])) {
-//
-//            if ($_SESSION["authorization"] == 22) {
-//        
-//         
-//          if ($unit_request_del->delete($id)) {
-//         //     echo "delete is done";
-//              require'../lib/smarty-master/setup.php';
-//                $smarty=new Smarty_Unit();
-//                   $smarty->display('../templates/controlPanel.html');
-//             
-//          }
-//         }
-//      }
-//    }
-  }
+  
 
 
     public function check_before_delete()
@@ -76,8 +77,11 @@ public function check_submit()
       if ($status) {
       
    $smarty=new Smarty_Unit();
-   $id=intval($_GET['id']);
- $smarty->assign('id',$id);
+   //$id=intval($_GET['id']);
+    $id=$_GET['id'];
+    echo $id;
+   // echo $id=39;
+   $smarty->assign('id',$id);
 
    $smarty->display('../templates/del.tpl');
 
@@ -97,5 +101,11 @@ public function check_submit()
 }
 
 $del=new deleting();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    $del->check_submit();
+}else if($_SERVER["REQUEST_METHOD"] == "GET"){
+
 $del->check_before_delete ();
-$del->check_submit();
+}
