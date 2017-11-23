@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-23 03:48:41
+/* Smarty version 3.1.30, created on 2017-11-23 04:28:30
   from "C:\xampp\htdocs\unit\templates\indexWithOutLogin_admin.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a168b6959c2f9_83402964',
+  'unifunc' => 'content_5a1694be0aeb01_76615404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5a168b6959c2f9_83402964 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1694be0aeb01_76615404 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>

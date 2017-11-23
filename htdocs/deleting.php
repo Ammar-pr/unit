@@ -77,32 +77,40 @@ public function check_submit()
       if ($status) {
       
    $smarty=new Smarty_Unit();
-   //$id=intval($_GET['id']);
-    $id=$_GET['id'];
-    echo $id;
+   $id=intval($_GET['id']);
+  
+    //echo $id;
    // echo $id=39;
     $smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
-$smarty->setCompileCheck(false);
+
+    
+
+$smarty->clearCache('../templates/del.tpl');
+
+     $id=$_GET['id'];
+    // fetch $obj from db and assign...
+    $smarty->assign('id', $id);
+       $smarty->display('../templates/del.tpl');
+
+}
 
 
-   $smarty->assign('id',$id);
-
-   $smarty->display('../templates/del.tpl');
 
           
-          $unit_request_del = new units_requests();
          
           
         
       }
 
-  }            }
-
-
-        }
-
+  }        
+  
+  
+  
+      }
     }
+
 }
+
 
 $del=new deleting();
 
