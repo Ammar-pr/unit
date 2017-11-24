@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/unit/htdocs/user_registration_form.php</file>
             <file>file:/C:/xampp/htdocs/unit/htdocs/users.php</file>
+            <file>file:/C:/xampp/htdocs/unit/ca/index33.php</file>
+            <file>file:/C:/xampp/htdocs/unit/ca/index.php</file>
+            <file>file:/C:/xampp/htdocs/unit/ca/captcha.php</file>
             <file>file:/C:/xampp/htdocs/unit/htdocs/file_up.php</file>
-            <file>file:/C:/xampp/htdocs/unit/templates/make_request.tpl</file>
             <file>file:/C:/xampp/htdocs/unit/htdocs/units_requests.php</file>
-            <file>file:/C:/xampp/htdocs/unit/htdocs/make_request.php</file>
+            <file>file:/C:/xampp/htdocs/unit/htdocs/registration.php</file>
+            <file>file:/C:/xampp/htdocs/unit/ca/CodexWorldCaptcha.php</file>
         </group>
     </open-files>
 </project-private>

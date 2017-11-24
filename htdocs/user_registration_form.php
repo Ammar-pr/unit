@@ -31,7 +31,7 @@
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcombobox.js"></script>
 
     <style type="text/css">
-        #demo-iframe {
+        .demo-iframe {
             border: none;
             width: 600px;
             height: 400px;
@@ -69,7 +69,6 @@
 <body>
 <script type="text/javascript">
     $(document).ready(function () {
-
                 		var collegeSource =
 		{
 			datatype: "json",
@@ -132,12 +131,8 @@
 			}
 		});   
         $('#sendButton').jqxButton({ width: 60, height: 25});
-
         $("#phoneInput").jqxMaskedInput({ mask: '(###)###-####', width: 150, height: 22});
-
   $("#numericInput").jqxMaskedInput({ width: '250px', height: '25px'});
-
-
     $('.text-input').addClass('jqx-input');
         $('.text-input').addClass('jqx-rc-all');
         if (theme.length > 0) {
@@ -152,7 +147,6 @@
             rules: [
                 { input: '#userInput', message: 'name is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#userInput', message: 'Your username must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
-
                 { input: '#passwordInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#passwordInput', message: 'Your password must be between 4 and 12 characters!', action: 'keyup, blur', rule: 'length=4,12' },
                 { input: '#passwordConfirmInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
@@ -168,16 +162,7 @@
                 },
                 { input: '#emailInput', message: 'E-mail is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#captcha', message: 'Captcah is required!', action: 'keyup, blur', rule: 'required' },
-                { input: '#captcha', message: 'Captcah doesn\'t match!!', action: 'keyup, blur', rule: function (input, commit) {
-                        var captach_session_var=<?php echo $_SESSION['captchaCode']; ?>
-                       
-                        if(captach_session_var==input.val()){
-                            alert("1");
-                            return true ;
-                }else {
-                    alert("2");
-                 return false;
-    }}},
+       
                 { input: '#emailInput', message: 'Invalid e-mail!', action: 'keyup', rule: 'email' },
          { input: '#deps', message: 'You must select a deparment name ', action: 'change', rule: function () {
                     var selectedIndexSection = $('#deps').text();
@@ -238,7 +223,7 @@
     });
 </script>
 <div style="height: 219px;">
-    <form class="form" id="form" target="demo-iframe"  method="post" action="registration.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
+    <form class="form" id="form"   method="post" action="registration.php" style="font-size: 13px; font-family: Verdana; width: 650px;">
         <div>
             <h2>Register</h2>
         </div>
@@ -308,7 +293,7 @@
         captcha :
     </td>
     <td>
-        <img src="captcha.php" id="capImage"/>
+        <img src="../ca/captcha.php" id="capImage"/>
 <br/>Can't read the image? click here to  <a href="javascript:void(0);" onclick="javascript:$('#capImage').attr('src','../ca/captcha.php');">refresh</a>.
            Enter the code: <input class="text-input" name="captcha_code" type="text" id="captcha"  value="">
       
@@ -322,13 +307,15 @@
                 <td colspan="2" style="text-align: center;"><input type="button" value="Send" id="sendButton" /></td>
             </tr>
             <tr>
-            <div id="demo-iframe"></div>
+                <td>
                 </td>
+            </tr>
         </table>
         
    
     </form>
-   
+           <iframe id="form-iframe" name="form-iframe" class="demo-iframe" frameborder="0"></iframe>
+
 </div>
 </body>
 </html>

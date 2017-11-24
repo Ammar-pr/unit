@@ -40,4 +40,4 @@ if(isset($_POST['submit']) && !empty($_POST['submit'])){
     Enter the code: <input name="captcha_code" type="text" value="">
     <input type="submit" name="submit" value="SUBMIT">
 </form>
-</html>
+</htm>
