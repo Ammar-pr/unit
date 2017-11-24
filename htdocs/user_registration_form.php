@@ -66,14 +66,14 @@
         }
     </style>
 </head>
-<body>
+<body>g
 <script type="text/javascript">
     $(document).ready(function () {
                 		var collegeSource =
 		{
 			datatype: "json",
 			datafields: [
-				{ name: 'name'},
+		 		{ name: 'name'},
 				{ name: 'id'}
 			],
 			url: '../scripts/cascadingcombobox_data.php',
@@ -210,7 +210,15 @@
         $("#sendButton").click(function () {
             var validationResult = function (isValid) {
                 if (isValid) {
-                    $("#form").submit();
+                   jQuery.ajax({
+		url: "contact_mail.php",
+		data:'userName='+$("#userInput").val()+'&userEmail='+$("#passwordInput").val()+'&subject='+$("#subject").val()+'&content='+$("#content").val()+'&captcha='+$("#captcha").val(),
+		type: "POST",
+		success:function(data){
+		$("#mail-status").html(data);
+		},
+		error:function (){}
+		});
                 }
             }
             $('#form').jqxValidator('validate', validationResult);
