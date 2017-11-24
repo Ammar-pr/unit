@@ -29,7 +29,7 @@
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcombobox.js"></script>
-
+g
     <style type="text/css">
         .demo-iframe {
             border: none;
@@ -66,7 +66,7 @@
         }
     </style>
 </head>
-<body>g
+<body>
 <script type="text/javascript">
     $(document).ready(function () {
                 		var collegeSource =
