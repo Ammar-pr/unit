@@ -90,7 +90,8 @@
                     source: source
                     ,
                     promptText: "Please Select secret question...",
-                    
+                   displayMember: 'source',
+                   valueMember: 'source',
                      width: '200',
                     height: '25'});
 

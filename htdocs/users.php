@@ -21,6 +21,48 @@ class users
     }
 
 
+    
+    public function check_exist_email($email){
+             
+       $error_massage="";
+       if(strlen($email)<=0){
+            $error_massage.="please insert email  address "; 
+         }else if((strlen($email))>0) {
+                    $num= $this->get_user_id($email);
+
+         }
+       
+       if($num==0){
+           $error_massage="";
+       }else {
+           $error_massage="";
+       }
+       
+       return $error_massage;
+    }
+
+    public  function  update_password ($new_password,$email){
+        $exist_email=false;
+        $error_massage="";
+        if(strlen($new_password)<=0){
+            $error_massage.="please insert new password "; 
+         }else if(strlen($new_password)>0) {
+         $new_password=  $hashed_password= password_hash("$new_password", PASSWORD_DEFAULT);   
+         }
+     
+            
+            if($error_massage=="" & $exist_email==true){
+                // do the update 
+                
+                return R::exec(" UPDATE `users` SET  `password` ='$new_password'  WHERE `users`.`email` =".$email);
+
+            }
+         
+            return $error_massage;
+         
+       
+    }
+
 
     public function Save($id,$email,$user_job_number,$role_id,$department_num,$name,$password,$phonenumber_number,$college_num,$secret_answer,$jqxWidgetList_question_list)
     {
@@ -31,18 +73,19 @@ class users
         if ($id > 0) {
             $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
 
-return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_num` =$department_num, `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_num` = $college_num , `email` = '$secret_answer' , `secret_answer` = '$secret_answer' , `secret_answer` = '$secret_answer'  WHERE `users`.`id` =" .$id);
+return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_num` =$department_num, `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_num` = $college_num , `email` = '$secret_answer' , `secret_answer` = '$secret_answer' , `secret_answer` = '$secret_answer' , `secret_question`='$jqxWidgetList_question_list' WHERE `users`.`id` =" .$id);
 
         } else {
 
           
-
+ echo "rr <br>";
              
                 $hashed_password= password_hash($password, PASSWORD_BCRYPT);
 
 
-            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_num`, `name`, `password`, `phonenumber_number`, `email`, `college_num`, `secret_answer`) VALUES ( $user_job_number, $role_id, $department_num, '$name', '$hashed_password', '$phonenumber_number', '$email',$college_num,$secret_answer)");
-        }
+          $var=  R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_num`, `name`, `password`, `phonenumber_number`, `email`, `college_num`, `secret_answer`,`secret_question`) VALUES ( $user_job_number, $role_id, $department_num, '$name', '$hashed_password', '$phonenumber_number', '$email',$college_num,'$secret_answer','$jqxWidgetList_question_list')");
+        echo $var;
+          }
     }
     public function fetchWithPK($id)
     {
@@ -153,6 +196,8 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 // ,htmlspecialchars($_POST['jqxWidgetList_question_list'])////// question
 
     public function check_user_input($email,$user_job_number,$dep_num,$name,$password,$phonenumber_number,$college_num,$secret_answer,$jqxWidgetList_question_list){
+       echo $jqxWidgetList_question_list;
+       
         $name=htmlspecialchars($name);
         $name=trim($name);
 
@@ -168,9 +213,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         if($college_num==0) {
 
             $error_massage.="الرجاء اختيار  الكلية"."<br>";
-        } if($jqxWidgetList_question_list==0) {
+        } if(strlen($jqxWidgetList_question_list)==0) {
 
-            $error_massage.="الرجاء اختيار  السؤال السري"."<br>";
+            $error_massage.="-الرجاء اختيار  السؤال السري"."<br>";
         }else if($jqxWidgetList_question_list=="Please Select secret question..."){
             $error_massage.="الرجاء اختيار  السؤال السري"."<br>";
         }
