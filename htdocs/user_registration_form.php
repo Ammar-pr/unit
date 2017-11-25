@@ -29,7 +29,7 @@
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxdata.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxlistbox.js"></script>
     <script type="text/javascript" src="../scripts/jqwidgets/jqwidgets/jqxcombobox.js"></script>
-g
+
     <style type="text/css">
         .demo-iframe {
             border: none;
@@ -73,7 +73,7 @@ g
 		{
 			datatype: "json",
 			datafields: [
-		 		{ name: 'name'},
+				{ name: 'name'},
 				{ name: 'id'}
 			],
 			url: '../scripts/cascadingcombobox_data.php',
@@ -210,15 +210,7 @@ g
         $("#sendButton").click(function () {
             var validationResult = function (isValid) {
                 if (isValid) {
-                   jQuery.ajax({
-		url: "contact_mail.php",
-		data:'userName='+$("#userInput").val()+'&userEmail='+$("#passwordInput").val()+'&subject='+$("#subject").val()+'&content='+$("#content").val()+'&captcha='+$("#captcha").val(),
-		type: "POST",
-		success:function(data){
-		$("#mail-status").html(data);
-		},
-		error:function (){}
-		});
+                    $("#form").submit();
                 }
             }
             $('#form').jqxValidator('validate', validationResult);

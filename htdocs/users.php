@@ -179,6 +179,10 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
             $error_massage.="ادخل رقمك الوظيفي   "."\n";
         } else if($user_job_num<=0){
             $error_massage.="ادخل رقمك الوظيفي   "."\n";
+        }else if(is_numeric($user_job_num)){
+            if(count (R::getAll( "SELECT * FROM users where user_job_number='$user_job_num' "  ))==1 ) {
+                $error_massage.=  "رقم الموظف موجود بالفعل  بالفعل حاول ان تدخل رقم  اخر  ";
+            }
         }
 
 
@@ -194,6 +198,11 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
          if(strlen($phonenumber_number)>13){
       echo strlen($phonenumber_number);
              $error_massage.="يجب ان يكون رقم الهاتف 10 أرقام"."\n";
+         } else if(strlen($phonenumber_number)==13){
+   //   echo strlen($phonenumber_number);
+           if(count (R::getAll( "SELECT * FROM users where phonenumber_number='$phonenumber_number'"  ))==1 ) {
+                $error_massage.=  "رقم  الهاتف  موجود بالفعل  بالفعل حاول ان تدخل رقم  اخر  ";
+            }
          }
 
         return $error_massage;
