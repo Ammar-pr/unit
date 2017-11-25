@@ -42,16 +42,18 @@ class users
     }
 
     public  function  update_password ($new_password,$email){
-        $exist_email=false;
         $error_massage="";
+        $error_massage.=check_exist_email($email);
+
         if(strlen($new_password)<=0){
             $error_massage.="please insert new password "; 
          }else if(strlen($new_password)>0) {
          $new_password=  $hashed_password= password_hash("$new_password", PASSWORD_DEFAULT);   
          }
+         
      
             
-            if($error_massage=="" & $exist_email==true){
+            if($error_massage==""){
                 // do the update 
                 
                 return R::exec(" UPDATE `users` SET  `password` ='$new_password'  WHERE `users`.`email` =".$email);
