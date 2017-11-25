@@ -22,16 +22,16 @@ class users
 
 
 
-    public function Save($id,$email,$user_job_number,$role_id,$department_num,$name,$password,$phonenumber_number,$college_num)
+    public function Save($id,$email,$user_job_number,$role_id,$department_num,$name,$password,$phonenumber_number,$college_num,$secret_answer,$jqxWidgetList_question_list)
     {
 
-
+// secret_question
 
 
         if ($id > 0) {
             $hashed_password= password_hash("$password", PASSWORD_DEFAULT);
 
-return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_num` =$department_num, `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_num` = $college_num , `email` = '$email' WHERE `users`.`id` =" .$id);
+return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_id` = $role_id ,`department_num` =$department_num, `name` = '$name', `password` = '$password', `phonenumber_number` = '$phonenumber_number',   `college_num` = $college_num , `email` = '$secret_answer' , `secret_answer` = '$secret_answer' , `secret_answer` = '$secret_answer'  WHERE `users`.`id` =" .$id);
 
         } else {
 
@@ -41,7 +41,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
                 $hashed_password= password_hash($password, PASSWORD_BCRYPT);
 
 
-            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_num`, `name`, `password`, `phonenumber_number`, `email`, `college_num`) VALUES ( $user_job_number, $role_id, $department_num, '$name', '$hashed_password', '$phonenumber_number', '$email',$college_num)");
+            R::exec("INSERT INTO `users` ( `user_job_number`, `role_id`, `department_num`, `name`, `password`, `phonenumber_number`, `email`, `college_num`, `secret_answer`) VALUES ( $user_job_number, $role_id, $department_num, '$name', '$hashed_password', '$phonenumber_number', '$email',$college_num,$secret_answer)");
         }
     }
     public function fetchWithPK($id)
@@ -150,9 +150,9 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
 
     //   echo $user->check_user_input(htmlspecialchars($_POST['email']),htmlspecialchars($_POST['user_job_number'])
 //,htmlspecialchars($_POST['department_name']),htmlspecialchars($_POST['name']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['phonenumber_number']),htmlspecialchars($_POST['college_name']));
+// ,htmlspecialchars($_POST['jqxWidgetList_question_list'])////// question
 
-
-    public function check_user_input($email,$user_job_number,$dep_num,$name,$password,$phonenumber_number,$college_num){
+    public function check_user_input($email,$user_job_number,$dep_num,$name,$password,$phonenumber_number,$college_num,$secret_answer,$jqxWidgetList_question_list){
         $name=htmlspecialchars($name);
         $name=trim($name);
 
@@ -161,13 +161,18 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         $error_massage ="";
         if(!is_string($name)  & strlen($name)<3 || strlen($name)>12 ) {
 
-            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم "."\n";
+            $error_massage.="اسم المستخدم يجب ان يكون كلمة وليس رقم "."<br>";
         }
 
 
         if($college_num==0) {
 
-            $error_massage   ="الرجاء اختيار  الكلية"."\n";
+            $error_massage.="الرجاء اختيار  الكلية"."<br>";
+        } if($jqxWidgetList_question_list==0) {
+
+            $error_massage.="الرجاء اختيار  السؤال السري"."<br>";
+        }else if($jqxWidgetList_question_list=="Please Select secret question..."){
+            $error_massage.="الرجاء اختيار  السؤال السري"."<br>";
         }
 
 
@@ -176,12 +181,12 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
  $error_massage   ="الرجاء اختيار   القسم"."\n";        }
 
         if(!is_numeric($user_job_num)){
-            $error_massage.="ادخل رقمك الوظيفي   "."\n";
+            $error_massage.="ادخل رقمك الوظيفي   "."<br>";
         } else if($user_job_num<=0){
-            $error_massage.="ادخل رقمك الوظيفي   "."\n";
+            $error_massage.="ادخل رقمك الوظيفي   "."<br>";
         }else if(is_numeric($user_job_num)){
             if(count (R::getAll( "SELECT * FROM users where user_job_number='$user_job_num' "  ))==1 ) {
-                $error_massage.=  "رقم الموظف موجود بالفعل  بالفعل حاول ان تدخل رقم  اخر  ";
+                $error_massage.=  "رقم الموظف موجود بالفعل  بالفعل حاول ان تدخل رقم  اخر   <br>";
             }
         }
 
@@ -189,11 +194,13 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error_massage.= "البريد الالكتروني غير صحيح"."\n";
         } else if(count (R::getAll( "SELECT * FROM users where email='$email' "  ))==1 ) {
-                $error_massage.=  "الايميل موجود بالفعل حاول ان تدخل ايميل اخر  ";
+                $error_massage.=  "الايميل موجود بالفعل حاول ان تدخل ايميل اخر  <br>";
             }
 
        if(strlen($password)>12 || strlen($password)<3) {
-            $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ,لاتكون أصغر من 3  ";
+            $error_massage.="كلمة المرور يجب أن تكون أقل من 12 خانة ,لاتكون أصغر من 3 <br> ";
+        }if(strlen($password)>40 || strlen($password)<3) {
+            $error_massage.="الاجابة السرية  يجب أن تكون أقل من 40 خانة ,لاتكون أصغر من 3 <br> ";
         }
          if(strlen($phonenumber_number)>13){
       echo strlen($phonenumber_number);
@@ -201,7 +208,7 @@ return R::exec(" UPDATE `users` SET `user_job_number` =$user_job_number, `role_i
          } else if(strlen($phonenumber_number)==13){
    //   echo strlen($phonenumber_number);
            if(count (R::getAll( "SELECT * FROM users where phonenumber_number='$phonenumber_number'"  ))==1 ) {
-                $error_massage.=  "رقم  الهاتف  موجود بالفعل  بالفعل حاول ان تدخل رقم  اخر  ";
+                $error_massage.=  "رقم  الهاتف  موجود بالفعل  بالفعل حاول ان تدخل رقم  اخر   <br>";
             }
          }
 

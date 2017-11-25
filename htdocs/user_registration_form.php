@@ -69,6 +69,45 @@
 <body>
 <script type="text/javascript">
     $(document).ready(function () {
+        
+        
+                        var source = [
+                    "Which phone number do you remember most from your childhood?",
+                    "What was your favorite place to visit as a child?",
+                    "In what city were you born?",
+                    "What high school did you attend?",
+                    "What is the name of your first school?",
+                    "What is your mother's maiden name?",
+                    "What street did you grow up on?",
+                    "What was the make of your first car?",
+                    "What is your father's middle name?",
+                    "What is the name of your first grade teacher?",
+                    "Which is your favorite web browser?"
+                
+		        ];
+                // Create a jqxDropDownList
+                $("#jqxWidgetList_question_list").jqxDropDownList({
+                    source: source
+                    ,
+                    promptText: "Please Select secret question...",
+                    
+                     width: '200',
+                    height: '25'});
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
                 		var collegeSource =
 		{
 			datatype: "json",
@@ -146,8 +185,12 @@
         $('#form').jqxValidator({
             rules: [
                 { input: '#userInput', message: 'name is required!', action: 'keyup, blur', rule: 'required' },
-                { input: '#userInput', message: 'Your username must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
-                { input: '#passwordInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
+                { input: '#userInput', message: 'Your name must be between 3 and 12 characters!', action: 'keyup, blur', rule: 'length=3,12' },
+              
+                            { input: '#secret_answer', message: 'secret answer is required!', action: 'keyup, blur', rule: 'required' },
+                { input: '#secret_answer', message: 'Your secret answer must be between 3 and 40 characters!', action: 'keyup, blur', rule: 'length=3,40' },
+
+            { input: '#passwordInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#passwordInput', message: 'Your password must be between 4 and 12 characters!', action: 'keyup, blur', rule: 'length=4,12' },
                 { input: '#passwordConfirmInput', message: 'Password is required!', action: 'keyup, blur', rule: 'required' },
                 { input: '#passwordConfirmInput', message: 'Passwords doesn\'t match!', action: 'keyup, focus', rule: function (input, commit) {
@@ -176,6 +219,18 @@
                     } 
                 }},
             
+            
+              { input: '#jqxWidgetList_question_list', message: 'You must select a secret question ', action: 'change', rule: function () {
+                    var selectedIndexSection = $('#jqxWidgetList_question_list').text();
+                
+              
+                    if (selectedIndexSection == "Please Select secret question...") {
+                     
+                       return false ;
+                    }else {
+                        return true ;
+                    } 
+                }},
           
                { input: '#colleges', message: 'You must select a colleges', action: 'change', rule: function () {
                     var selectedIndexSection = $('#colleges').text();
@@ -229,7 +284,7 @@
         </div>
         <table class="register-table">
             <tr>
-                <td>Username:</td>
+                <td>name:</td>
                 <td><input name="name" type="text" id="userInput" class="text-input" /></td>
             </tr>
             <tr>
@@ -241,7 +296,25 @@
                 <td><input type="password" id="passwordConfirmInput" class="text-input" /></td>
             </tr>
 
+            <tr>
+                <td>Secret question</td>
+                <td>              
+                    
+                     
+    <div name="jqxWidgetList_question_list" id="jqxWidgetList_question_list"></div>
 
+                    
+</td>
+            </tr>
+            
+            
+            <tr>
+                <td> secret question answer :</td>
+                <td><input name="secret_answer" type="text" id="secret_answer" class="text-input" /></td>
+            </tr>
+
+            
+            
             <tr>
                 <td>E-mail:</td>
                 <td><input name="email" type="text" id="emailInput" class="text-input" /></td>
